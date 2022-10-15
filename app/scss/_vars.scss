@@ -1,0 +1,406 @@
+// Theme Information
+//--------------------------------------------//
+$theme_name: "cwebba";
+$theme_uri: "http://blog.craigwebbart.com";
+$theme_author: "Craig Webb";
+$theme_author_uri: "http://craigwebbart.com";
+$theme_description: "Custom theme for Craig Webb Art";
+$theme_version: "2.0";
+$theme_license: "Copyright 2016, 2020 Craig Webb Art";
+$theme_tags: "post-formats";
+$text_domain: "cwebba";
+// 110920
+
+// Icons
+//--------------------------------------------//
+// map *.png icon files
+//$icons_sprite: sprite-map( "icons/*.png" ); 
+//$icons_sprite2x: sprite-map( "icons@2x/*.png" );
+ 
+// generate the icons sprites
+//$sprites_file: sprite-url( $icons_sprite );
+//$sprites2x_file: sprties-url( $icons_sprite2x );
+ 
+//$sprites_url: url( "images/" + sprite-path( $icons_sprite ) );
+//$sprites2x_url: url( "images/" + sprite-path( $icons_sprite2x ) );
+ 
+// list with theme icons file names (found in icons and icons@2x folders)
+//$theme_icons: ( "checkmark", "star" );
+
+// Crayola Colors
+$shadow-blue: #778BA5;
+$sunglow: #FFCC33;
+
+
+// Helpers:
+
+$bod-ft:'Open Sans', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+$bod-it-ft:'open_sanslight_italic', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+
+$head-ft: 'Ubuntu', Verdana, Corbel, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans", "Verdana Ref", sans-serif;
+$mono-ft: "andale mono", "lucida console", monospace, serif;
+$top-ul-ft: Verdana, Geneva, "Helvetica Neue", Helvetica, sans-serif; /* Depreciated */
+
+
+// BS_04 Variables
+// BS Color system - Hue 210
+//
+// Variables should follow the `$component-state-property-size` formula for
+// consistent naming. Ex: $nav-link-disabled-color and $modal-content-box-shadow-xs.
+
+// CWebba08 Color system - Hue 25
+
+$white:    #fff !default;
+$gray-100: #FBFAF9 !default;
+$gray-200: #F0EDEA !default;
+$gray-300: #E7E2DF !default;
+$gray-400: #DAD3CE !default;
+$gray-500: #BDB4AD !default;
+$gray-600: #7E746D !default;
+$gray-700: #564E48 !default;
+$gray-800: #413A35 !default;
+$gray-900: #2A2622 !default;
+$black:    #000 !default;
+
+$grays: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$grays: map-merge(
+  (
+    "100": $gray-100,
+    "200": $gray-200,
+    "300": $gray-300,
+    "400": $gray-400,
+    "500": $gray-500,
+    "600": $gray-600,
+    "700": $gray-700,
+    "800": $gray-800,
+    "900": $gray-900
+  ),
+  $grays
+);
+
+// CWebba08 Colors
+
+// WHITES
+
+
+// #FDFEFB              // A bright, yellow-hue wht.
+// HSL 150 33 99 99
+// RGB 252 253 252
+$brite-wht:rgba(252, 253, 253, 0.99);
+
+// #FDFEFB             // .basal off-white background color 
+// HSL 76 66 99 99     /* This is a hue between yellow and green - bright and neutral. */
+// RGB 253 254 251
+$basal-wht: rgba(253, 254, 251, 0.8);
+
+
+// # FCFDFC
+// HSL 150 33 99 99
+// RGB 252 253 252
+$pine-wht: rgba(252, 253, 253, 0.9);
+
+
+// #EEEEDD         // Yel Background-color for body
+// HSL 60 33 90 93
+// RGB 238 238 221
+$old-yeller: rgba(238, 238, 221, 0.99);
+
+
+
+// Shadow Color
+// #4D1A3B
+// hsla(321, 50%, 20%, 1);
+$plum: rgba(77, 26, 59, 0.95);
+
+// GREYS
+
+/* Very light reddish gray, used as a border on  .workbook li border, .top UL border /*
+#DFDEDD
+30 3 87 87
+223 222 221   */
+$brd-gry: rgba(223, 222, 221, 0.99);
+
+  /* #CFCFCF       // (Grey border for Top UL UL) <-- DEPRECIATED REMOVE THIS
+// HSL 26 0 81 81
+// RGB 207 207 207 
+  $brd-gry: rgba(207, 207, 207, 0.99);      */
+
+// #D4CEC9 <-- Warm grey, close to #CFCFCF, Approx. "450": $gray-450, Convert border to this.
+// 25 12 81 81
+// 212 206 201
+$bdr-gry: rgba(212, 206, 201, 0.99);
+
+
+// BROWNS:
+
+// #331700      // Slightly lighter for large type
+// HSL 27 100 10 12
+$hdr-brn: rgba(51, 23, 0, 0.7);
+
+//#241000         // This is the default body text-color.
+//HSL 27 100 7 8
+//RGB 36 16 0
+//hsla(27 100%, 7%, 1);
+$bdy-brn: rgba(36, 16, 0, 0.99);
+
+// #211000
+// HSL 29 100 6 8
+// RGB 33 16 0
+// hsla(29 100%, 6%, 1);
+$dk-dk--brn: rgba(33, 16, 0, 0.99);
+
+// #443322
+// HSL 30 33 20 21
+// RGB 68 51 34
+// hsla(30 33%, 20%, 1);
+$chocolate-brn: rgba(68, 51, 34, 0.99);
+
+// #857464             // Txt color for .grn-gradi01,
+// HSL 29 14 46 47
+// RGB 133 116 100
+$tan-txt:rgba(133, 116, 100, 1);
+
+/*#6E5C4D <-- Make-be $tan-txt-dk   Use for Text-color visited
+HSL 27 18 37 37
+RGB 110 92 77       */
+$tan-txt-dk:rgba(110, 92, 77, 0.99);
+
+// #8C4103              // Header-tag Brown
+// HSL 27 96 28 35
+// RGB 140 65 3
+$hdr-brn:rgba(140, 65, 3, 0.99);
+
+
+
+// GREENS:
+
+// #bdc         // CWebba Grn
+// #BBDDCC
+// HSL 150 33 80 80
+// RGB 187 221 204
+$celadon: rgba(187, 221, 204, 0.99);
+
+// #A9C6B8
+// HSL 151 20 72 74
+// RGB 169 198 184
+$celadrk:rgba(169, 198, 184, 0.99);
+
+// #7BAD94
+// HSL 150 23 58 62
+// RGB 123 173 148
+$celadeep:rgba(123, 173, 148, 0.99);
+
+
+// #D9EDDA     <--- Accidental celadon green
+// 123 35 89 90
+// 217 237 218
+$accidental-grn: rgba(127, 237, 218, 0.99);
+
+/*#37B375 <-- Button color
+152 53 46 59
+55 179 117      */
+$golf-green:rgba(43, 140, 92, 0.99);
+
+
+// #EAFFEA
+// HSL 120 100 96 97
+// RGB 234 255 234
+$acid-grn:rgba(234, 255, 234, 1);
+
+// #CFE6CF
+// HSL 120 32 86 87
+// RGB 207 230 207
+$wasabi:rgba(207, 230, 207, 1);
+
+
+// COLORS FOR SOCIAL MEDIA ICONS (022119)
+
+// #B6D6B6         022119 inset green [1/3]
+// HSL 120 28 78 79
+// RGB 182 214 182
+$old-grass:rgba(182,214,182, 0.99);
+
+// #DDEFD2
+// 98 47 88 91     <-- mid-color between inset green and basal white [2/3]
+// RGB 221 239 210
+$tea-grass:rgba(221,239,210, 0.5);
+
+// #EDFFE2     <--- 2nd inset color for social media   [3/3]
+// 97 100 94 97
+// 237 255 226
+$lemon-grass:rgba(237,255,226, 0.5);
+
+
+// GREEN-BLUES:
+
+// #2288AA;        // a:visitedvcolor
+// HSL 195 67 40 49
+// RGB 34 136 170
+$cape-cod-blu:rgba(34,136,170, 0.99);
+
+
+// BLUES:
+
+// #0088CC;         $tagblu
+// HSL 200 100 40 53
+// color:hsla(200, 100%, 40%, 1);
+// RGB 0 136 204
+$tagblu:rgba(0, 136, 204, 0.99);
+
+
+/* .arrowCircle    <-- color for lightbox SVG
+#93C6F0
+HSL 207 76 76 76
+RGB 147 198 240
+stroke:rgba(147, 198, 240, 0.5);        */
+$arrow-circle:rgba(147, 198, 240, 0.99);
+
+/* A-link Blues */
+
+/*a:link
+#004477
+206 100 23 28
+0 68 119        */
+$midnight-blue:rgba(0, 68, 119, 0.99);
+
+/*a:focus, a:hover { color: #06C;
+#0066CC
+210 100 40 46
+0 102 204       */
+$royal-blu:rgba(0, 102, 204, 0.99);
+
+/* a:visited color 
+#3399CC
+200 60 50 57
+51 153 204      */
+$visitation-blu:rgba(51, 153, 204, 0.99);
+
+/*.credit a {color: #84A4BD;
+#84A4BD     <-- low saturation lite blue    
+206 30 63 63
+132 164 189     */
+$blu-moon:rgba(132, 164, 189, 0.99);
+
+
+/*#5FC1F1     <-- $daylight-blu
+200 84 66 72
+95 193 241      */
+$daylight-blu:rgba(95, 193, 241, 0.99);
+
+/*! ORANGE */
+
+/*a.contact {
+  color : #E6662D;
+#E6662D
+18 79 54 57
+230 102 45      */
+$pumpkin:rgba(230, 102, 45, 0.99);
+
+/*a.contact:hover {
+  color : #FF9966;
+#FF9966
+20 100 70 71
+255 153 102     */
+$orange-lt:rgba(255, 153, 102, 0.99);
+
+
+// REDS
+
+// #900000         <--- Blood Red
+// HSL 0 100 28 30
+// RGB 144 0 0
+$blood:rgba(144, 0, 0, 0.99);
+
+/*#AC3415       <--- Button Hvr Red
+12 78 38 39
+172 52 21       */
+$redskin:rgba(172, 52, 21, 0.99);
+
+
+// CWebba08 Prototyping Colors:
+
+// #FFDEDD     main Pink
+// HSL 2 100 93 91
+// RGB 255 222 221
+$proto-pink: rgba(255, 222, 221, 0.99);
+
+// #FEFDFA     header, footer wht
+// HSL 45 67 99 99
+// RGB 254 253 250
+$proto-wht: rgba(254, 253, 250, 0.99);
+
+// #CEEFEF     .wide-content
+// HSL 180 51 87 91
+// RGB 206 239 239
+$proto-blu: rgba(206, 239, 239, 0.99);
+
+// #AFDFC7     html    Grn
+// HSL 150 43 78 82
+// RGB 175 223 199
+$grrly-grn: rgba(175, 223, 199, 0.99);
+
+// #BCDEFA     body blu (+ .sidebar)
+// HSL 207 86 86 86
+// RGB 188 22 250
+$juju-blu: rgba(188, 222, 250, 0.99);
+
+// #DAB452         =   $mustard
+// HSL 43 65 59 71
+// RGB 218 180 82
+$mustard: rgba(218, 180, 82, 0.99);
+
+
+
+//Gradient Variable
+// See: https://medium.com/@alvaro.saburido/applying-gradient-trends-in-sass-cf825d70f5fe
+// https://codepen.io/alvarosaburido/pen/YarpJz
+// https://codepen.io/alvarosaburido/pen/WzZREy
+
+// Remaining gradient mixins are on the mixin scss. See full example at module/_bg_gradient.scss
+
+
+/*  Gradient classes and fallback colors
+
+$gra-gradi:  #f7f7f7;
+$grn-gradi: #EAFFEA;	
+$grnlite01: #DAebDA;
+$topnavhover-gradi: #BBDDCC;
+$topcurrent-gradi: #FFCCCC;
+$topul-gradi: #F9FBFA;	
+$topulhover-gradi: #bdc;	
+
+  */
+
+
+$gradients: () !default;
+$gradients: map-merge((
+    gra: linear-gradient(0deg, rgba(247, 247, 247, 1) 0%,rgba(230, 230, 230, 1) 100%),
+    gra02: linear-gradient(0deg, rgba(230, 230, 230, 1) 0%, rgba(247, 247, 247, 1) 100%),
+    grn: linear-gradient(0deg, rgba(234, 255, 234, 1) 0%,rgba(207, 230, 207, 1) 100%),
+    grnlite01: linear-gradient(0deg, rgba(234, 255, 234, 1) 0%, rgba(218,235,218,1) 100%), //#DAEBDA
+    grnlite02: linear-gradient(0deg, rgba(218,235,218,1) 0%, rgba(234, 255, 234, 1)  100%), //#DAEBDA
+    topnavhover: linear-gradient(180deg, rgba(221, 238, 230, 1) 0%,rgba(187, 221, 204, 1) 47%,rgba(169, 198, 184, 1) 100%),
+    topcurrent: linear-gradient(180deg, rgba(238, 221, 221, 0.4) 0%,rgba(255, 204, 204, 0.5) 47%,rgba(198, 169, 169, 1) 100%),
+    topul: linear-gradient(180deg, rgba(253, 254, 251, 0.9) 0%,rgba(249, 251, 250, 1) 17%,rgba(169, 198, 184, 1) 100%),
+    topulhover: linear-gradient(0deg, rgba(187, 221, 204, 1) 0%,rgba(123, 173, 148, 1) 100%),
+    chill: linear-gradient(135deg, #09e485 0%,#0291e3 100%),
+    warm: linear-gradient(135deg, #F2CD48 0%,#FD803F 100%),
+    hot: linear-gradient(135deg, #F9445A 0%,#FD803F 100%),
+    cold: linear-gradient(135deg, #8019C6 0%,#2F93CC 100%)
+), $gradients);
+
+
+// ICON Colors:
+
+$codepen: #000000;
+$linkedin: #0077B5;
+$twitter: #1DA1F2;
+$github: #181717;
+$behance: #1769FF;
+$flickr: #0063DC;
+$instagram: #E4405F;
+$facebook: #3B5998;
+$angellist: #000000;
+$dribbble: #EA4C89;
+

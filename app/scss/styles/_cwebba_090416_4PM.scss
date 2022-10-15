@@ -1,0 +1,1277 @@
+/*HEADER section */
+
+header { text-align:center;
+	clear:both;
+	float:left;
+	width:100%;
+}
+
+header figure { margin-bottom:0;
+}
+
+.logo img { float:left;
+}
+
+.logo {
+  width: 34.1232227488152%;
+  margin: 0;
+  float: left;
+}
+
+.rightrail {
+  width: 65.8767772511848%;
+  margin: 0;
+  float: right;
+  overflow: hidden;
+}
+
+#cswnavpic { 
+line-height:0;
+}
+
+/* HACK - See http://stackoverflow.com/questions/4604436/is-there-a-non-trivial-purpose-for-defining-a-css-style-for-htmlxmlns - Might change to Conditional Comment */
+html[xmlns] .top {
+	display: block;
+}
+
+
+ul.top { 
+width: 100%;
+height:2em;
+margin:auto;
+text-align: justify;
+font-size: 0;
+/*  font-size: 12px\9; *//* IE6-9 only hack */
+}
+
+.top:after {
+  content: "";
+  width: 100%;
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+}
+
+.top li {
+  display: inline-block;
+  position: relative;
+  font-size: 1rem;
+  padding: 0;
+  zoom: 1;
+  *display: inline;
+}
+
+.drop {
+	position: relative;
+	}/* WAS li.drop - rename to be "rel" */
+
+.top a {
+  display: block;
+  float: left;
+  text-decoration: none;
+}
+
+.top a:link, .top a:visited { 
+  font-family: 'Ubuntu', Verdana, Corbel, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans", "Verdana Ref", sans-serif;
+  font-weight:500;
+  font-size: 1em;
+  color: rgba(33,16,0,.7);
+  line-height:1em;
+  -o-transition:font-size .25s ease-in, padding .25s ease-in; 
+  -moz-transition:font-size .25s ease-in, padding .25s ease-in; 
+  -webkit-transition:font-size .25s ease-in, padding .25s ease-in;
+  transition:font-size .25s ease-in, padding .25s ease-in; 
+  background-color: transparent;
+  text-decoration: none;
+  padding: 0.5em 12%;/*was 7.5%*/
+  border: 0;
+-webkit-border-radius: .35em;
+-moz-border-radius: .35em;
+border-radius: .35em;
+}
+
+.top a:hover, .top a:active{
+color:rgba(33,16,0,1);
+background:#BBDDCC;/* for non-css3 browsers */
+background: -moz-linear-gradient(top, #DDEEE6, #BBDDCC 47%, #A9C6B8);
+background: -ms-linear-gradient(top, #DDEEE6, #BBDDCC 47%, #A9C6B8);
+background: -o-linear-gradient(top, #DDEEE6, #BBDDCC 47%, #A9C6B8);
+background: linear-gradient(top left, #DDEEE6, #BBDDCC 47%, #A9C6B8);/*New Webkit*/
+background-image: -webkit-gradient(linear,center top,center bottom,from(#DDEEE6),color-stop(0.47, #BBDDCC),to(#A9C6B8));/*OLD Webkit*/
+}
+
+.top a, .top a:visited {display:block;float:left; text-decoration:none;
+}
+
+
+.top .current a, .top li:hover > a {
+	color: #732626;
+	}
+
+.top .current a{
+padding:.5em 12%;
+border:0;
+-webkit-border-radius:.35em;
+   -moz-border-radius:.35em;
+        border-radius:.35em;
+background:#FFCCCC;/* for non-css3 browsers */
+background: -moz-linear-gradient(top, rgba(238,221,221,0.4), rgba(255,204,204,0.5) 47%, rgba(198,169,169,1));
+background: -ms-linear-gradient(top, rgba(238,221,221,0.4), rgba(255,204,204,0.5) 47%, rgba(198,169,169,1));
+background: -o-linear-gradient(top, rgba(238,221,221,0.4), rgba(255,204,204,0.5) 47%, rgba(198,169,169,1));
+background-image: -webkit-gradient(linear,center top,center bottom,from(rgba(238,221,221,0.4)),color-stop(0.47, rgba(255,204,204,0.5)),to(rgba(198,169,169,1)));/*OLD Webkit*/
+background: -webkit-linear-gradient(top, rgba(238,221,221,0.4), rgba(255,204,204,0.5) 47%, rgba(198,169,169,1));
+background: linear-gradient(top, rgba(238,221,221,0.4), rgba(255,204,204,0.5) 47%, rgba(198,169,169,1));
+}
+
+
+/* level 2 list   – –  – –  – –  – –  – –  – – */
+.top ul {
+background:#F9FBFA;
+background:-webkit-gradient(linear, center top, center bottom, from(#FFF), color-stop(17%, #F9FBFA), to(#A9C6B8));
+background:   -moz-linear-gradient(-90deg, #FFF, #F9FBFA 17%, #A9C6B8);
+background: -ms-linear-gradient(top,  #FFF 0%,#F9FBFA 17%, #A9C6B8 100%);
+background:     -o-linear-gradient(-90deg, #FFF, #F9FBFA 17%, #A9C6B8);
+background: -webkit-gradient(linear, 50% 0%, 50% 100%, from(#FFF), color-stop(0.17, #F9FBFA), to(#A9C6B8));/*OLD Webkit*/
+background: -webkit-linear-gradient(top, #FFF, #F9FBFA 17%, #A9C6B8);
+background:        linear-gradient(top, #FFF, #F9FBFA 17%, #A9C6B8);
+  color: #fff;
+  display: none;
+  margin: 0;
+  padding: 0; 
+  width: 11.5em; /* HERE this has an affect - 150% width */
+  position: absolute;
+  top: 1.875em;
+  left: 0;
+  z-index: 2;
+  border: solid 1px #CFCFCF;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px 10px 10px 10px;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, .3);
+  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, .3);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, .3);
+height:5.75em;
+}
+
+/*
+.top li:nth-child(even) { background-color:rgba(148, 25, 85, 0.4);}
+.top li:nth-child(odd) { background-color:rgba(25, 148, 85, 0.4);}
+*/
+
+.top ul li {
+  margin: 0;
+  padding: 0;
+  height: 1.75em;
+  float: left;
+}
+
+/* dropdown */
+.top li:hover > ul {
+  display: block;
+}
+
+.top ul a {
+  font-weight: 500;
+  padding-top: .5em;
+  line-height: 1em;
+}
+
+/* sub levels link hover */
+.top ul li:hover a, .top li:hover li a {
+  text-align:left;
+  background: none;
+  border: none;
+  color: #260F40;
+padding-top:.5em;
+line-height:1.1em;
+width:11.5em;
+  z-index: 2;
+}
+
+/* sub levels link hover */
+.top ul a:hover {
+color: #732626; 
+background-color: #bdc;
+background: -moz-linear-gradient(top, #7BAD94, #BBDDCC)!important;
+    background: -ms-linear-gradient(top,  #7BAD94 0%,#BBDDCC 100%); 
+    background: -o-linear-gradient(top,  #7BAD94 0%,#BBDDCC 100%);
+background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, from(#BBDDCC), to(#7BAD94))!important;/*OLD Webkit*/
+background: -webkit-linear-gradient(top,  #7BAD94 0%,#BBDDCC 100%);
+background:linear-gradient(top, #7BAD94, #BBDDCC);
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0 0 0 0;
+}
+
+/* THESE DECLARATIONS ARE EXTRA 090316 (compares to the MQ-Redo version) 
+
+.top ul li {
+  float: none;
+  margin: 0;
+  padding: 0;
+}
+
+.top ul li a:hover {
+padding-top:.5em;
+line-height:1.1em; 
+	width: 11.4em;
+}
+*/
+
+/* float the top list items to make it horizontal and a relative position so that you can control the dropdown menu position *//* ie_drop */
+.top ul li {float:left;} /*  REMOVED: height:3em;line-height:3em;  */
+
+ /*  In the original above, this float is set to NONE. Now this rule MUST be included. When float is removed, the links disappear.  */
+
+
+/* level 3+ list */
+.top ul ul {
+	left: 10em;
+	top: -.125em;
+}
+
+/* style the sub-level lists *//* ie_drop */
+.top ul ul {width:15em;
+}
+
+.top ul ul a {
+padding-top:.5em;
+line-height:1.1em; 
+}
+.top ul ul li a:hover{
+padding-top:.5em;
+line-height:1.1em; 
+}
+
+/* style the sub level links *//* ie_drop */
+.top ul ul a, 
+.top ul ul a:visited {
+display:block;
+width:15em;
+height:100%;
+line-height:1.1em;
+}
+
+
+/* rounded corners for first and last child */
+.top ul li:first-child > a {
+	-webkit-border-top-left-radius: 9px;
+	-moz-border-radius-topleft: 9px;
+	-webkit-border-top-right-radius: 9px;
+	-moz-border-radius-topright: 9px;
+border-radius: 9px 9px 0 0; /*(top-left, top-right, bottom-right, bottom-left)*/
+}
+.top ul li:last-child > a {
+	-webkit-border-bottom-left-radius: 9px;
+	-moz-border-radius-bottomleft: 9px;
+	-webkit-border-bottom-right-radius: 9px;
+	-moz-border-radius-bottomright: 9px;
+	border-bottom-right-radius: 9px;
+border-radius: 0 0 9px 9px; /*(top-left, top-right, bottom-right, bottom-left)*/
+}
+
+/* END HEADER section */
+
+/* 3-COLUMN LAYOUT STYLE */
+
+.main-content {
+width:60%;
+float:left;
+margin-left: 20%;
+padding:1em 1.5em;
+}
+
+.sidnav {
+width: 20%;
+margin-left: -80%;
+padding: 1em;
+float:left;
+}
+
+.related-info {
+width: 20%;
+color: #555;
+padding: 1em;
+float:left;
+}
+
+.related-info h6 { 
+font-style: italic;
+line-height:1.5em;
+padding:.5em .375em .75em .75em;
+margin:0 0 .5em;
+-webkit-border-radius: .75em;
+-moz-border-radius: .75em;
+border-radius: .75em;
+}/*rgba(245, 245, 245, 0.8);*/
+
+.related-info h6, .related-info figure { margin-bottom:1em;
+}
+
+
+/* DEFAULT MOBILE STYLE */
+
+aside, article, #leftnav, blockquote.big {
+     -moz-border-radius: .375em;
+     -webkit-border-radius: .375em;
+border-radius: .375em;
+}
+
+
+/* WIDE PAGE STYLE */
+
+.wide-content {
+  width: 100%;
+  float: left;
+  padding: 1em 1.5em;
+}
+
+.wide-sidnav {
+  width: 100%;
+  padding: 1em;
+  float: left;
+}
+
+
+/* - - - - [ DEFAULT SIDE NAVIGATION ] - - - -  */
+
+/* NOTE: .move is Side Nav. .footmove is a part of the footer */
+
+.move h4, .footmove h4 { margin:0 0 .25em;
+color:#06C;
+line-height:1.75em; 
+}
+
+.move p { font-size:1em;
+line-height:1.25em; 
+color:#223; margin:0;
+}
+
+.sidnav-art nav,
+.sidnav nav { margin:1em 0 .5em;
+}
+
+.navserv,
+.wide-navserv {width: 100%;
+} /*this is a UL element */
+
+.navserv li {
+text-align:left;
+margin:.25em 0;
+}
+
+/*
+.navserv a, .navserv a:visited {
+	font-size:.875em;
+	line-height: 1.5em;
+	padding: .375em 1.25em;
+	color: rgba(33,16,0,.7);
+	background-color: transparent;
+	text-decoration: none;
+border: 0;-webkit-border-radius: .35em;
+-moz-border-radius: .35em;
+border-radius: .35em;
+}
+*/
+.grn-gradi01,
+.navserv a:hover, .navserv a:active,
+.footsy a:hover, .footsy a:active {
+	color: rgba(133,116,100,1);
+background: #EAFFEA;
+background: -moz-linear-gradient(top, #EAFFEA, #CFe6CF);
+background: -ms-linear-gradient(top, #EAFFEA, #CFe6CF);
+background: -o-linear-gradient(top, #EAFFEA, #CFe6CF);
+background-image: -webkit-gradient(linear, 50% 0%, 50% 100%,  from(#EAFFEA), to(#CFe6CF));/*OLD Webkit*/
+background: -webkit-linear-gradient(top, #EAFFEA, #CFe6CF);
+background: linear-gradient(to bottom, #EAFFEA, #CFe6CF);
+}
+
+.services-art header,
+.services header { text-align:left;
+padding:.5em;
+-webkit-border-radius:6px;
+-moz-border-radius:6px;
+border-radius:6px;
+margin-bottom:.5em;
+}
+.services-art p,
+.services p { font-size:.875em;
+line-height: 1.5em;
+}
+
+.colcontain {padding:.125em;
+}
+
+.columns02 {
+    -webkit-column-count: 1;
+    -webkit-column-gap: 1em;
+    -moz-column-count: 1;
+    -moz-column-gap: 1em;
+    -ms-column-count: 1;
+    -ms-column-gap: 1em;
+    column-count: 1;
+    column-gap: 1em;
+  }
+
+/* .gra-gradi, .join, .socialnav a, .workbook li has moved to helpers.scss */  
+
+.sidnavcol { 
+margin:.125em 0 .5em;
+padding:.5em .5em .25em;
+ margin:.125em 0 .325em ;
+border:1px solid #E7E6E4;
+-webkit-border-radius: .35em;
+-moz-border-radius: .35em;
+border-radius: .35em;
+}
+
+/* WHAT ABOUT THESE?
+.sidnavcol p { font-size:.8275em;
+line-height: 1.125em;
+	color: rgba(33,16,0,.7);
+}
+.list-archives {
+  font-weight:400;
+}
+*/
+
+.list-archives {
+    list-style: none;
+    line-height:4px;
+    margin:0 0 .125em;
+    padding: 0;
+}
+
+.list-archives li {
+  font-weight: 400;
+  font-size: .875em;
+  line-height: 1.5em;
+  margin: 0 0 .25em;
+  color: rgba(33, 16, 0, 0.7);
+}
+
+/*
+.sidnavcol a {
+  color: hsla(210, 0%, 54%, 1);
+} this is grey - I've decided to go with the a.link declaration. */
+
+.sidnavcol a:hover {
+  color: hsla(210, 100%, 40%, 1);
+  text-decoration:none;
+}
+
+.col-fix li:nth-of-type(1) { margin-top:-1em;
+}
+ 
+
+.columns2b {
+  -webkit-column-count: 1;
+  -webkit-column-gap: 1em;
+  -moz-column-count: 1;
+  -moz-column-gap: 1em;
+  -ms-column-count: 1;
+  -ms-column-gap: 1em;
+  column-count: 1;
+  column-gap: 1em;
+  margin-bottom:1em;
+}
+
+.columns3 p,
+.columns2b p { display:inline-block;
+}
+
+.columns2b p:first-of-type { margin:0 auto .5em;
+}
+
+.columns2b p:last-of-type { margin:.5em auto 0;
+}
+
+.columns3 {
+  -webkit-column-count: 1;
+  -webkit-column-gap: 1em;
+  -moz-column-count: 1;
+  -moz-column-gap: 1em;
+  -ms-column-count: 1;
+  -ms-column-gap: 1em;
+  column-count: 1;
+  column-gap: 1em;
+}
+
+ .columns4{
+    -webkit-column-count: 4;
+    -webkit-column-rule: 0;
+    -moz-column-count: 4;
+    -moz-column-rule: 0;
+    -ms-column-count: 4;
+    -ms-column-rule: 0;
+    column-count: 4;
+    column-rule: 0;
+}
+
+/* - - - - [ END SIDE NAVIGATION ] - - - -  */
+
+/* - - - - [ WIDE SIDE NAVIGATION ] - - - -  */
+
+.wide-move {
+  width: 100%;
+  margin-right: 2%;
+  -o-transition: all .5s ease-in-out;
+  -moz-transition: all .5s ease-in-out;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+
+.wide-move h4 { margin:0 0 .25em;
+color:hsla(200, 100%, 40%, 1);/*#0088CC;*/
+line-height:1.75em;
+font-weight:400;
+}
+
+.wide-move p { font-size:1em;
+line-height:1.25em; 
+color:#223; margin:0;
+}
+
+.wide-sidnav nav { margin:1em 0 .5em;
+}
+
+.wide-navserv {
+  padding: 0;
+  -webkit-column-count: 2;
+  -webkit-column-gap: 1em;
+  -moz-column-count: 2;
+  -moz-column-gap: 1em;
+  -ms-column-count: 2;
+  -ms-column-gap: 1em;
+  column-count: 2;
+  column-gap: 1em;
+  margin-bottom:1em;
+}
+
+.wide-navserv li {
+  width: 100%;
+  float: left;
+}
+
+.wide-navserv li div {
+   background-color: transparent;
+   padding: .375em 1.25em;
+-webkit-border-radius: .35em;
+-moz-border-radius: .35em;
+border-radius: .35em;
+}
+
+
+.wide-navserv li div:hover {
+color: #857464;
+color:hsla(29, 14%, 46%, 1);
+background: #EAFFEA;
+background: -moz-linear-gradient(top, #EAFFEA, #CFe6CF);
+background: -ms-linear-gradient(top, #EAFFEA, #CFe6CF);
+background: -o-linear-gradient(top, #EAFFEA, #CFe6CF);
+background-image: -webkit-gradient(linear, 50% 0%, 50% 100%,  from(#EAFFEA), to(#CFe6CF));/*OLD Webkit*/
+background: -webkit-linear-gradient(top, #EAFFEA, #CFe6CF);
+background: linear-gradient(top, #EAFFEA, #CFe6CF);
+padding: .375em 1.25em;
+}
+
+.wide-navserv a, .wide-navserv a:visited {
+  font-size: .875em;
+  line-height: 1.5em;
+  color: rgba(33, 16, 0, 0.7);
+  text-shadow: hsla(29, 14%, 46%, 0.5) 0 0 1px;
+  background-color: transparent;
+  text-decoration: none;
+  border: 0;
+}
+
+.wide-services {
+  width: 100%;
+  margin: 0;
+  -o-transition: all .5s ease-in-out;
+  -moz-transition: all .5s ease-in-out;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+
+.wide-services header { 
+padding:.5em .75em;
+margin:.5em 0;
+text-align:left;
+}
+
+.wide-services h5 { 
+margin:0;
+}
+
+.wide-services p { font-size:.875em;
+line-height: 1.5em;
+}
+
+/* - - - - [ END WIDE SIDE NAVIGATION ] - - - -  */
+
+
+/* - - - - - - [ NEW ART LAYOUT 090613 ] - - - - - - */
+
+.main-art-content {
+width:75%;
+float:left;
+margin-left: 25%;
+padding:1em 1.5em;
+}
+
+.sidnav-art {
+width: 25%;
+margin-left: -100%;
+padding: 1em;
+float:left;
+}
+
+/* Work - Portfolio Page Declarations */
+
+.workbook { margin-bottom:1.5em;
+}
+
+.workbook ul { overflow:hidden;
+z-index:1;
+padding:0;
+}
+
+.workbook li { width:31%;
+margin-right:3%;
+display: inline-block;
+vertical-align:top;
+padding:0 .5em .5em; text-align:left;
+border:1px solid #DFDEDD;
+-webkit-border-radius: .35em;
+-moz-border-radius: .35em;
+border-radius: .35em;
+  color: rgba(33,16,0,.7);
+}
+
+.workbook li.last { margin-right:0;
+}
+
+.workbook h5 { margin:.625em 0 .125em;
+  font-weight:500;
+}
+
+.workbook figure { display:none;
+}
+
+.workbook li p { text-align:left;
+margin:.375em 0 .125em;
+}
+
+
+/* FOOTER */
+
+footer {
+clear: both;
+}
+
+.footmove { width:40%;
+float:left;
+padding:0 1em 1.5em;
+-o-transition: width .25s linear;
+-webkit-transition: width .25s linear;
+-moz-transition: width .25s linear;
+transition: width .25s linear;
+margin-right:1%;
+}
+
+.footmove p { font-size:.75em;
+line-height:1.375em; 
+color:#223; margin:0 0 .5;
+}
+
+.back2top { font-size:.75em;
+margin:0;
+}
+
+span.learn { display:none;
+}
+
+.footmove .concept { font-size:.6375em;
+line-height: 1.375em;
+margin: .75em 0 1.5em;
+color:#223;
+}
+
+.footstep { display: table;
+width:100%;
+margin-bottom:1em;
+}/*nav*/
+
+
+.newslet { width:32%;
+float:left;
+-o-transition: width .25s linear;
+-webkit-transition: width .25s linear;
+-moz-transition: width .25s linear;
+transition: width .25s linear;
+}
+
+ul.footsy   {
+display: table-row;
+font-size: 1rem;
+}
+
+ul.footsy li {
+  display: inline-block;
+  text-align: center;
+  width: 50%;
+}
+
+.join { width:22%;
+min-height: 2.5em;
+margin:auto;
+float:right;
+margin-right:2%;
+text-align:center;
+font-size:.875em;
+line-height:1.75; 
+padding:.25em .5em .5em 1em;
+border:1px solid #DEDDDC;
+}
+
+.join a { margin:auto;
+  color: #a7a7a7;
+vertical-align:middle;
+}
+
+.join a:hover { margin:auto;
+  text-decoration: none;
+  color: #940;
+  color:hsla(27, 96%, 28%, 1);
+}
+
+
+.footsy a, .footsy a:visited {
+  font-size: .8125em;
+  padding: .425em 5%;
+  color: #241000;
+  text-shadow: hsla(29, 14%, 46%, 0.5) 0 0 1px;
+  background-color: transparent;
+  text-decoration: none;
+  border: 0;
+  margin: .25em auto 0;
+  -webkit-border-radius: .35em;
+  -moz-border-radius: .35em;
+  border-radius: .35em;
+  transition: padding .25s linear;
+}
+
+.sm_button { display: inline-block;
+text-align:center;
+width:17.5%;
+padding: 0.35em 1% 0.75em;
+}
+
+/*    - - - - [ Social Nav ] - - - - -  */
+
+.socialnav {
+    margin:auto;
+    padding:0 .5em;
+    min-width:10em;
+    width:100%;
+    height:2.375em;
+    overflow:hidden;
+    text-align:justify;
+}
+.socialnav li {
+    display:inline;
+    list-style:none;
+  text-align: center;
+}
+.socialnav li.last {
+    margin-right:100%; /*This is what makes it work */
+}
+
+/*.socialnav li:nth-child(even) { background-color:rgba(148, 25, 85, 0.4);}
+.socialnav li:nth-child(odd) { background-color:rgba(25, 148, 85, 0.4);}*/
+
+.socialnav li a {
+    display:inline-block;
+    padding:0 0 0;
+    height:1.5em;
+    color:#AAA;
+    vertical-align:middle;
+    text-decoration:none;
+}
+
+.socialnav a { font-size: 1.375em;
+  display: inline-block;
+  width: 1.475em;
+  height: 1.475em;
+  position: relative;
+  text-align: center;
+  line-height: 1.475em;
+  border-radius: 50%;
+  -moz-box-shadow: 0 2px 4px #aaa, inset 0 2px 2px #fff;
+  -webkit-box-shadow: 0 2px 4px #aaa, inset 0 2px 2px #fff;
+  box-shadow: 0 2px 4px #aaa, inset 0 2px 2px #fff;
+  vertical-align:middle;
+}
+
+.socialnav a:hover {
+  text-decoration: none;
+  color: #940;
+  color:hsla(27, 96%, 28%, 1);
+  background: #f5f5f5;
+}
+
+.copyright {
+font-family: 'Ubuntu', Verdana, Corbel, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans", "Verdana Ref", sans-serif;
+font-size: 0.6875em;
+line-height: 1.2em;
+color:#889;
+position:absolute;
+bottom:0;
+left:1em;
+width:70%
+}
+
+
+.tothetop { display:inline-block;
+vertical-align:baseline;
+background:#CEBEBE;
+padding:.125em .5em;
+position:absolute;
+bottom:0;
+right:0;
+-webkit-border-top-left-radius: 8px 6px;
+-moz-border-top-left-radius: 8px 6px;
+border-top-left-radius: 8px 6px;
+}
+
+/* ======= [ Page Specific Declarations ]  =========== */
+
+#nouvel p {
+text-align:justify;
+-webkit-hyphens: auto;
+-epub-hyphens: auto;
+-moz-hyphens: auto;
+hyphens: auto;
+   -webkit-hyphenate-before: 2;
+    -webkit-hyphenate-after: 3;
+            hyphenate-lines: 3;
+}
+
+#nouvel h2 { line-height:1;
+}
+
+#nouvel h4 { line-height:1.5em;
+margin-top:.75em;
+margin-bottom:1.5em;
+}
+
+#nouvel h6 { line-height:1.5em;
+margin-top:0;
+margin-bottom:.125em;
+text-align:left;
+}
+
+#nouvel h6 strong { 
+line-height:3.5em;
+margin:1.5em 0!important;
+}
+
+#nouvel blockquote { text-align:left;
+font-family:    Corbel, "Gill Sans", 
+        "Gill Sans MT",
+        GillSansMT,
+        GillSans,
+Verdana, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
+font-size:1.125em;
+line-height: 1.375em;
+color:#555;
+background:hsla(150, 40%, 70%, .2);
+padding:0.25em 1% 0.375em 2%;
+margin: 1.25em 0 1.375em 0;
+}
+
+
+#print-media { width:100%;
+float:left;
+}
+
+#printcol-clients { width: 36.7260273972603%;
+margin-right:2.739726027397%;
+text-align:left;
+float:left;
+}
+
+#printcol-pics { width: 60.5342465753425%;
+text-align:left;
+float:left;
+}
+
+.menutable {
+width:100%;
+background-color: #fff;
+text-align:center;
+}
+
+/* - - - - -   [  Me-Menu ]  - - - - - */
+
+#me-menu { width:98%;
+margin:0;
+display:block;
+margin-bottom: .5em;
+padding: .5em 2.739726027397%;
+border-style: solid;
+border-color: #eee;
+border-width: 2px;
+-webkit-border-radius: .5em;
+-moz-border-radius: .5em;
+border-radius: .5em;
+} 
+
+#me-menu:after {content:"\0020";display:block;height:0;clear:both;visibility:hidden;overflow:hidden;
+}
+
+.me-menu-pic { 
+float:left;
+margin:.5em 4% .25em auto;
+}
+
+.me-menu-text { 
+	font-size:.9375em;
+line-height:1.5em;
+margin:.5em 0 .5em 2.739726027397%;
+}
+
+/* - - - - -   [  WIDE ME-MENU ]  - - - - - */
+
+.wide-me-menu { width:98%;
+margin:0;
+display:block;
+margin-bottom: .5em;
+padding: .5em 2.739726027397%;
+border-style: solid;
+border-color: #eee;
+border-width: 2px;
+-webkit-border-radius: .5em;
+-moz-border-radius: .5em;
+border-radius: .5em;
+}
+
+.wide-me-menu:after {content:"\0020";display:block;height:0;clear:both;visibility:hidden;overflow:hidden;
+}
+
+.wide-me-menu h4 a {
+  font-family: 'Ubuntu', Verdana, Corbel, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans", "Verdana Ref", sans-serif;
+  color : #E6662D;
+  font-weight:400;
+  text-decoration: none;
+}
+
+.wide-me-menu h4 a:hover {
+  font-family: 'Ubuntu', Verdana, Corbel, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans", "Verdana Ref", sans-serif;
+  color : #FF9966;
+  text-decoration: underline;
+}
+
+ /*_ _ _ _ [ END WIDE ME-MENU ] _ _ _ _ _*/
+
+.titleblack {
+color : #000;
+font-size:0.875em;
+letter-spacing : 4px;
+font-weight: bold;
+margin:.5em 2.739726027397%;
+}
+
+.media-head { margin-bottom:1em;
+}
+
+/* - - - - -   [ WEB WORK PAGE ]  - - - - - */
+
+.project-content header,
+.projectthumbs { 
+  display:block;
+  clear:both;
+}
+.project-content header:after,
+.projectthumbs:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+  overflow: hidden;
+}
+
+/* - - - - -   [ UX / PROTOTYPE / WIREFRAMES PAGES ]  - - - - - */
+
+.projects h6 { padding:1px 0 1px 3px;
+background:hsla(150, 40%, 70%, .2);
+font-weight:bold;
+margin:.25em 0 1px;
+color: #000;
+margin-bottom:1px;
+     -webkit-border-radius: .375em;
+border-radius: .375em;
+}
+
+/* This was changed for wireframe pages or resume. Find and fix.*/
+h6 { font-size:1em;line-height:1.25em;
+}
+
+.projects p,
+.projects article { -webkit-column-break-inside:avoid;
+-moz-column-break-inside:avoid;
+-o-column-break-inside:avoid;
+-ms-column-break-inside:avoid;
+column-break-inside:avoid;
+}
+
+.live { padding-bottom: .25em;
+border-bottom: 1px dashed #004477;
+}
+
+
+/* - - - - -   [  CONTACT PAGE ]  - - - - - */
+
+.formbox { 
+width:66%;
+margin-left:34%;
+float:left;
+display:block;
+}
+
+
+.addressbox  { 
+width:32%;
+margin: .5em 2% 1em -100%;
+float:left;
+display:block;
+}
+
+#paypal { margin-top:.5em;
+}
+
+.addressbox p { 
+font-size:.875em;
+margin-bottom:1.5em;
+}
+
+.keepcolumn { display: inline-block; }
+
+.address-h5 { 
+margin-bottom:0;
+}
+
+/* - - - - -   [ LINKS PAGE ]  - - - - - */
+
+.weblink { width:23.728813559322%;
+margin-right:1.694915254237%;
+float:left;
+}
+
+.weblink > a{line-height: 1.5em;
+font-size:0.6875em;
+text-decoration:underline;
+}
+
+.h6link { 
+font-size:.875em;
+line-height: 1.5em;
+margin: .25em 0 .25em 0;
+}
+
+.website { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+ font-size: .9375em;
+line-height: 1.5em;
+font-weight:bold;
+margin-bottom:0;
+}
+
+.descrip { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+font-size:0.875em;
+line-height: 1.375em;
+color:#444;
+margin-top:0;
+margin-bottom:.75em;
+}
+
+.descrip2 { font-size:0.875em;
+line-height:1.375em;
+color:#444;
+}
+
+/* - - - - -   [ Links Accordian ]  - - - - - */
+
+/* - - - RESET - - - 
+This resets the accordion properties that I turned off
+*/
+
+.accordion-group {
+  margin-bottom: 2px;
+  border: 1px solid #e5e5e5;
+  -webkit-border-radius: 4px;
+     -moz-border-radius: 4px;
+          border-radius: 4px;
+}
+
+.accordion-heading .accordion-toggle {
+  display: block;
+ padding: 8px 3em;
+}
+
+.accordion-inner {
+  padding: 9px 15px;
+  border-top: 1px solid #e5e5e5;
+}
+
+.accordion-toggle p { margin:0 0 .5em;
+}
+
+
+/*-  RESUME LISTS
+----------------------------------------------------------------------*/
+
+#chops { width:90%;}
+#chops li { font-size: 0.9375em;
+line-height:1.325em;
+margin-bottom:.425em;
+padding-left: 1em;
+text-indent: -1.325em;
+}/* the rules that do the indenting */
+
+#chops li:before {
+    content: "\00BB \0020 \00A0";
+       }
+
+.punchlist { 
+font-size:.9375em;
+line-height: 1.25em;
+}
+.punchlist li {
+margin: 1em 0;
+padding-left: .875em;
+text-indent: -.875em;
+font-size:.9375em;
+line-height: 1.25em;
+margin: 0em 0% .25em 0%;
+vertical-align:top;
+}
+
+/* the rules that do the indenting */
+/*padding-left: 1em;
+text-indent: -1em;*/
+
+p.punchlist { font-size:.75em;
+line-height: 1.25em;
+margin: 0em 0% .25em 0%;
+}
+
+/* Declarations below this  line are of questionaqlbe use to a WP theme and may be so specialized that they should be removed to a modual and eliminated. */
+
+.artcaption {
+text-align:left;
+margin:auto; 
+margin-bottom:2em;
+padding:0;
+}
+
+.wcap { max-width:670px;
+margin:auto;
+}
+
+.mcap { max-width:670px;
+margin:auto;
+}
+
+.wcap,
+.mcap { width: 93.75%;/*650px*/
+  -o-transition:width .25s ease-in, max-width .25s ease-in; 
+    -moz-transition:width .25s ease-in, max-width .25s ease-in; 
+    -webkit-transition:width .25s ease-in, max-width .25s ease-in;
+  transition:width .25s ease-in, max-width .25s ease-in; 
+}
+
+figure.w306 { width:306px;
+max-width:306px; 
+text-align:left;
+margin:auto; 
+margin-bottom:2em;
+padding:0;
+}
+
+.w306 a { margin:0;}
+
+.herobox figure { margin-top:1em!important;
+}
+
+figure.hero-art { 
+text-align:left;
+margin:auto; 
+padding:0;
+}
+
+.mb3em,
+.mast,
+.herobox {
+margin-bottom:3em;
+}
+
+.herobox-clear {
+margin:0 auto 3em;
+}
+
+.herobox-clear:after {
+  content: "";
+  width: 100%;
+  display: inline-block;
+
+  zoom: 1;
+  *display: inline;
+}
+
+/* This declaration conflict with another of the same name above. Find it's reason and re-name it. Note: MS Justify properties moved to IE. FIX THERE TOO.
+083113 RENAMED. Still need to change IE styles. */
+.printrow { 
+  text-align: justify;
+  -ms-text-justify: distribute-all-lines;
+  text-justify: distribute-all-lines; 
+height:auto;
+padding:0;
+margin:0;
+line-height:0;
+}
+
+.triad { width:31.5%; 
+margin:auto;
+margin-bottom:0;
+display:inline-block;
+*display: inline;
+zoom: 1;
+}
+
+.triad figure { margin-bottom:.25em; 
+}
+
+.inset, .inset2{
+font-family:    Corbel, "Gill Sans", 
+        "Gill Sans MT",
+        GillSansMT,
+        GillSans,
+Verdana, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
+font-size:1em;
+font-style:italic;
+letter-spacing : .1em;
+color:#555;
+line-height: 1.375em;
+background:hsla(150, 40%, 70%, .2);
+padding:0.25em 2% 0.375em 2.5%;
+margin: 1.25em 0 1.375em 0;
+     -moz-border-radius: .375em;
+     -webkit-border-radius: .375em;
+border-radius: .375em;
+display:table;
+text-align:left!important;
+}
+
+

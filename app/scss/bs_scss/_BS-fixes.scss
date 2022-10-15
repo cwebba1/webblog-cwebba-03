@@ -1,0 +1,30 @@
+/* _BS-fixes.scss */
+/*----------[ = BS fix ]----------*/
+/*.row .row {
+    margin: 0px -15px;
+}*/
+
+.row > div[class*="col-"] > .row > figure[class*="col-"] {
+    padding: 0;
+}
+.col-lg-6-not {
+    position: relative;
+    min-height: 1px;
+    padding-right: 0;
+    padding-left: 0;
+    float: left;
+}
+@media (min-width: 992px) {
+    .col-lg-6-not {
+    width: 50%;
+    }
+    .col-lg-6-not.left {
+    padding-right: .9375rem;
+    }
+    .col-lg-6-not.right {
+    padding-left: .9375rem;
+    }
+}
+
+
+

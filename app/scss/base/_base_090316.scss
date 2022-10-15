@@ -1,0 +1,662 @@
+/* 090316 Cwebba_WP base.scss with styles from CWebba07 base.css */
+/* Previous: 061415 Cwebba Theme from 062914 CSS */
+
+
+/* This Normalize Reset conflicts with Fancybox.
+html {
+    overflow: scroll;
+}*/
+
+/* ============  [    Base ]   ============= */
+
+html { font-family: 'open_sansregular', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-size: 16px;
+  }
+
+html,
+body {
+  height: 100%;
+  min-height: 100%;
+}
+
+body, nav, ul, li, a  {margin: 0; padding: 0;}
+
+* { -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+box-sizing: border-box;
+*behavior: url(/assets/javascripts/masterscripts/boxsizing.htc);
+}
+
+.unborderbox { box-sizing: content-box;
+*behavior: url(/js/masterscripts/boxsizing.htc);
+}
+
+body {
+font-family: 'open_sansregular', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+font-size: 100%;
+width:100%;
+margin: 0 auto;
+padding: 0;
+} /* Center page without wrapper */
+
+body {
+font: 400 normal 1rem/1.70rem;
+color:#241000;
+color:hsla(27, 100%, 7%, 1);
+text-shadow:rgba(0,0,0,0.01) 0 0 1px;
+    -o-transition:all .5s ease-in; 
+    -moz-transition:all .5s ease-in; 
+    -webkit-transition:all .5s ease-in;
+    transition:all .5s ease-in; 
+background-color:rgba(135, 135, 105, 0.4);
+background:url('assets/images/oj_emboss.png');
+}
+
+
+/*-  SELF-CLEARING FLOATS
+----------------------------------------------------------------------*/
+
+header:after, nav:after, article:after, aside:after, footer:after, hgroup:after, section:after, .logo:after, figure:after, .page:after { 
+  content:"\0020";display:block;height:0;clear:both;visibility:hidden;overflow:hidden;}
+
+.clearfix {display:block;}
+.clearfix:after, .container:after {content:"\0020";display:block;height:0;
+clear:both;visibility:hidden;
+overflow:hidden;
+}
+.clear {clear:both;
+}
+
+.clear2 { 
+height:0;clear:both;visibility:hidden;overflow:hidden;
+line-height:0;
+}
+
+
+/* Page is a class used by WordPress. FIX Remove "ground classes"*/
+.ground,
+.basal {
+width: 97.5%;
+margin: 0 auto;
+padding: 0;
+background:#FFF;
+  -o-transition:width .25s ease-in; 
+    -moz-transition:width .25s ease-in; 
+    -webkit-transition:width .25s ease-in;
+  transition:width .25s ease-in; 
+}
+
+.cask {
+padding-left: 1.375em;
+padding-right: 1.375em;
+}
+
+.row {
+width: 100%;
+/*max-width: 1140px;*/
+margin: 0 auto;
+overflow: hidden;
+}
+
+/* Icon Font */
+@font-face {
+  font-family: 'cwebba-b';
+  src: url('font/cwebba-b.eot');
+  src: url('font/cwebba-b.eot?#iefix') format('embedded-opentype'),
+       url('font/cwebba-b.woff') format('woff'),
+       url('font/cwebba-b.ttf') format('truetype'),
+       url('font/cwebba-b.svg#cwebba-b') format('svg');
+  font-weight: normal; font-style: normal;
+}
+
+[class*="icon-"] {
+  font-family: 'cwebba-b';
+  font-style: normal;
+  font-size: 1.5em;
+speak: none;
+}
+
+.icon-gplus:before     { content: "\f0d5"; 
+line-height:1.475em;
+ } 
+.icon-flickr:before      { content: "\46"; 
+line-height:1.475em;
+} 
+.icon-linkedin:before       { content: "\f0e1"; 
+line-height:1.475em;
+ } 
+.icon-twitter:before { content: "\f099"; 
+line-height:1.475em;
+ }
+.icon-github-circled:before { content: "\f09b"; 
+line-height:1.475em;
+ }
+.icon-facebook-squared:before { content: "\f308"; 
+line-height:1.475em;
+ }
+.icon-dribbble:before { content: "\44"; 
+line-height:1.475em;
+ }
+.icon-quote-left:before { content: "\f10d"; }
+.icon-github-circled:before { content: "\f09b"; }
+.icon-home:before { content: "\2302"; } 
+.icon-cog:before { content: "\2699"; } 
+.icon-location:before { content: "\e801"; } 
+icon-heart:before { content: "\2665"; }
+
+
+
+
+/* formatting of elements */
+
+/* TYPOGRAPHY */
+
+p {
+font: 1em  'Open Sans', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+font-weight:300;
+font-size: 1em;
+line-height: 1.5em;
+font-weight: normal;
+margin: 0 0 .5em 0;
+}
+
+p:last-of-type { 
+margin-bottom:1.5em;
+}
+
+/*
+3/16 = 0.1875
+0.375
+9/16 = 0.5625
+10/16 = 0.625
+11/16 = 0.6875
+12/16 = 0.75
+13/16 = 0.8125
+14/16 = 0.875
+15/16 = 0.9375
+6/16 = 0.375
+18/16 = 1.125
+19/16 = 1.1875
+20/16 = 1.25
+*/
+
+.p6 { font-size:0.375em;
+line-height:1em;
+}
+
+.p8 { font-size:0.5em;
+line-height:1em;
+}
+
+.p9 {font-size:.5625em;
+line-height: 1.5em;
+margin: 0 0 2.15em 0;
+}
+
+.p10 {font-size:.625em;
+line-height: 1.5em;
+margin: 0 0 1.75em 0;
+}
+
+.p11 {font-size:.6875em;
+line-height: 1.5em;
+margin: 0 0 1.375em 0;
+}
+
+.p12 {font-size:.75em;
+line-height: 1.5em;
+margin: .75em 0 .75em 0;
+}
+
+.p13 {font-size:.8125em;
+line-height: 1.6875em;
+margin: 0.65625em 0 0.65625em 0;
+}
+
+.p14 {font-size:.875em;
+line-height: 1.5em;
+margin: .625em 0 1em 0;
+}
+
+.p14b {font-size:.875em;
+line-height: 1.5em;
+margin: 0;
+}
+
+.p15 {font-size:.9375em;
+line-height: 1.5em;
+margin: 0 0 0.625em 0;
+}
+
+.p18 {font-size:1.125em;
+line-height: 1.375em;
+margin: 0 0 0.458333333333333em 0;
+}
+
+.p19 {font-size:1.1875em;
+line-height: 1.1875em;
+margin: 0 0 0.625em 0;
+}
+
+.p20 {font-size:1.25em;
+line-height: 1.25em;
+margin: 0 0 0.416666666666667em 0;
+}
+
+.p24 {font-size:1.5em;
+line-height: 2.25em;
+margin: .25em 0 1.5em 0;
+float:right;
+text-align:right;
+}
+
+/* LINKS */
+
+a { 
+color: #004477;
+color:hsla(206, 100%, 23%, 1);
+font-size: inherit;
+line-height: inherit;
+text-decoration: none;
+vertical-align:baseline; 
+margin:0; 
+padding:0; 
+border: 0;
+outline: 0;
+background:transparent; 
+word-wrap: break-word;
+overflow-wrap: break-word;
+  -o-transition: 0.2s color linear;
+  -moz-transition: 0.2s color linear;
+  -webkit-transition: 0.2s color linear;
+  transition: 0.2s color linear;
+}
+
+a:focus { 
+outline: 0;
+}
+a:hover, a:active { outline: none; }
+
+a:focus, a:hover { color: #0066CC;
+text-decoration: underline; 
+}
+
+a:visited {color: #335577;
+text-decoration: none;
+}/* grey blue */
+
+a:active { text-decoration: underline; 
+color: #900000; 
+}
+
+a.contact {
+  color : #E6662D;
+  text-decoration: none;
+}
+
+a.contact:hover {
+  color : #FF9966;
+  text-decoration: underline;
+}
+
+.credit {font-family: 'Open Sans', Arial, "Helvetica Neue", Helvetica, sans-serif;
+font-weight:400;
+font-size:.675em;
+line-height:.75em;
+}
+
+.credit a {color: #84A4BD;
+  text-decoration: none;
+  -o-transition: 0.2s color linear;
+  -moz-transition: 0.2s color linear;
+  -webkit-transition: 0.2s color linear;
+  transition: 0.2s color linear;
+}/*csw blue */
+
+.credit a:focus { outline: thin dotted; }
+
+.credit a:focus, a:hover {color: #0066CC;
+text-decoration: underline; 
+}
+
+.credit a:visited {color: #8C0C10;
+text-decoration: none;
+}
+
+a.cutine { color: #3399CC;
+margin: 0 0 .5em 0;
+font-family: 'open_sanslight_italic', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+font-size: .75em;
+line-height: 1.4em;
+font-style:italic;
+text-decoration: none; }
+
+a.cutine:hover { color: #3399CC;
+margin: 0 0 .5em 0;
+font-size: .75em;
+line-height: 1.4em;
+font-style:italic;
+text-decoration: underline; }
+
+a.cutine:visited {color: #0066CC;
+margin: 0 0 .5em 0;
+font-size: .75em;
+line-height: 1.4em;
+font-style:italic;
+text-decoration: underline;
+}/*Royal blue */
+
+p a, p a:visited { line-height: inherit; }
+
+a img, img { border: none; }
+a img {display: block;} /* Stops image links getting text link styles */
+
+a.menu {
+font-family: 'Ubuntu', Verdana, Corbel, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans", "Verdana Ref", sans-serif;
+font-size:.875em;
+font-weight: 300;
+line-height : 1.625em;
+color: #3090C0;
+text-decoration: none;
+}
+
+a.menu:hover {
+  font-family: 'Ubuntu', Verdana, Corbel, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans", "Verdana Ref", sans-serif;
+  color : #5FC1F1;
+  text-decoration: underline;
+}
+
+
+/* Headers */
+
+h1, h2, h3, h4, h5, h6,  blockquote {font-family: 'Ubuntu', Verdana, Corbel, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans", "Verdana Ref", sans-serif;
+  color: #8c4103;
+  color:hsla(27, 96%, 28%, 1);/*#8C4103;*/
+  font-weight: 300;
+}
+
+h1 { font-size: 2em; line-height:1.2em; margin-bottom:0.35em; margin-top:0; }
+
+h2 { font-size:1.75em;line-height:1.5em; margin-bottom:.2em; }
+
+h3 { font-size:1.5em;line-height:1.25em; margin-bottom:.35em; }
+
+h4 { font-size:1.375em;line-height:1.25em; margin-bottom:.35em; }
+
+h5 { margin-top:.5em;
+  font-size:1em;line-height:1.25em; margin-bottom:.35em; }
+
+h6 { font-size:1em;line-height:1.25em; margin-bottom:.25em;
+  margin-top: 0; }
+
+blockquote {
+color:#625550;
+color:hsla(15, 10%, 35%, 1);
+font-size:1.125em;
+line-height: 1.375em;
+margin: 0 0 0.5em 0;
+font-style:italic;
+}
+
+blockquote.big {
+color:#625550;
+color:hsla(15, 10%, 35%, 1);
+
+font-size:1.125em;
+line-height: 1.375em;
+letter-spacing: 0.1em;
+background:hsla(150, 40%, 70%, .3);
+padding:0.25em 1% 0.375em 2%;
+margin: 1.25em 0 1.375em 0;
+}
+
+/* = MEDIA / IMG Elements 
+---------------------------------------------------- */
+img {
+border: 0;
+margin: 0 auto 0 auto;
+background:transparent;vertical-align:baseline;
+}
+
+svg:not(:root) {
+    overflow: hidden;
+}
+
+img { -ms-interpolation-mode: bicubic; }
+
+/* IMAGE MODIFIERS */
+.border {
+	border-style: solid;
+	border-color: #DDD;
+border-width: 1px;
+}
+
+.centered {
+display: block;
+margin-left: auto; margin-right: auto;
+}
+
+.rnd {
+border: 0;
+-webkit-border-radius: .5em;
+-moz-border-radius: .5em;
+border-radius: .5em;
+}
+
+.rnd3 {
+border: 0;-webkit-border-radius: .3em;
+-moz-border-radius: .3em;
+border-radius: .3em;
+}
+
+
+a img { border:0;}
+
+figure img, figure object, figure embed, figure video {max-width: 100%;
+width: 100%; height: auto; 
+}
+
+svg:not(:root) { overflow:hidden} /* Correct IE9 overflow */
+
+/* example:
+img {
+  max-width:240px;
+  width:100%
+} */
+
+figure {
+padding:0;
+margin:0 0 .5em;
+font-size:1rem;
+}
+
+figcaption { 
+  margin:.375em 0; 
+  font-size:1em; line-height:1em; color: #262626;
+}
+figcaption p { margin:0 0 .5em; font-size:0.75em; 
+  line-height:1.25em; 
+  color: #262626;
+text-align:left;
+}
+
+figure.w250 { width:250px;
+max-width:250px; 
+float:left;
+text-align:left;
+margin-bottom:1em;
+margin-right:1em; 
+padding:0;
+}
+
+.w250 a { margin:0;
+}
+
+
+/* = LISTS 
+---------------------------------------------------- */
+
+ul { list-style:initial;
+}
+
+/* eliminate this reset
+ol,ul{ list-style:none;}
+*/
+
+
+/*From cwebba Style - see old version note.
+This affects top nav.
+ul,ol { list-style: none;
+line-height:4px;
+margin-top:0;
+padding: 0 }*/
+
+nav ul{
+  list-style:none;
+}
+
+nav li{
+  display:inline;
+}
+
+/* More Stuff:
+ul { list-style: inherit;
+list-style-type:disc;
+list-style-position :outside;
+*/
+
+
+li ul, li ol {margin:0;}
+dl dd {margin-left: 1.5em}
+
+
+ul.example {
+    list-style: none;
+  line-height:inherit;
+    padding:0;
+}
+ 
+.example li { 
+    padding-left: 1em; 
+    text-indent: -.75em;
+    margin:0 0 .5em;
+}
+ 
+.example li:before {
+    content: "» ";
+    color: #ab3223; /* or whatever color you prefer */
+}/* Â» RIGHT-POINTING DOUBLE ANGLE QUOTATION MARK &#187; */
+
+
+ul.dash,
+ul.mdash,
+ul.bullet,
+ul.triangle,
+ul.angle
+ {
+  list-style: none;
+   list-style-position: inside;
+  font-size:inherit;
+  line-height:inherit;
+  margin-left:0;
+  padding-left:0;
+    padding-left: 1.5em; 
+    text-indent: -1.5em;
+}
+ 
+.dash li,
+.mdash li,
+.bullet li,
+.triangle li,
+.angle li
+ { 
+    margin:0 0 .5em;
+}
+
+.dash li:before {
+    content: "\2013\00a0\020";
+    color: #A92323; /* or whatever color you prefer */
+}
+
+.mdash li:before {
+    content: "\2014\020";
+    color: #A92323; /* or whatever color you prefer */
+}
+
+.bullet li:before {
+    content: "\2022\00a0\020";
+    color: #A92323; /* or whatever color you prefer */
+}/* â€¢ */
+
+.triangle li:before {
+    content: "\2023\00a0\020";
+    color: #A92323; /* or whatever color you prefer */
+}/* â€£ */
+
+.angle li:before {
+    content: "\00bb\00a0\020";
+    color: #A92323; /* or whatever color you prefer */
+}/* Â» */
+
+
+
+/* ==============================
+   Forms Normalize Reset
+   ============================ */
+fieldset {
+    border: 1px solid #c0c0c0;
+    margin: 0 2px;
+    padding: 0.35em 0.625em 0.75em;
+}
+legend {
+    border: 0;
+    padding: 0;
+}
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+    -webkit-appearance: button;
+    -moz-appearance: button; 
+    cursor: pointer;
+}
+button[disabled],
+input[disabled] {
+    cursor: default;
+}
+input[type="checkbox"],
+input[type="radio"] {
+    box-sizing: border-box;
+    padding: 0;
+*behavior: url(/assets/javascripts/master-scripts/boxsizing.htc);
+}
+input[type="search"] {
+    -webkit-appearance: textfield;
+    -moz-appearance: textfield;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+*behavior: url(/assets/javascripts/master-scripts/boxsizing.htc);
+}
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+textarea {
+    overflow: auto; /* 1 */
+    vertical-align: top; /* 2 */
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* ======= [ END NORMALIZE RESETS ]  =========== */
+

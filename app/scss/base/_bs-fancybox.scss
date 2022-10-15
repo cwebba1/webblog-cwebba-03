@@ -1,0 +1,608 @@
+/* - – [ God Save Bootstrap Code  ] – - */
+
+.container-fluid02 {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 2%;
+  padding-right: 2%;
+}
+.container-fluid02:before, .container-fluid02:after {
+  content: " ";
+  display: table;
+}
+.container-fluid02:after {
+  clear: both;
+}
+
+/* TEST NO-QUERIES (MOBILE) */
+
+.navbar-nav {
+  width: 100%;
+  font-size: 1rem;
+  margin: 0 auto;
+  min-height: 1em;
+}
+
+.navbar-default {
+  color:inherit;
+  background-color: inherit;
+  border-color: transparent;
+}
+
+.navbar-header {
+  width: 20%;
+  float: right;
+}
+
+.navbar-collapse {
+  padding-right: 1em;
+  padding-left: 1em;
+  overflow-x: visible;
+  -webkit-overflow-scrolling: touch;
+  border-top: 0 solid transparent;
+}
+
+.navbar-brand {
+  display: inline-block;
+  padding: 0;
+  font-size: 1em;
+  line-height: 1.2em;
+  margin: 0 auto;
+}
+
+.navbar-nav > li {
+  float: none;
+  text-align:center;
+  margin:auto;
+}
+
+.navbar-default .navbar-nav > li > a,
+.navbar-nav > li > a {
+  color: #000000;
+  padding: .25em .75em;
+  margin: .125em auto;
+  -webkit-border-radius: 9px;
+  -moz-border-radius: 9px;
+  border-radius: 9px;
+  max-width: 98%;
+}
+
+.navbar-default .navbar-nav > li > a:hover, 
+.navbar-nav > li > a:hover, 
+.navbar-default .navbar-nav > li > a:focus,
+.navbar-nav > li > a:focus {
+  color: #999999;
+  padding: .25em .75em;
+  margin: .125em auto;
+  text-decoration: none;
+  background: rgba(220, 220, 220, 0.3);
+  -o-transition: all .25s ease-in;
+  -moz-transition: all .25s ease-in;
+  -webkit-transition: all .25s ease-in;
+  transition: all .25s ease-in;
+}
+
+.navbar-default .navbar-nav > li.active > a,
+.navbar-nav > li.active > a {
+  color: #696969;
+  background-color: #CFC9C9;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, from(rgba(207, 201, 201, 0.3)), to(rgba(182, 175, 175, 0.3)));
+  /*OLD Webkit*/
+  background-image: -webkit-linear-gradient(top, rgba(207, 201, 201, 0.3), rgba(182, 175, 175, 0.3));
+  background-image: -moz-linear-gradient(top, rgba(207, 201, 201, 0.3), rgba(182, 175, 175, 0.3));
+  background-image: -ms-linear-gradient(top, rgba(207, 201, 201, 0.3), rgba(182, 175, 175, 0.3));
+  background-image: -o-linear-gradient(top, rgba(207, 201, 201, 0.3), rgba(182, 175, 175, 0.3));
+  background: linear-gradient(rgba(207, 201, 201, 0.3), rgba(182, 175, 175, 0.3));
+}
+
+/* line 303, ../sass/base/_helpers.scss */
+.navbar-default .navbar-nav > li.active > a:hover,
+.navbar-nav > li.active > a:hover,
+.navbar-default .navbar-nav > li.active > a:focus,
+.navbar-nav > li.active > a:focus {
+  color: #333333;
+  background-color: #CFC9C9;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, from(rgba(182, 175, 175, 0.3)), to(rgba(207, 201, 201, 0.3)));
+  /*OLD Webkit*/
+  background-image: -webkit-linear-gradient(top, rgba(182, 175, 175, 0.3), rgba(207, 201, 201, 0.3));
+  background-image: -moz-linear-gradient(top, rgba(182, 175, 175, 0.3), rgba(207, 201, 201, 0.3));
+  background-image: -ms-linear-gradient(top, rgba(182, 175, 175, 0.3), rgba(207, 201, 201, 0.3));
+  background-image: -o-linear-gradient(top, rgba(182, 175, 175, 0.3), rgba(207, 201, 201, 0.3));
+  background: linear-gradient(rgba(182, 175, 175, 0.3), rgba(207, 201, 201, 0.3));
+}
+
+
+
+#full-back .navbar-nav > li > a,
+.full-back .navbar-nav > li > a {
+  color: #FFF;
+  text-shadow: rgba(37, 3, 125, 0.7) 1px 1px 4px;
+  background: rgba(205, 245, 245, 0.001);
+}
+
+
+#full-back .navbar-nav > li > a:hover,
+#full-back .navbar-nav > li > a:focus,
+.full-back .navbar-nav > li > a:hover,
+.full-back .navbar-nav > li > a:focus {
+  color: #FFF;
+  background: rgba(205, 245, 245, 0.3);
+ }
+
+#full-back .navbar-nav > li.active > a,
+#full-back .navbar-nav > li.active > a,
+.full-back .navbar-nav > li.active > a,
+.full-back .navbar-nav > li.active > a {
+  color: #fff;
+ background: rgba(255, 145, 145, 0.3);
+}
+
+
+
+.navbar-nav > .dropdown .dropdown-menu {
+  top: auto;
+  left: auto;
+}
+
+/*UL.DROPDOWN DECLARATIONS:*/
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: .5em;
+  z-index: 1000;
+  display: none;
+  float: left;
+  min-width: 12.5em;
+  padding: 0;
+  margin: .125em 0;
+  list-style: none;
+  font-size: .875em;
+  text-align: left;
+  background-color: #fff;
+    background: rgba(255, 255, 255, 0.8); /*wht-back*/
+border: 1px solid #ccc;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  background-clip: padding-box;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+}
+
+/* rounded corners for first and last child */
+.dropdown-menu li:first-child > a {
+  -webkit-border-top-left-radius: 6px;
+  -moz-border-radius-topleft: 6px;
+  -webkit-border-top-right-radius: 6px;
+  -moz-border-radius-topright: 6px;
+border-radius: 6px 6px 0px 0px; /*(top-left, top-right, bottom-right, bottom-left)*/
+margin:0 auto;
+}
+
+.dropdown-menu li:last-child > a {
+  -webkit-border-bottom-left-radius: 6px;
+  -moz-border-radius-bottomleft: 6px;
+  -webkit-border-bottom-right-radius: 6px;
+  -moz-border-radius-bottomright: 6px;
+border-radius: 0px 0px 6px 6px; /*(top-left, top-right, bottom-right, bottom-left)*/
+margin:0 auto;
+}
+
+
+#full-back .dropdown-menu {
+  background: rgba(205, 245, 245, 0.15); /*full-back*/
+}
+
+
+
+.dropdown-menu > li > a {
+  display: block;
+  padding: .25em 1.25em;
+  clear: both;
+  font-weight: normal;
+  line-height: 1.428571429;
+  color: #333333;
+  white-space: nowrap;
+  text-align:center;
+}
+
+.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
+  text-decoration: none;
+  color: #696969;
+  background: rgba(145, 145, 145, 0.3);
+}
+
+.dropdown-menu > .active > a, .dropdown-menu > .active > a:hover, .dropdown-menu > .active > a:focus {
+  color: #696969;
+  text-decoration: none;
+  outline: 0;
+ background: rgba(255, 145, 145, 0.3);
+}
+
+
+#full-back .dropdown-menu > li > a {
+  display: block;
+  padding: .25em 1.25em;
+  clear: both;
+  font-weight: normal;
+  line-height: 1.428571429;
+  color: #FFFFFF;
+  white-space: nowrap;
+  text-align:center;
+    text-shadow: 1px 1px 4px rgba(205, 245, 245, 0.15);
+
+}
+
+#full-back .dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
+  text-decoration: none;
+  color: #FFFFFF;
+  background: rgba(145, 145, 145, 0.3);
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 1);
+
+}
+
+
+/* Toggle Button */
+
+.navbar-default .navbar-toggle {
+  border-color: #DDD;
+}
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+  background-color: rgba(145, 145, 145, 0.1);
+}
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #AAA;
+}
+
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+  border-color: rgba(145, 145, 145, 0.1);
+}
+
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+  background: rgba(145, 145, 145, 0.1);
+  color: #696969;
+}
+
+
+/* END NAV (MOBILE) */
+
+
+
+/* BS Carousel */
+
+@font-face {
+  font-family: 'Glyphicons Halflings';
+  src: url('../assets/fonts/bootstrap/glyphicons-halflings-regular.eot');
+  src: url('../assets/fonts/bootstrap/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../assets/fonts/bootstrap/glyphicons-halflings-regular.woff') format('woff'), url('../assets/fonts/bootstrap/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons-halflingsregular') format('svg');
+}
+
+html,
+body,
+.carousel,
+.item,
+.active,
+.carousel-inner,
+.carousel-inner .item {
+  min-height: 100%;
+}
+
+/*.item div:nth-child(1) {
+min-height:600px;
+}
+*/
+#carousel {font-size:1rem;
+}
+
+/*
+.carousel-fade .carousel-inner .item {
+  opacity: 0;
+  -webkit-transition-property: opacity;
+  -moz-transition-property: opacity;
+  -o-transition-property: opacity;
+  transition-property: opacity;
+}
+.carousel-fade .carousel-inner .active {
+  opacity: 1;
+}
+*/
+
+.carousel-fade .item { 
+-webkit-transition: opacity 5s; 
+-moz-transition: opacity 5s; 
+-ms-transition: opacity 5s; 
+-o-transition: opacity 5s; 
+transition: opacity 5s;
+}
+.carousel-fade .active.left { left:0;opacity:0;
+z-index:2;
+}
+.carousel-fade .next { left:0;opacity:1;
+z-index:1;
+}
+ 
+/*
+.carousel-control {
+  top: 0px;
+  left: 0px;
+  width: 20%;
+  height: 100%;
+  margin-top: 0px;
+  font-size: 0px;
+  border: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  background: white;
+  background:transparent;
+  opacity: 0;
+}
+
+.carousel-control.left {
+  background-image: -webkit-linear-gradient(left, color-stop(rgba(255, 255, 255, 0.5) 0), color-stop(rgba(255, 255, 255, 0.0001) 100%));
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.5) 0, rgba(255, 255, 255, 0.0001) 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80FFFFFF', endColorstr='#00FFFFFF', GradientType=1);
+}
+
+.carousel-control.right {
+  right: 0;
+  left: auto;
+  background-image: -webkit-linear-gradient(left, color-stop(rgba(255, 255, 255, 0.0001) 0), color-stop(rgba(255, 255, 255, 0.5) 100%));
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.0001) 0, rgba(255, 255, 255, 0.5) 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00FFFFFF', endColorstr='#80FFFFFF', GradientType=1);
+}
+
+
+.carousel-control.right {
+  right: 0px;
+}
+
+.carousel-control:hover{
+  opacity: 0.1;
+}
+*/
+
+/*   [ TEST CODE ]    */
+
+/**
+ * Move bootstrap carousel controll arrow outside the contents.
+ */
+$carouselArrowWidth: 3em;
+.carousel-control {
+  width: $carouselArrowWidth;
+  .icon-prev, .icon-next, .glyphicon-chevron-left, .glyphicon-chevron-right {
+    margin: 0.2em;
+  }
+  .icon-prev, .glyphicon-chevron-left {
+    left: 0;
+  }
+  .icon-next, .glyphicon-chevron-right {
+    right: 0;
+  }
+}
+.carousel {
+  padding-left: $carouselArrowWidth + 0.5em;
+  padding-right: $carouselArrowWidth + 0.5em;
+}
+ 
+/**
+ * carousel control style
+ */
+.carousel-control {
+  opacity: 1;
+  color: #ccc;
+  text-shadow: none;
+  &.left, &.right {
+    background-image: none;
+  }
+}
+.carousel-control:hover,
+.carousel-control:focus {
+  color: #999;
+}
+
+/* ASCI Versions */
+.chevron-left:before {
+  content: "&#8250;";
+}
+.chevron-right:before {
+  content: "&#8249;";
+}
+
+.glyphicon-chevron-left:before {
+  content: "\2329";
+     } 
+  .glyphicon-chevron-right:before {
+  content: "\232A";
+  }
+
+
+
+/*   [ENDS HERE]    */
+
+.carousel-inner {
+margin-bottom:2.5em;
+}
+
+.carousel-indicators {
+  position: absolute;
+  bottom: -40px;
+  left: 50%;
+  z-index: 15;
+  width: 100%;
+  padding-left: 0;
+  margin-left: -50%;
+  text-align: center;
+  list-style: none;
+}
+
+
+
+.carousel-indicators li {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  margin: 2px 3px;
+  text-indent: -999px;
+  cursor: pointer;
+  background-color: #000 \9;
+  background-color: rgba(143,138,138,0.9);
+  border: 1px solid #ffffff;
+  border-radius: 10px;
+}
+
+.carousel-indicators li.active {
+  width: 18px;
+  height: 18px;
+  margin: 0;
+  background-color: #ffffff;
+  border:1px solid rgba(143,138,138,0.9);
+}
+
+/* These are your slider heights */
+/*
+.slider-size-portrait {
+height: 700px; 
+}
+
+.slider-size {
+height: 400px; 
+}
+
+.slider-mid-size {
+height: 450px;
+}
+*/
+
+.carousel {
+width:100%; 
+margin:0 auto; /* center your carousel if other than 100% */ 
+}
+
+.carousel-caption {
+  position: static;
+/*  right: 15%;
+  bottom: 20px;
+  left: 15%;*/
+  z-index: 10;
+  padding-top: .75em;
+  padding-bottom: .125em;
+  text-align: center;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+  background:#000;
+}
+
+.carousel-caption p {
+margin:0 auto .5em;
+}
+
+
+
+
+/* - – [ God Save Fancybox  ] – - */
+
+
+
+/* This is the Successful Pattern Example */
+
+.projectthumbs div{
+  vertical-align:top;
+}
+
+.bkimg {
+background: #F5F4F4 url(../assets/images/indie_indian_portrait.jpg) no-repeat center center;
+      background-size: cover;
+display:block; 
+height:250px;
+text-indent:-9999px;
+}
+
+#twoxtrapixel{
+background-image:url(../assets/images/indie_indian_portrait.jpg);
+}
+
+
+.projectthumbs p { font-size:.75em;
+  line-height:1.25em;
+  margin:0 0 1.5em;
+}
+
+/* This is the Successful Pattern Example
+.list-img {
+background: #F5F4F4 url(../assets/images/indie_indian_landscape.jpg) no-repeat center center;
+      background-size: cover;
+display:block; 
+height:140px;
+text-indent:-9999px;
+}
+ 
+#onextrapixel{
+background-image:url(../assets/images/indie_indian_landscape.jpg);
+}
+*/
+
+
+.list-img {
+  background-size: cover;
+  display:block; 
+  text-indent:-9999px;
+}
+
+.portrait {
+height:720px;
+min-height:275px;
+} 
+
+.landscape {
+min-height:240px;
+} 
+
+
+.portrait,
+.landscape,
+.slider-size-portrait {
+  -o-transition:all .5s ease-in-out; 
+    -moz-transition:all .5s ease-in-out; 
+    -webkit-transition:all .5s ease-in-out;
+  transition:all .5s ease-in-out; 
+}
+
+
+
+/* Image Styles */
+
+.carousel .carousel-inner .bg {
+background-repeat:no-repeat;
+background-size:cover;
+ -o-transition:all .5s ease-in-out; 
+    -moz-transition:all .5s ease-in-out; 
+    -webkit-transition:all .5s ease-in-out;
+  transition:all .5s ease-in-out; 
+}
+.bk-img { 
+}
+
+/* MOBILE IMAGES */
+
+/* #corp-carousel 
+.corp00 { background:url(../assets/images/corporate/img_4029_800.jpg) center center;
+height:50vh; }
+*/
+
+/* Full Page Slider codes. Background images are set within the HTML using inline CSS, not here */
+
+.fill {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+

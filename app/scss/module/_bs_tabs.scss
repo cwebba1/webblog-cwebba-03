@@ -1,0 +1,71 @@
+/*! _bs_tabs.scss 071816 */
+/*----------[ =section id="BS  Tabs" ]----------*/
+
+.nav-tabs .nav-link.active,
+.nav-tabs .nav-link.active:focus,
+.nav-tabs .nav-link.active:hover,
+.nav-tabs .nav-item.open .nav-link,
+.nav-tabs .nav-item.open .nav-link:focus,
+.nav-tabs .nav-item.open .nav-link:hover {
+    color: hsla(210, 100%, 60%, 1);
+}
+.nav-tabs .nav-link:hover {
+    background: #EBEBEB;
+    color: #ab3223;
+    text-shadow: hsla(7, 66%, 40%, 0.2) 0 0 1px;
+    -webkit-transition: background .2s ease-in;
+    -moz-transition: background .2s ease-in;
+    -o-transition: background .2s ease-in;
+}
+
+.nav-pills > .active > a,
+.nav-pills > .active > a:hover,
+.nav-pills > .active > a:focus {
+    color: #ffffff;
+    background-color: #ab3223;
+}
+.nav-pills .nav-link.active,
+.nav-pills .nav-link.active:focus,
+.nav-pills .nav-link.active:hover,
+.nav-pills .nav-item.open .nav-link,
+.nav-pills .nav-item.open .nav-link:focus,
+.nav-pills .nav-item.open .nav-link:hover {
+    color: #fff!important;
+    cursor: default;
+    background-color: hsla(7, 66%, 40%, 1);
+}
+
+.tab-pane {
+    padding: 1.5em 1.5em .5em;
+    font-size: 1rem;
+    border: 1px solid #DDD;
+    border-top: 0;
+}
+.tab-pane h6 {
+    font-family: 'Istok Web', Verdana, Tahoma, Corbel, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans", "Verdana Ref", sans-serif;
+    font-size: .9375em;
+    line-height: 1.5em;
+    font-weight: 700!important;
+    margin-bottom: 0;
+}
+.tab-pane p {
+    font-size: 0.875em;
+    line-height: 1.375em;
+    color: #444;
+    margin-top: 0;
+    margin-bottom: .75em;
+}
+.tab-pane p.p2 {
+    font-size: 0.875em;
+    line-height: 1.375em;
+    color: #444;
+}
+.tab-pane a:link,
+.tab-pane a:visited {
+    color: hsla(210, 100%, 60%, 1);
+}
+.tab-pane a:hover {
+    color: hsla(7, 66%, 40%, 1);
+    text-decoration: underline;
+}
+

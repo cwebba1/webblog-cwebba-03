@@ -1,0 +1,117 @@
+/*! _reset.scss */
+/* 051116 Reset. This contains declarations from cwebba, BS, Eric Myer, HTML5 Reset */
+
+/* BS resets from _reboot.scss */
+
+html,
+button,
+input,
+select,
+textarea {
+    font-family: sans-serif;
+}
+
+/* Box Sizing https://css-tricks.com/box-sizing
+http://stackoverflow.com/questions/29605843/how-do-you-add-box-sizing-border-box-to-normalize-css-file
+http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+*/
+
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+*behavior: url(/assets/javascripts/master-scripts/boxsizing.htc);
+}
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+  }
+
+.unborderbox { box-sizing: content-box;
+*behavior: url(/js/master-scripts/boxsizing.htc);
+}
+
+body, nav, ul, li, a  {margin: 0; padding: 0;}
+
+/*-  SELF-CLEARING FLOATS  - Example from stephencaver_Responsive
+----------------------------------------------------------------------*/
+
+header:after, nav:after, article:after, aside:after, footer:after, hgroup:after, section:after, .logo:after, figure:after, .page:after { content:"\0020";display:block;height:0;clear:both;visibility:hidden;overflow:hidden;}
+
+.clearfix {display:block;}
+.clearfix:after, .container:after {content:"\0020";display:block;height:0;
+clear:both;visibility:hidden;
+overflow:hidden;
+}
+
+[tabindex="-1"]:focus {
+  outline: none !important;
+}
+
+[role="button"] {
+  cursor: pointer;
+}
+
+a,
+area,
+button,
+[role="button"],
+input,
+label,
+select,
+summary,
+textarea {
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
+}
+/* END BS reboot.scss */
+
+
+/* HTML5 Boilerplate v5.0 | MIT License | http://h5bp.com/ */
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}/*light blue*/
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+/*
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle; /* This varies from Normalize*/
+
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}  *//* This varies from Normalize*/
+
+/* END HTML5 Boilerplate v5.0 */
+
+/*! CWebba Resets */
+
+:focus,
+:active {
+    outline: 0
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

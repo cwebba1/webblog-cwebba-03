@@ -1,0 +1,487 @@
+/*HEADER section */
+
+header { text-align:center;
+	clear:both;
+	float:left;
+	width:100%;
+}
+
+header figure { margin-bottom:0;
+}
+
+.logo img { float:left;
+}
+
+.logo {
+  width: 34.1232227488152%;
+  margin: 0;
+  float: left;
+}
+
+.rightrail {
+  width: 65.8767772511848%;
+  margin: 0;
+  float: right;
+  overflow: hidden;
+}
+
+#cswnavpic { 
+line-height:0;
+}
+
+/* HACK - See http://stackoverflow.com/questions/4604436/is-there-a-non-trivial-purpose-for-defining-a-css-style-for-htmlxmlns - Might change to Conditional Comment */
+html[xmlns] .top {
+	display: block;
+}
+
+ul.top { 
+width: 100%;
+height:2em;
+margin:auto;
+text-align: justify;
+font-size: 0;
+/*  font-size: 12px\9; *//* IE6-9 only hack */
+}
+
+.top:after {
+  content: "";
+  width: 100%;
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+}
+
+.top li {
+  display: inline-block;
+  position: relative;
+  font-size: 1rem;
+  padding: 0;
+  zoom: 1;
+  *display: inline;
+}
+
+.top li:last-of-type { 
+margin-right:1.5em;
+}
+
+
+
+.drop {
+	position: relative;
+	}/* WAS li.drop - rename to be "rel" */
+
+.top a {
+  display: block;
+  float: left;
+  text-decoration: none;
+}
+
+.top a:link, .top a:visited { 
+  font-family: $head-ft;
+  font-weight:500;
+  font-size: 1em;
+  color: rgba(33,16,0,.7);
+  line-height:1em;
+  transition:font-size .25s ease-in, padding .25s ease-in; 
+  background-color: transparent;
+  text-decoration: none;
+  padding: 0.5em 12%;/*was 7.5%*/
+  border: 0;
+border-radius: .35em;
+}
+
+.top a:hover, .top a:active{
+color:rgba(33,16,0,1);
+  background: #BBDDCC;
+  background: map-get($gradients, topnavhover);
+}
+
+.top a, .top a:visited {display:block;float:left; text-decoration:none;
+}
+
+
+.top .current a, .top li:hover > a {
+	color: #732626;
+	}
+
+.top .current a{
+padding:.5em 12%;
+border:0;
+        border-radius:.35em;
+  background: #FFCCCC;
+  background: map-get($gradients, topcurrent);
+}
+
+
+/* level 2 list   – –  – –  – –  – –  – –  – – */
+.top ul {
+  background: #F9FBFA;
+  background: map-get($gradients, topul);
+  color: #fff;
+  display: none;
+  margin: 0;
+  padding: 0; 
+  width: 11.5em; /* HERE this has an affect - 150% width */
+  position: absolute;
+  top: 1.875em;
+  left: 0;
+  z-index: 2;
+  border: solid 1px #CFCFCF;
+  border-radius: 10px 10px 10px 10px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, .3);
+height:5.75em;
+}
+
+/*
+.top li:nth-child(even) { background-color:rgba(148, 25, 85, 0.4);}
+.top li:nth-child(odd) { background-color:rgba(25, 148, 85, 0.4);}
+*/
+
+.top ul li {
+  margin: 0;
+  padding: 0;
+  height: 1.75em;
+  float: left;
+}
+
+/* dropdown */
+.top li:hover > ul {
+  display: block;
+}
+
+.top ul a {
+  font-weight: 500;
+  padding-top: .5em;
+  line-height: 1em;
+}
+
+/* sub levels link hover */
+.top ul li:hover a, .top li:hover li a {
+  text-align:left;
+  background: none;
+  border: none;
+  color: #260F40;
+padding-top:.5em;
+line-height:1.1em;
+width:11.5em;
+  z-index: 2;
+}
+
+/* sub levels link hover */
+.top ul a:hover {
+color: #732626; 
+  background-color: #bdc;
+  background: linear-gradient(to bottom, #bbddcc, #7bad94) !important;
+  background-color: map-get($gradients, topulhover);
+  border-radius: 0 0 0 0;
+}
+
+/* THESE DECLARATIONS ARE EXTRA 090316 (compares to the MQ-Redo version) 
+
+.top ul li {
+  float: none;
+  margin: 0;
+  padding: 0;
+}
+
+.top ul li a:hover {
+padding-top:.5em;
+line-height:1.1em; 
+	width: 11.4em;
+}
+*/
+
+/* float the top list items to make it horizontal and a relative position so that you can control the dropdown menu position *//* ie_drop */
+.top ul li {float:left;} /*  REMOVED: height:3em;line-height:3em;  */
+
+ /*  In the original above, this float is set to NONE. Now this rule MUST be included. When float is removed, the links disappear.  */
+
+
+/* level 3+ list */
+.top ul ul {
+	left: 10em;
+	top: -.125em;
+}
+
+/* style the sub-level lists *//* ie_drop */
+.top ul ul {width:15em;
+}
+
+.top ul ul a {
+padding-top:.5em;
+line-height:1.1em; 
+}
+.top ul ul li a:hover{
+padding-top:.5em;
+line-height:1.1em; 
+}
+
+/* style the sub level links *//* ie_drop */
+.top ul ul a, 
+.top ul ul a:visited {
+display:block;
+width:15em;
+height:100%;
+line-height:1.1em;
+}
+
+
+/* rounded corners for first and last child */
+.top ul li:first-child > a {
+border-radius: 9px 9px 0 0; /*(top-left, top-right, bottom-right, bottom-left)*/
+}
+.top ul li:last-child > a {
+	border-bottom-right-radius: 9px;
+border-radius: 0 0 9px 9px; /*(top-left, top-right, bottom-right, bottom-left)*/
+}
+
+/* END HEADER section */
+
+/* 3-COLUMN LAYOUT STYLE */
+
+.main-content {
+width:60%;
+float:left;
+margin-left: 20%;
+padding:1em 1.5em;
+}
+
+.sidnav {
+width: 20%;
+margin-left: -80%;
+padding: 1em;
+float:left;
+}
+
+.related-info {
+width: 20%;
+color: #555;
+padding: 1em;
+float:left;
+}
+
+.related-info h6 { 
+font-style: italic;
+line-height:1.5em;
+padding:.5em .375em .75em .75em;
+margin:0 0 .5em;
+border-radius: .75em;
+}/*rgba(245, 245, 245, 0.8);*/
+
+.related-info h6, .related-info figure { margin-bottom:1em;
+}
+
+
+/* DEFAULT MOBILE STYLE */
+
+aside, article, #leftnav, blockquote.big {
+border-radius: .375em;
+}
+
+
+/* WIDE PAGE STYLE */
+
+.wide-content {
+  width: 100%;
+  float: left;
+  padding: 1em 1.5em;
+}
+
+.wide-sidnav {
+  width: 100%;
+  padding: 1em;
+  float: left;
+}
+
+
+/* - - - - [ DEFAULT SIDE NAVIGATION ] - - - -  */
+
+/* NOTE: .move is Side Nav. .footmove is a part of the footer */
+
+.move h4, .footmove h4 { margin:0 0 .25em;
+color:#06C;
+line-height:1.75em; 
+}
+
+.move p { font-size:1em;
+line-height:1.25em; 
+color:#223; margin:0;
+}
+
+.sidnav-art nav,
+.sidnav nav { margin:1em 0 .5em;
+}
+
+.navserv,
+.wide-navserv {width: 100%;
+} /*this is a UL element */
+
+.navserv li {
+text-align:left;
+margin:.25em 0;
+}
+
+.grn-gradi01,
+.navserv a:hover, .navserv a:active,
+.footsy a:hover, .footsy a:active {
+	color: rgba(133,116,100,1);
+    background: #EAFFEA;
+  background: linear-gradient(0deg, #eaffea 0%, #cfe6cf 100%);
+}
+
+.services-art header,
+.services header { text-align:left;
+padding:.5em;
+border-radius:6px;
+margin-bottom:.5em;
+}
+.services-art p,
+.services p { font-size:.875em;
+line-height: 1.5em;
+}
+
+.colcontain {padding:.125em;
+}
+
+
+/* .gra-gradi, .join, .socialnav a, .workbook li has moved to helpers.scss */  
+
+.sidnavcol { 
+margin:.125em 0 .5em;
+padding:.5em .5em .25em;
+ margin:.125em 0 .325em ;
+border:1px solid #E7E6E4;
+border-radius: .35em;
+}
+
+/* WHAT ABOUT THESE?
+.sidnavcol p { font-size:.8275em;
+line-height: 1.125em;
+	color: rgba(33,16,0,.7);
+}
+.list-archives {
+  font-weight:400;
+}
+*/
+
+.list-archives {
+    list-style: none;
+    line-height:4px;
+    margin:0 0 .125em;
+    padding: 0;
+}
+
+.list-archives li {
+  font-weight: 400;
+  font-size: .875em;
+  line-height: 1.5em;
+  margin: 0 0 .25em;
+  color: rgba(33, 16, 0, 0.7);
+}
+
+/*
+.sidnavcol a {
+  color: hsla(210, 0%, 54%, 1);
+} this is grey - I've decided to go with the a.link declaration. */
+
+.sidnavcol a:hover {
+  color: hsla(210, 100%, 40%, 1);
+  text-decoration:none;
+}
+
+.col-fix li:nth-of-type(1) { margin-top:-1em;
+}
+ 
+
+/* - - - - [ END SIDE NAVIGATION ] - - - -  */
+
+/* - - - - [ WIDE SIDE NAVIGATION ] - - - -  */
+
+.wide-move {
+  width: 100%;
+  margin-right: 2%;
+  transition: all .5s ease-in-out;
+}
+
+.wide-move h4 { margin:0 0 .25em;
+color:hsla(200, 100%, 40%, 1);/*#0088CC;*/
+line-height:1.75em;
+font-weight:400;
+}
+
+.wide-move p { font-size:1em;
+line-height:1.25em; 
+color:#223; margin:0;
+}
+
+.wide-sidnav nav { margin:1em 0 .5em;
+}
+
+.wide-navserv {
+  padding:0;
+  column-count: 1;
+  column-gap: 1em;
+  margin-bottom:1em;
+}
+
+
+.wide-navserv .rice { 
+text-align:left;
+padding:.5em .75em;
+margin:.125em 0;
+}
+
+.wide-navserv li {
+  width: 100%;
+  float: left;
+}
+
+.wide-navserv li div {
+   background-color: transparent;
+   padding: .375em 1.25em;
+border-radius: .35em;
+}
+
+
+.wide-navserv li div:hover {
+color: #857464;
+color:hsla(29, 14%, 46%, 1);
+  background: #EAFFEA;
+  background: map-get($gradients, grn);
+padding: .375em 1.25em;
+  line-height: 1.25em;
+}
+
+.wide-navserv a, .wide-navserv a:visited {
+  font-size: .875em;
+  line-height: 1.325em;
+  color: rgba(33, 16, 0, 0.7);/* These links are grey */
+  text-shadow: hsla(29, 14%, 46%, 0.5) 0 0 1px;
+  background-color: transparent;
+  text-decoration: none;
+  display:block;
+}
+
+.wide-services {
+  width: 100%;
+  margin: 0;
+  transition: all .5s ease-in-out;
+}
+
+.wide-services header { 
+padding:.5em .75em;
+margin:.5em 0;
+text-align:left;
+}
+
+.wide-services h5 { 
+margin:0;
+}
+
+.wide-services p { font-size:.875em;
+line-height: 1.5em;
+}
+
+/* - - - - [ END WIDE SIDE NAVIGATION ] - - - -  */
+
+

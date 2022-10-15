@@ -1,0 +1,196 @@
+/* footer.scss 072120
+footer.scss 050620
+footer.scss 022519 */
+/* footer.scss 021019 */
+/* cwebba08 */
+
+/* FOOTER */
+
+footer {
+  padding:0 0.5em;
+  margin:1em 0 1.5em;
+clear: both;
+}
+
+.footstep { display: table;
+width:100%;
+margin-bottom:0.5em;
+}
+
+.footsy a:hover, .footsy a:active {
+  color: #857464;
+  background: #EAFFEA;
+  background: map-get($gradients, grn);
+}
+
+ul.footsy   {
+display: table-row;
+  font-size: 1rem;
+}
+
+ul.footsy li {
+display: block;
+text-align: center;
+width: 100%;
+break-inside: avoid;
+}
+
+@media all and (min-width: 360px) {
+ul.footsy li {
+  display: inline-block;
+  text-align: center;
+  width: 48%;
+  break-inside: avoid;
+  }
+}
+.footsy a, .footsy a:visited {
+    font-size: .8125em;
+    padding: .425em 5%;
+  color: #241000;
+  text-shadow: hsla(29, 14%, 46%, 0.5) 0 0 1px;
+  background: transparent;
+  text-decoration: none;
+  border: 0;
+  margin: .25em auto 0;
+  border-radius: .35em;
+  transition: padding .25s linear;
+}
+
+@media all and (min-width: 600px) {
+ul.footsy li {
+  display: table-cell;
+  text-align: center;
+  width: 19.5%;
+}
+
+.footsy a, .footsy a:visited {
+  font-size: .875em;
+  padding: .425em 8%;
+  }
+}
+
+.context h4 { margin:0 0 .25em;
+color:hsla(200, 100%, 40%, 1);/*#0088CC;*/
+line-height:1.75em;
+font-weight:400;
+}
+
+.context p { font-size:.75em;
+line-height:1.375em; 
+color:#223; margin:0 0 .5em;
+}
+
+.context .concept { font-size:.6375em;
+line-height: 1.25em;
+margin: .75em 0 1em;
+color:#223;
+}
+
+.join { 
+ height: 2.875em;
+text-align:center;
+font-size:.875em;
+line-height:1.75;
+font-weight:400;
+padding:.25em .5em .5em 1em;
+border:1px solid #DFDEDD;
+border-radius: .375em;
+}
+
+.join {
+  background: #f7f7f7;
+/*  background: map-get($gradients, gra); */
+  background: linear-gradient(#f7f7f7, #e6e6e6);
+  color: #432;
+  color: hsla(30, 33%, 20%, 1);
+}
+
+.join a { margin:auto;
+  color: #a7a7a7;
+vertical-align:middle;
+}
+
+.join a:hover { margin:auto;
+  text-decoration: none;
+  color:hsla(27, 96%, 28%, 1);
+}
+
+/* .socialmedia { This is located in the _social_nav.scss component} */
+
+
+/*  Grid Layout  */
+
+/*  .footstep, */
+  .context,
+  .socialnav, /* <ul class="socialmedia"> */
+  .join { 
+    width: 100%;
+}
+
+@media all and (min-width: 600px) {
+footer { 
+  }
+
+.grid-wrapper { 
+  display: grid;
+  grid-template-columns: 17em 1fr;
+  grid-template-rows: 2.5em auto;
+  grid-gap: 0.5em;
+ }
+
+/*  .footstep { 
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+   grid-row-end: 2;
+   }
+*/
+  .context { 
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+   grid-row-end: 3;
+   }
+
+  .socialnav { 
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+   grid-row-end: 2;
+  }
+
+  .join { 
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+   grid-row-end: 3;
+margin-top:0.5em;
+   }
+}
+
+@media all and (min-width: 800px) {
+footer { 
+  }
+
+.grid-wrapper { 
+  display: grid;
+  grid-template-columns: 17em 1fr minmax(12em, 24%);
+  grid-template-rows: 2.5em auto;
+}
+
+  .socialnav { 
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+   grid-row-end: 2;
+   }
+
+  .join { 
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+   grid-row-end: 2;
+margin-top:0;
+   }
+}
+

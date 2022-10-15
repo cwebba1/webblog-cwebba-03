@@ -1,0 +1,133 @@
+/* _sticky_footer_flex.scss */
+/* Sticky-footer Flex Declarations */
+
+*,:after,:before { box-sizing:border-box; }
+  
+html {
+  min-height: 100%;
+text-rendering:optimizeLegibility;
+}
+
+/* This declaration conflicts with nested sticky footer. See below. Depreciate.
+html { 
+height:100%;
+}
+*/
+
+body {
+  min-height: 100vh;
+  margin:0;
+}
+
+
+/* Sticky-footer Flex Declarations */
+
+/* body seems to require both height and min-height declarations to accommodate both sticky footer flex by itself and also sticky sticky footer with inner sticky flex. (?) */
+body { 
+display:flex;
+flex-direction:column;
+height:100%;
+/* height:100%;			 need for sticky footer flex only */
+min-height:100%;		/* need for sticky footer + inner sticky flex */
+}
+
+footer, header { 
+flex:none;
+}
+main { 
+flex:1 0 auto;
+width:100%;
+align-items:stretch;
+}
+
+main:after { content:'\00a0';
+display:block;
+/*margin-top:1.5em;*/
+height:0;
+visibility:hidden;
+}
+
+
+/* END STICKY FOOTER*/
+
+
+/* Flexbox Grid */
+/*  https://www.taniarascia.com/easiest-flex-grid-ever/
+https://codepen.io/taniarascia/pen/rOLEGe 
+*/
+.column {
+  flex-basis: 100%;
+}
+
+  .row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+
+
+/* INNER STICKY FOOTER*/
+
+
+@media (min-width:920px) {
+
+	main {
+    display: inline-flex;
+	}
+
+.wide-content { 
+	height:inherit;
+    display:flex;
+flex-direction:column;
+}
+
+.hero, .workbook { 
+flex:none;
+}
+.content { 
+flex:1 0 auto;
+width:100%;
+}
+.content:after { content:'\00a0';
+display:block;
+height:0;
+visibility:hidden;
+}
+
+}
+/* END INNER STICKY FOOTER*/
+
+/* - - - - [ WIDE PAGE STYLE ] - - - -  */
+
+.wide-content {
+  width: 100%;
+  float: left;
+  padding: 1em 1.5em;
+}
+
+.wide-sidnav {
+  width: 100%;
+  padding: 1em;
+  float: left;
+}
+
+
+/* Media Queries */
+
+@media screen and (min-width: 920px) {
+
+  .wide-content {
+    margin-left: 25%;
+    width: 75%;
+/*    height:100%;
+    min-height:100%;*/
+  }
+
+  .wide-sidnav {
+    width: 25%;
+    margin-left: -100%;
+  }
+}
+
+
+

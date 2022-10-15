@@ -1,0 +1,32 @@
+/** _top_copyright.scss */
+
+/** - - - [ To the Top and Copyright ] - - - */
+
+.copyright {
+    font-family: $head-ft;
+  font-size: 0.6875em;
+  line-height: .0625em;
+  color: #889;
+  position: absolute;
+  bottom: 0;
+  left: 1em;
+  width: 70%;
+}
+
+.back2top {
+  font-size: .75em;
+  margin: 0;
+}
+
+.tothetop {
+  display: inline-block;
+  vertical-align: baseline;
+  background: #CEBEBE;
+  font-weight: 400;
+  padding: .125em .5em;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  -moz-border-top-left-radius: 8px 6px;
+  border-top-left-radius: 8px 6px;
+}

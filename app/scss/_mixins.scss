@@ -1,0 +1,86 @@
+// Icons
+//--------------------------------------------//
+@mixin sprite_icon( $name, $sprite ) {
+     
+    @include sprite-dimensions( $sprite, $name );
+    background-position: sprite-position( $sprite, $name );
+}
+ 
+@mixin retina_sprite_icon( $name, $sprite ) {
+     
+    $pos: sprite-position( $sprite, $name );
+    background-position: nth( $pos, 1 ) nth( $pos, 2 ) / 2;
+    @include background-size( ceil( image-width( sprite-path( $sprite ) ) / 2 ) auto );
+}
+
+
+// Gradient Mixins
+//--------------------------------------------//
+
+// See _vars.scss for gradient color variables and _helper.scss for the gradient classes.
+// See _bg-gradient.scss for an example of all code together at one source.
+
+// Gradient backgrounds
+@mixin bg-gradient($parent, $gradient) {
+  #{$parent} {
+    background: $gradient;
+  }
+}
+
+// Gradient text
+@mixin text-gradient($parent, $gradient) {
+  #{$parent} {
+    background-image: $gradient;
+    color:transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+}
+
+@mixin border-gradient($parent, $gradient) {
+  #{$parent} {
+    border: 20px solid transparent;
+    border-width: 6px;
+    border-style: solid;
+    border-image: $gradient;
+    border-image-slice: 1;
+  }
+}
+
+// Gradient classes are at _helper.scss
+
+
+/* IMAGE MODIFIERS */
+
+/* Box-Shadow */
+
+@mixin shadow( $offset-x : 0 , $offset-y : 0.125em , $blur : 0.625em , $spread : 0px , $color : ($plum)){
+  box-shadow: $offset-x $offset-y $blur $spread $color;
+}
+
+@mixin rnd($border-radius, $border:0) {
+border-radius: $border-radius;
+border: $border; 
+}
+
+@mixin inlineflexCenter {
+  display: inline-block;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+@mixin btnFont {
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5;
+  text-decoration: none;
+  text-shadow:rgba(234, 255, 234, 0.99) 1px 1px 1px;
+  white-space: nowrap;
+  user-select: none;
+  transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+
+

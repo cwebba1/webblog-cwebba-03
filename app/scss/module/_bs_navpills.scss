@@ -1,0 +1,43 @@
+/* _bs_navpills.scss 071816 */
+/* This came from cwebba accordion tab/pill interface */
+
+@media screen and (max-width: 376px) {
+.nav-pills { 
+    font-family: 'Cabin Condensed';
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    }
+    .nav-pills a {
+    font-size: .75em;
+}
+    .nav-pills .nav-link {
+    display: block;
+    padding: .625em .475em;
+    border-radius: .375rem;
+    }
+}
+@media (max-width: 600px) {
+    .nav-tabs .nav-item + .nav-item {
+    margin-left: .05rem;
+    /* Was .rem <--- MAKE BE A PECENT AND SMALLER */
+    }
+    .nav-tabs a,
+    .nav-pills a {
+    font-size: .875em;
+    font-family: inherit;
+    }
+    .nav-pills .nav-link {
+    margin-bottom: .5em;
+    }
+    .tab-content {
+    border: 1px solid #ddd;
+    }
+}
+@media (max-width: 660px) {
+    .nav-pills .nav-link {
+    display: block;
+    padding: .625em .5em;
+    border-radius: .375rem;
+    }
+}
+

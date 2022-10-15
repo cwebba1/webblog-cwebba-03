@@ -1,0 +1,25 @@
+/* _simpleJS_Slideshow_modules.scss*/
+
+/*----------[ =section id="2016 Simple JavaScript Slideshow" ]----------*/
+
+.fadein {
+    position: relative;
+    height: 0;
+    width: 100%;
+    padding-top: calc( 75% + 4em);
+}
+.fadein figure {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    transition: opacity 1s;
+    opacity: 1;
+}
+.fadein figure.is-hidden {
+    opacity: 0;
+}
+.fadein figcaption {
+    line-height: 1.1em;
+    margin-bottom: .5em;
+}

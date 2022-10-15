@@ -1,0 +1,120 @@
+/* _searchbox.scss */
+
+/*    - - - - [ Search Box ] - - - - -  */
+
+#searchbox
+{
+    font-size: 1.25rem;
+    background-color: #eaf8fc;
+    background-image: linear-gradient(#fff, #d4e8ec);
+    border-radius: 1.25em;    
+    border-width: 1px;
+    border-style: solid;
+    border-color: #c4d9df #a4c3ca #83afb7;            
+    width: 100%;
+    height: 2.5em;
+    padding: 0.375em;
+    margin: 0 auto;
+    overflow: hidden; /* Clear floats */
+}
+
+input[type=search], [type=text], input[type=email], input[type=tel], input[type=url], input[type=password] {
+display: inline-block;
+margin: 0;
+font-size: .875em;
+height: 1.75em;
+line-height: 1.5em;
+color: #555555;
+vertical-align: middle;
+text-indent: 0px;
+text-shadow: none;
+text-align: start;
+background-color: #ffffff;
+border-top: 1px solid #ccc;
+border-left: 1px solid #ccc;
+border-right: 1px solid #eee;
+border-bottom: 1px solid #eee;
+webkit-border-radius: 4px;
+-moz-border-radius: 4px;
+border-radius: 4px;
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+
+-webkit-appearance: textfield;
+padding: 1px;
+-webkit-rtl-ordering: logical;
+-webkit-user-select: text;
+cursor: auto;
+}
+
+#search, 
+#submit {
+    float: left;
+}
+
+#search {
+    padding: 0.375em .5em;
+    height:2.25em;
+    width: 77%;
+    border: 1px solid #a4c3ca;
+    font: normal 1em 'trebuchet MS', arial, helvetica;
+    line-height:1.375em;
+    background: #f1f1f1;
+    border-radius: 50px 3px 3px 50px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25) inset, 0 1px 0 rgba(255, 255, 255, 1);            
+}
+
+#search-submit
+{       
+    background-color: #6cbb6b;
+    background-image: linear-gradient(#95d788, #6cbb6b);
+    border-radius: 3px 50px 50px 3px;    
+    border-width: 1px;
+    border-style: solid;
+    border-color: #7eba7c #578e57 #447d43;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.3), 
+                0 1px 0 rgba(255, 255, 255, 0.3) inset;
+    height: 2.5em;
+    margin: 0 0 0 4%;
+    padding: 0;
+    width: 18%;
+    cursor: pointer;
+    font: bold .875em Arial, Helvetica;
+    color: #23441e;    
+    text-shadow: 0 1px 0 rgba(255,255,255,0.5);
+}
+
+#search-submit:hover {       
+    background-color: #95d788;
+    background-image: linear-gradient(#6cbb6b, #95d788);
+}   
+
+#search-submit:active {       
+    background: #95d788;
+    outline: none;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5) inset;        
+}
+
+#search-submit::-moz-focus-inner {
+       border: 0;  /* Small centering fix for Firefox */
+}
+
+#search::-webkit-input-placeholder {
+   color: #9c9c9c;
+   font-style: italic;
+}
+
+#search:-moz-placeholder {
+   color: #9c9c9c;
+   font-style: italic;
+}  
+
+#search:-ms-placeholder {
+   color: #9c9c9c;
+   font-style: italic;
+}   
+
+
+/* ----------------------- */
+

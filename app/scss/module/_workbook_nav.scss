@@ -1,0 +1,69 @@
+/* _workbook_nav.scss 062720 020819 */
+
+/* Workbook Navigation Module - Cwebba08b Flexbox Styles */
+
+
+/*.gra-gradi,
+.join,
+.socialnav a,	*/
+.workbook li {
+  background: #f7f7f7;
+  background: map-get($gradients, gra);
+  color: #432;
+  color: hsla(30, 33%, 20%, 1);
+}
+
+/* Mobile-first */
+
+.workbook ul { 
+display:flex;
+flex-direction:column;
+}
+
+
+  .workbook li {
+  width: 100%;
+    color: rgba(33,16,0,.7);
+    text-align:left;
+    padding:0 .5em .5em;
+    border:1px solid #DFDEDD;
+    border-radius: .35em;
+  background: #f7f7f7;
+  background: linear-gradient(0deg, rgba(247, 247, 247, 1) 0%,rgba(230, 230, 230, 1) 100%);
+  margin: 0 0 1em 0;
+margin-bottom:1em;
+}
+
+.workbook li.last { margin-bottom:0;
+}
+
+.workbook h5 { margin:.625em 0 .125em;
+	font-weight:400;
+}
+
+.workbook li p { text-align:left;
+margin:.375em 0 .125em;
+}
+
+@media only screen and (min-width: 560px) {
+
+.workbook ul { 
+    display: flex;
+flex-direction:row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.workbook li { 
+  width: calc(33.3333% - 15px);
+  margin: 0 0 0 0;
+}
+
+}
+
+
+
+
+
+
+

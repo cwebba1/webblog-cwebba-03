@@ -1,0 +1,263 @@
+/*  _project_module.scss  */
+
+
+/* - – [ God Save Fancybox  ] – - */
+/* This is the Successful Pattern Example */
+/* line 325, ../sass/base/_helpers.scss */
+
+
+
+.projectthumbs div {
+  vertical-align: top;
+}
+
+.projectthumbs p {
+  font-family:'Open Sans', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-weight:400;
+  font-size: .8125em;
+  line-height: 1.375em;
+  margin: .125em 0 1.5em;
+}
+
+.list-img {
+  background-size: cover;
+  display: block;
+  text-indent: -9999px;
+    border: 1px solid #DDD;
+}
+
+/* line 434, ../sass/base/_helpers.scss */
+.portrait {
+  height: 720px;
+  min-height: 275px;
+}
+
+/* line 439, ../sass/base/_helpers.scss */
+.landscape {
+  min-height: 240px;
+}
+
+/* line 443, ../sass/base/_helpers.scss */
+.portrait,
+.landscape {
+  -o-transition: all .5s ease-in;
+  -moz-transition: all .5s ease-in;
+  -webkit-transition: all .5s ease-in;
+  transition: all .5s ease-in;
+}
+
+
+#project-one {
+  background-image: url(../assets/images/websites/Lawson_biotech_cropped.jpg);
+}
+
+.p-one {
+  background: #F5F4F4 url(../assets/images/websites/Lawson_biotech_c800.jpg) no-repeat center contain; 
+}
+
+#project-two {
+  background-image: url(../assets/images/websites/SilverFox.jpg);
+}
+
+.p-two {
+  background: #F5F4F4 url(../assets/images/websites/SilverFox_800.jpg) no-repeat center contain;
+}
+
+#project-three {
+  background-image: url(../assets/images/websites/IcarusGroupIronwork2016.jpg);
+}
+
+.p-three {
+  background: #F5F4F4 url(../assets/images/websites/IcarusGroupIronwork2016_800.jpg) no-repeat center contain;
+}
+
+#project-four {
+  background-image: url(../assets/images/websites/CareHandOff_03.jpg);
+}
+
+.p-four {
+  background: #F5F4F4 url(../assets/images/websites/CareHandOff_03_800.jpg) no-repeat center contain;
+}
+
+#project-five {
+  background-image: url(../assets/images/websites/Shalizar-Home.jpg);
+}
+
+.p-five {
+  background: #F5F4F4 url(../assets/images/websites/Shalizar_home_600.jpg) no-repeat center contain;
+}
+
+#project-six {
+  background-image: url(../assets/images/websites/MMW_About_short.jpg);
+}
+
+.p-six {
+  background: #F5F4F4 url(../assets/images/websites/MMW_About_short_800.jpg) no-repeat center contain;
+}
+
+#project-seven {
+  background-image: url(../assets/images/websites/Randalls_New_Home.jpg);
+}
+
+.p-seven {
+  background: #F5F4F4 url(../assets/images/websites/Randalls_New_Home_800.jpg) no-repeat center contain;
+}
+
+#project-eight {
+  background-image: url(../assets/images/websites/BM_Photography_600.jpg);
+}
+
+/* line 364, ../sass/base/_helpers.scss */
+.p-eight {
+  background: #F5F4F4 url(../assets/images/websites/BM_Photography_600.jpg) no-repeat center contain;
+}
+
+#project-nine {
+  background-image: url(../assets/images/websites/HandOff_Crop_800.jpg);
+}
+
+.p-nine {
+  background: #F5F4F4 url(../assets/images/websites/HandOff_Crop_800.jpg) no-repeat center contain;
+}
+
+
+
+/* FANCYBOX Styles FOR Projects.html Page Head */
+.fancybox-type-iframe .fancybox-nav {
+    width: 60px;       
+}
+
+.fancybox-type-iframe .fancybox-nav span {
+    visibility: visible;
+    opacity: 0.5;
+}
+
+.fancybox-type-iframe .fancybox-nav:hover span {
+    opacity: 1;
+}
+
+.fancybox-type-iframe .fancybox-next {
+    right: -60px;
+}
+
+.fancybox-type-iframe .fancybox-prev {
+    left: -60px;
+}
+
+.fancybox-title-outside-wrap {
+  position: relative;
+  font-family: 'Ubuntu' Verdana, Corbel, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans", "Verdana Ref", sans-serif;
+  font-weight: 500;
+  font-size: .875em;
+  line-height:1.5em;
+  color: #FFF;
+  text-align:center;
+  background: #8F8A8A;
+  background: rgba(143, 138, 138, 0.9);
+  padding: 1em 0 .75em;
+  margin-top: 0;
+}
+/* END Styles from head */
+
+/* - – [ Media Queries  ] – - */
+
+@media only screen and (min-width: 480px) {
+  .portrait {
+    height: 700px;
+  }
+
+  .landscape {
+    height: 250px;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .projectthumbs div {
+    display: inline-block;
+    width: 46%;
+    margin-right: 6%;
+  }
+
+  .projectthumbs div:nth-child(2n) {
+    margin-right: 0;
+  }
+
+  .portrait {
+    height: 400px;
+  }
+
+  .landscape {
+    height: 200px;
+  }
+}
+
+@media only screen and (min-width: 760px) {
+  .portrait {
+    height: 450px;
+  }
+
+  .landscape {
+    height: 140px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .fancybox-prev {
+    display: none;
+  }
+
+  .fancybox-next {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 921px), print {
+.portrait {
+    height: 420px;
+  }
+
+  .landscape {
+    height: 130px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .portrait {
+    height: 300px;
+  }
+
+  .landscape {
+    height: 130px;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+.projectthumbs div {
+    display: inline-block;
+    width: 30.6%;
+    margin-right: 3%;
+  }
+
+  .projectthumbs div:last-of-type {
+    margin-right: 0;
+  }
+
+  .projectthumbs div:nth-child(2n) {
+    margin-right: 3%;
+  }
+
+  .projectthumbs div:nth-child(3n) {
+    margin-right: 0;
+  }
+}
+
+@media only screen and (min-width: 1240px) {
+  .portrait {
+    height: 320px;
+  }
+
+}
+
+
+
+

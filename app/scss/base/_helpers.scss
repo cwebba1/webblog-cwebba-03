@@ -1,0 +1,197 @@
+/* _helpers.scss 110920 */
+
+.mw149 { max-width: 149px;}
+
+.mw277 { max-width: 277px;}
+
+.mw306 { max-width: 306px;}
+
+.mw324 { max-width: 20.25em;}
+
+.mw400 { max-width: 25em;}
+
+.mw500 { max-width: 31.25em;}
+
+.mw600 { max-width: 600px;}
+
+.mw670 { max-width:41.875em;}
+
+.w48p { width:48%;
+  transition:width .25s ease-in, max-width .25s ease-in; 
+}
+
+.shadow {
+background:hsla(321, 50%, 20%, .8);
+box-shadow: 0 .125em .625em hsla(321, 50%, 20%, 1);
+}
+
+.innershadow { 
+box-shadow: inset 0 0 15px #8C7E73, 0 0 20px #DDD6D5, inset 0 35px 35px -18px #D2C8C6;
+}
+
+.thin-lt-rule {
+height:1px; border: none; color:#CFD0CF;
+background-color:#CDC; width:100%; padding:0; clear: both; margin-bottom:0;
+margin:2em 0;
+}
+
+.red-rule {
+height:2px; border: none; color:#A92323;
+background-color:#A92323; width:100%; padding:0; clear: both; margin-bottom:0;
+}
+
+abbr[title] {
+    border-bottom: 1px dotted;
+}
+b,
+strong { font-weight: 600; }
+
+em,i { font-style:italic; }
+
+dfn { font-style: italic; }
+mark { background: #ff0;
+  color: #000;
+}
+
+code,
+kbd,
+/*pre,*/
+samp,
+ tt {
+  font-family: "andale mono", "lucida console", monospace, serif;
+  font-size: 1em;
+  color:#900;
+  }
+
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.wrap-text {
+  word-wrap: break-word;
+  -epub-word-break: break-all;
+  -ms-word-break: break-all;
+  word-break: break-all;
+  word-break: break-word;  /* Non standard for webkit */
+  overflow-wrap: break-word;
+  -epub-hyphens: auto;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto;
+}
+
+.nowrap {
+  white-space: nowrap;
+  line-height: inherit;
+}
+
+.hyphenate {
+  -epub-word-break: break-all;
+  -ms-word-break: break-all;
+  word-break: break-all;  /* Non standard for webkit */
+  word-break: break-word;
+  -webkit-hyphens: auto;
+  -epub-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto;
+  -webkit-hyphenate-before: 2;
+  -webkit-hyphenate-after: 3;
+  hyphenate-lines: 3;
+}
+
+q {
+  quotes: "\201C" "\201D" "\2018" "\2019";
+}
+small { font-size: 80%; }
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+/* add to span for ampersand */
+.amp { font-family:Adobe Caslon Pro,Baskerville,"Goudy Old Style","Palatino","Palatino Linotype","Book Antiqua",Georgia,"Times New Roman",Times,serif;font-style:italic;font-size:110%;line-height:0;position:relative;vertical-align:baseline} /* Best available ampersand */
+
+.ampem { 
+  font-family: Baskerville, Garamond, Palatino, "Palatino Linotype", "Hoefler Text", "Times New Roman", serif;
+  font-style: italic;
+  font-weight: normal;
+} /* Ethan Marcotte Best Ampersand */
+
+.fl{ float:left; }
+.fr{ float:right; }
+.mcent{ margin-left: auto; margin-right: auto; }
+.tcent{text-align:center;}
+.tleft { text-align:left;}
+.trigh { text-align:right;}
+.tjust { text-align:justify;}
+.centertext{ margin-left: auto; margin-right: auto; text-align:center; }
+
+.first { margin-left:0;padding-left:0;}
+.last { margin-right:0;padding-right:0;}
+.inline { display:inline;}
+.block { display:block;}
+.relative { position: relative;}
+
+.no-margin { margin:0;}
+.mr1 { width:inherit;
+margin-right: 1em; }
+.rice { background:url('./assets/images/ricepaper.png');
+}
+
+.pink { background-color:#FFCCCC;}
+.pearl { background-color:#FCE;}
+.puce { background-color:#FEC;}
+.powder { background-color:#CFE;}
+.white { background-color:#FFF;}
+.gree { background-color:#EFEFEF;}
+.gred { background-color:#DDD;}
+.gre9 { background-color:#999;}
+.gre4 { background-color:#444;}
+.yell { background-color:#FFC;}
+
+.blood { color:#900;}
+.blu { color:#139;}
+.violet1{ color:#260F40;}
+.violet2{ color:#34105C;}
+.cocoa{ color:#432;}
+.mirren{ color: #ab3223;} 
+.wht { color:#FFF;}
+
+.trnsp50 {background-color: rgba(255,255,255,0.5);}
+code { color:#900;}
+
+.gra-gradi,
+.join,
+.workbook li {
+  background: #f7f7f7;
+  background: map-get($gradients, gra);
+  color: #432;
+  color: hsla(30, 33%, 20%, 1);
+}
+
+
+/* Nuggies */
+
+.mb5 {margin-bottom:.5em;}
+
+/* WP post-img helper */
+
+.attachment-category-thumb { 
+background:hsla(204, 9%, 66%, 1);
+box-shadow: 2px 2px 4px hsla(204, 9%, 66%, 1);
+border: 0;
+border-radius: .5em;
+}
+
