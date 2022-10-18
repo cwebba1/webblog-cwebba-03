@@ -4,12 +4,24 @@ This is a revised build for Gulp in 2022 for use building front-end websites and
 
 Task Features:
 
-browserSync
+BrowserSync
 copyHTML
+copySCSS
+copyCSS
 imgTask
 jsTask
 cssTask
 watchTask
+
+101722 Notes:
+Certain PostCSS plugins are added to cssTask.
+copySCSS transfers SASS results from APP/SCSS/CSS to APP?CSS
+copyCSS transfers the result of cssTask out of the Gulpfile.js root folder into the cwebba WordPress Theme
+
+Current NPM warnings for Node Modules in this build are:
+"29 vulnerabilities (9 moderate, 20 high)"
+
+Use this Gulp build with caution.
 
 101522 Notes:
 

@@ -1,32 +1,26 @@
 /*!
 Theme Name: cwebba
 Theme URI: http://blog.craigwebbart.com
-Version: 2.0
+Version: 3.0
 Author: Craig Webb
-Author URI: http://craigwebbart.com
+Author URI: https://craigwebbart.com
 Description: Custom theme for Craig Webb Art
-License: Copyright 2016, 2020 Craig Webb Art
+License: Copyright 2016, 2020, 2022 Craig Webb Art
 License URI: License.txt
 Tags: post-formats
 Text Domain: cwebba 
 */
 
-// @import "compass";
  
 @import "vars";
 @import "mixins";
-//@import "theme_info";
+// @import "theme_info";
 
 // Reset 
 @import "resets/normalize";
 @import "resets/reset";
 
-// Bootstrap 
-//@import "bs_scss/cwebba_bootstrap_0503b2";
-//@import "bs_scss/tether.scss";
-
 // Helpers 
-//@import "base/bs-fancybox.scss"; <-- This stuff does not belong here - move to Modules.
 @import "base/sticky_footer_flex";
 @import "base/base";
 @import "base/helpers";
@@ -40,23 +34,12 @@ Text Domain: cwebba
 @import "module/footer";
 @import "module/social_nav";
 @import "module/top_copyright";
-//@import "module/cwebba_columns";
 @import "module/form-norm";
 @import "module/contact_form_06";
 @import "module/searchbox";
 @import "module/modals";
-//@import "module/project_modals";
-//@import "module/bs_tabs";
-//@import "module/css3_columns";
 @import "module/wp-core-styles";
-//@import "module/lightbox02";
-//@import "images/icons";
-//@import "module/cwebba_project_module.scss";	<-- REDUNDENT?
-//@import "module/bs-carousel";
-//@import "module/popups";
-//@import "module/button_styles";
-//@import "images/icons";
+@import "module/zedtest";
 
- 
  // States 
 @import "states/media_queries";
