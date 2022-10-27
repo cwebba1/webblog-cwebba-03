@@ -1,0 +1,97 @@
+{{!-- includes/map-modal-contact.hbs --}}
+{{!--  MAP MODAL --}}
+<div id="map_box">
+<div id="gmap_box">
+<iframe width="100%" height="250" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?safe=off&amp;q=14-28+30th+Road,+Astoria,+NY+11102&amp;ie=UTF8&amp;hq=&amp;hnear=14-28+30th+Rd,+Queens,+New+York+11102&amp;gl=us&amp;t=m&amp;z=14&amp;ll=40.76935,-73.929853&amp;output=embed"></iframe>
+</div>
+<small><a href="https://maps.google.com/maps?safe=off&amp;q=14-28+30th+Road,+Astoria,+NY+11102&amp;ie=UTF8&amp;hq=&amp;hnear=14-28+30th+Rd,+Queens,+New+York+11102&amp;gl=us&amp;t=m&amp;z=14&amp;ll=40.76935,-73.929853&amp;source=embed" style="color:#0000FF;text-align:left">View Larger Map</a></small><br />
+
+<div class="half-box">
+<p><strong>Address</strong><br/>
+14-28 30th Road, Suite 1<br />
+Astoria, New York 11102</p>
+
+<p><strong>Telephone</strong><br />
+(917) 797-0983</p>
+
+</div>
+<div class="half-box last">
+<p style="margin-bottom:0;"><strong>Online Payments</strong><br />
+You may make online payments using PayPal with your credit card or PayPal account.</p>
+{{!-- PayPal Code --}}
+<div id="paypal" style="width:100%;"><form action="https://www.paypal.com/cgi-bin/webscr" method="post"> <input type="hidden" name="cmd" value="_xclick"> <input type="hidden" name="business" value="craigwebb@craigwebbart.com"> <input type="hidden" name="no_shipping" value="0"> <input type="hidden" name="no_note" value="1"> <input type="hidden" name="currency_code" value="USD"> <input type="hidden" name="tax" value="0.00"> <input type="hidden" name="lc" value="US"> <input type="hidden" name="bn" value="PP-BuyNowBF"> <input type="image" src="https://www.paypal.com/en_US/i/btn/btn_paynow_LG.gif" name="submit" alt="Make payments with PayPal - it's fast, free and secure!"> <img alt="PayPal" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1"></form></div>
+</div>{{!-- Half-box last  --}}
+<footer id="modfoot">
+<nav style="padding:0;margin:0;">
+<ul class="signup">
+<li><a href="mailto:craigwebb@craigwebbart.com">Send an email to Craig Webb Art</a></li>
+<li class="last">&copy; Copyright 2014 <a href="http://craigwebbart.com" target="_blank">Craig Webb Art</a></li>
+<span class="stretch"></span> 
+</ul>
+</nav>
+<span id="map-closeBtn" class="map-close-btn">Close Window</span><br />
+</footer>
+</div>{{!-- END Map_box  --}}
+{{!-- *   *   *   *   *   *   *    --}}
+
+{{!--  SOCIAL MODAL BOX  --}}
+<div id="modal_box">
+<form id="mail-list" method="post" name="subscription-form" action="support/formtoemailpro.php">{{!-- contact-form --}}
+<header class="mod">
+<h5>Subscribe to our mailing list</h5>
+<figure><img class="mod" src="images/airplane.jpg"></figure>
+<div class="receive"><p>Receive periodic reviews,  updates about current events and special offers.</p></div>
+</header>
+<br class="clear"/>
+
+<article class="subscribe">
+<div id="fieldset">
+<legend>Your Contact Information</legend>
+<ul>
+<li>
+<label for=first-name>First Name</label>
+<input id=first-name name=first-name type=text placeholder="First name" required autofocus>
+</li>
+<li>
+<label for=last-name>Last Name</label>
+<input id=last-name name=last-name type=text placeholder="Last Name" required>
+</li>
+<li>
+<label for=email>Email</label>
+<input id=email name=email type=email placeholder="example@domain.com" required>
+</li>
+<li>
+<label for=email>Website</label>
+<input id=website name=website type=website placeholder="http://your-domain.com" >
+</li>
+<li>
+<label for=phone>Phone</label>
+<input id=phone name=phone type=tel placeholder="Eg. +1-212-000-0000">
+</li>
+<li  id="message">
+<label for=comments class="comments">Comment here</label>
+<textarea type="text" name="comments" value="comment" rows="8"></textarea>
+</li>
+</ul>
+<div class="updates">
+<label for="email-updates" class="wide2">Send Special Offers</label>
+<input type="checkbox" checked name="email-updates"></div>
+
+<button class="social-button" type=submit name=submit value=submit>Send!</button>
+</div>{{!-- END id="fieldset" --}}
+</article>
+</form>
+<footer id="modfoot">
+<nav style="padding:0;margin:0;">
+<ul class="signup">
+<li><a href="mailto:craigwebb@craigwebbart.com">Send an email to Craig Webb Art</a></li>
+<li class="last">&copy; Copyright 2014 <a href="http://craigwebbart.com" target="_blank">Craig Webb Art</a></li>
+<span class="stretch"></span> 
+</ul>
+</nav>
+<span id="modal-closeBtn" class="modal-close-btn">Close Window</span><br />
+</footer>
+</div>
+{{!--  *   *   *   *   *   *   *   --}}
+
+

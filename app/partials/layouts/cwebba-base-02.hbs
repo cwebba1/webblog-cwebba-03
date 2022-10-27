@@ -1,0 +1,63 @@
+{{!-- layouts/cwebba-base-02.hbs --}}
+<!doctype html>
+<html>
+  <head>
+    <title>
+      {{#if title}}
+        {{title}}
+      {{else}}
+        Craig Webb Art
+      {{/if}}
+    </title>
+    {{#> head-block}}
+      {{!-- Custom <head> content per page can be added as inline-block, replacing head-block wrapper. --}}
+        {{> includes/head }}
+      {{!-- includes/head-block houses the font and style sheet declarations. --}}
+    {{/head-block}}
+
+  </head>
+  <body>
+<div class="basal">
+<a name="top"></a>
+    <header class="rice">
+      {{#> header-block-02 }}
+        {{!--  The `includes/Header` partial is the default content, but can be overridden.  --}}
+        {{> includes/header-02 }}
+      {{/header-block-02 }}
+    </header>
+<main>
+    {{#> main-content-block }}
+        {{> includes/main-content }}
+      {{!-- Blank placeholder. Content content goes here. --}}
+    {{/main-content-block }}
+
+
+      {{#> sidebar-block-02}}
+        {{> includes/left-sidebar-02 }}
+      {{/sidebar-block-02}}
+</main>
+
+    <footer>
+      {{#> footer-block-02 }}
+        {{!-- The `includes/footer` partial is the default content, but can be overridden. --}}
+        {{> includes/footer-02 }}
+      {{/footer-block-02}}
+    </footer>
+    <div style="position:relative;">
+<div class="tothetop" style=""><p style="font-size:.75em;margin:0;"><a href="#">Back to Top</a></p></div>
+<p class="copyright">&copy; 2005 &ndash; <script type='text/javascript'>if (typeof(getCopyrightDate)=='function') document.write(getCopyrightDate(2014, null, '-')); else document.write((new Date()).getFullYear());</script> Craig Webb Art. &nbsp;All&nbsp;Rights&nbsp;Reserved.</p>
+</div>
+
+</div><!-- END "basal" -->
+
+
+  </body>
+      {{#> js01-block}}
+        {{!--
+          The `includes/js01` partial is the default content,
+          but can be overridden.
+        --}}
+        {{> includes/js01 }}
+      {{/js01-block}}
+
+</html>

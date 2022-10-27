@@ -1,0 +1,20 @@
+{{!-- includes/main-content-03.hbs --}}
+<!--  MAIN CONTENT BEGINS HERE -->
+<div class="wide-content">
+    {{#> hero-block }}
+      {{!-- Hero content goes here. --}}
+    {{/hero-block }}
+
+    {{!-- Page content will go here --}}
+<div class="content">
+    {{#> content-block }}
+      {{!-- inline content will go here. --}}
+        {{> includes/content }}
+    {{/content-block }}
+</div>
+    
+      {{!-- workbook navigation block goes here. --}}
+    {{#> workbook-nav-block }}
+        {{> includes/workbook-nav}}
+    {{/workbook-nav-block }}
+</div><!-- END "wide-content" -->

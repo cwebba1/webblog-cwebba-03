@@ -1,0 +1,18 @@
+{{!-- includes/main-content-04.hbs --}}
+<!--  MAIN CONTENT BEGINS HERE -->
+<div class="wide-content">
+      {{!-- Hero content is removed from here. --}}
+
+    {{!-- Page content will go here --}}
+<div class="content">
+    {{#> content-block }}
+      {{!-- inline content will go here. --}}
+        {{> includes/content }}
+    {{/content-block }}
+</div>
+    
+    {{#> workbook-nav-block }}
+      {{!-- workbook navigation block goes here. --}}
+        {{> includes/workbook-nav }}
+    {{/workbook-nav-block }}
+</div><!-- END "wide-content" -->

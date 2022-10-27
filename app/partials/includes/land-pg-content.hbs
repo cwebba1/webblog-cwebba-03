@@ -1,0 +1,22 @@
+{{!-- includes/land-pg-content.hbs --}}
+{{!-- WAS includes/main-content.hbs --}}
+<!--  MAIN CONTENT BEGINS HERE -->
+<div class="landpage">
+    {{#> hero-block }}
+      {{!-- Hero content goes here. --}}
+    {{/hero-block }}
+
+    {{!-- Page content will go here --}}
+<div class="content">
+    {{#> content-block }}
+      {{!-- inline content will go here. --}}
+        {{> includes/content }}
+    {{/content-block }}
+</div>
+    
+    {{#> workbook-nav-block }}
+
+      {{!-- workbook navigation block goes here. --}}
+        {{> includes/workbook-nav }}
+    {{/workbook-nav-block }}
+</div><!-- END "wide-content" -->

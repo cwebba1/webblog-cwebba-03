@@ -1,0 +1,75 @@
+{{!-- pages/index.hbs --}}
+
+{{#> layouts/cwebba-base-03 title="Craig Webb Art / Content Design & Development" }}
+
+{{#*inline "meta-block" }}
+{{> includes/meta
+  meta-description="Craig Webb Art home page"
+  meta-keywords="Web design, Graphic design, Copywriting"
+  meta-social-content="Craig Webb Art"
+  meta-url="http://craigwebbart.com/"
+  meta-site-name="Craig Webb Art"
+  og-image="http://www.craigwebbart.com/assets/images/heropics/Saturn_Returns.jpg"
+  og-image-alt="Saturn Returns"
+}}
+{{/inline}}
+{{!-- best image 1200x630px, aspect ratio 1.91:1, size less than 1mb --}}
+
+
+  {{!--   The `includes/head` partial is here.  --}}
+  {{#> head-block}}
+        {{> includes/head }}
+  {{/head-block}}
+  
+  {{!--   The `includes/header` partial is here.  --}}
+  {{#*inline "rail-block"}}
+    {{> includes/rail
+      rail-src="assets/images/navpics/wave.jpg"
+      rail-alt="(917) 797&middot;0983"
+    }}
+  {{/inline}}
+
+    {{!-- MAIN CONTENT --}}
+
+    {{!-- Let's change the hero image for this layout. --}}
+  {{#*inline "hero-block"}}
+    {{> includes/hero
+      hero-class="herobox"
+      hero-src="assets/images/heropics/528x90_laugh.jpg"
+      hero-alt="Chinese wealth laugh banner"
+      fig-caption=""
+    }}
+  {{/inline}}
+
+    {{!-- Let's change the content for this layout. --}}
+   {{#*inline "content-block"}}
+   <p class="testies">THIS IS HANDLEBARS INDEX – <span>MAKE THE MOST OF IT</span></p>
+<p>This is a testes. One, Two, Three</p>
+<p>I DON'T GET IT! I DON'T GET IT! Do I Get it? I DON'T GET IT! I DON'T GET IT! Do I Get it? Why don't I get it? A new test? Testies. . .</p>
+<p>Aauuugghh! Aauuugghh! Aauuugghh!</p>
+<p>OK, OK OKAY!</p>
+<h2>Great communications achieve results.</h2>
+<h4>Express ideas that reach people and deliver an impression that compels action.</h4>
+<p>Utilizing inventive idea generation and strategic insight to gain new business, <strong>Craig Webb</strong> provides concepts, design, art, copy, and production services to produce integrated consumer, business and technology communications that affirm your identity and message.
+</p>
+
+<blockquote class="big">Target consumers with compelling messages tailored to convey your core identity.</blockquote>
+  {{/inline}}
+
+{{!-- The "workbook-nav" is here.  --}}
+{{!-- includes/workbook-nav --}}
+  {{#*inline "workbook-nav-block"}}
+    {{> includes/workbook-nav-02 }}
+  {{/inline}}
+
+  {{!-- The "sidebar-block" content is here. --}}
+
+  {{!-- The "footer-block" content is here. --}}
+
+  {{!--  MODAL FORM BLOCK HERE  --}}
+
+    {{#*inline "js-block"}}
+    {{> includes/scripts/lightbox-plus-jquery }}
+    {{/inline}}
+  
+{{/layouts/cwebba-base-03}}

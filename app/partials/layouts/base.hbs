@@ -1,0 +1,51 @@
+{{!-- layouts/base.hbs --}}
+
+<!doctype html>
+<html>
+  <head>
+    <title>
+      {{#if title}}
+        {{title}}
+      {{else}}
+        Base Page Title
+      {{/if}}
+    </title>
+
+<!-- Fonts -->
+<!-- Roboto -->
+<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+<!-- PT Serif Caption -->
+<link href='https://fonts.googleapis.com/css?family=PT+Serif+Caption:400,400italic' rel='stylesheet' type='text/css'>
+
+<!--build:css css/styles.min.css-->
+<link rel="stylesheet" type="text/css" href="css/styles.css"> 
+<link rel="stylesheet" type="text/css" href="css/some-other-styles.css">
+<!--endbuild-->
+
+    {{#> head-block}}
+      {{!-- Custom <head> content per page could be added. --}}
+    {{/head-block}}
+  </head>
+  <body>
+    {{#> hero-block}}
+      {{!-- Hero content goes here. --}}
+    {{/hero-block}}
+
+    <footer>
+      {{#> footer-block}}
+        {{!--
+          The `includes/footer` partial is the default content,
+          but can be overridden.
+        --}}
+        {{> includes/footer }}
+      {{/footer-block}}
+    </footer>
+      {{#> js-block}}
+        {{!--
+          The `includes/js` partial is the default content,
+          but can be overridden.
+        --}}
+        {{> includes/js }}
+      {{/js-block}}
+  </body>
+</html>

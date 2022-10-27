@@ -1,0 +1,81 @@
+{{!-- layouts/cwebba-base-04.hbs --}}
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="no-js">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<head>
+  <title>
+    {{#if title}}
+    {{title}}
+    {{else}}
+    Craig Webb Art
+    {{/if}}
+  </title>
+{{#> meta-block }}
+    {{!--  The `includes/meta` partial is the default content, but can be overridden. --}}
+{{/meta-block }}
+
+<!-- This is a revised statement added to the head for testing. -->
+
+{{#> font-block }}
+    {{!--  The `includes/fonts` partial is the default content, but can be overridden. --}}
+   {{> includes/fonts }}
+{{/font-block }}
+
+  {{#> head-block}}
+  {{!-- Custom <head> content per page can be added as inline-block, replacing head-block wrapper. --}}
+    {{> includes/head }}
+    {{!-- includes/head-block houses the font and style sheet declarations. --}}
+    {{/head-block}}
+<link rel="stylesheet" type="text/css" href="css/styles.css"> 
+  </head>
+  <body>
+    <div class="basal">
+      <a name="top"></a>
+      {{!--   The `includes/modal` partial is here.  --}}
+      {{#> modal-spot-block}}
+      {{!-- This modal box can be overridden for other modal boxes. --}}
+      {{> includes/modal-box }}
+      {{/modal-spot-block}}
+
+      <header class="rice">
+        {{#> header-block-02 }}
+        {{!--  The `includes/Header` partial is the default content, but can be overridden.  --}}
+        {{> includes/header-02 }}
+        {{/header-block-02 }}
+      </header>
+      <main>
+        {{#> main-content-block }}
+        {{> includes/main-content-04 }}
+        {{!-- Blank placeholder. Content content goes here. --}}
+        {{/main-content-block }}
+
+        {{#> sidebar-block-04}}
+        {{> includes/left-sidebar-04 }}
+        {{/sidebar-block-04}}
+      </main>
+      <footer>
+        {{#> footer-block-03 }}
+        {{!-- The `includes/footer` partial is the default content, but can be overridden. --}}
+        {{> includes/footer-03 }}
+        {{/footer-block-03}}
+      </footer>
+      <div style="position:relative;">
+        <div class="tothetop" style=""><p style="font-size:.75em;margin:0;"><a href="#">Back to Top</a></p></div>
+        <p class="copyright">&copy; 2005 &ndash; <script type='text/javascript'>if (typeof(getCopyrightDate)=='function') document.write(getCopyrightDate(2014, null, '-')); else document.write((new Date()).getFullYear());</script> Craig Webb Art. &nbsp;All&nbsp;Rights&nbsp;Reserved.</p>
+      </div>
+    </div>{{!-- END "basal" --}}
+    {{#> modal-form-block}}
+    {{!--  The `includes/social-modal-form` partial is the default content, but can be overridden. --}}
+    {{> includes/social-modal-form }}
+    {{/modal-form-block}}    
+  </body>
+  {{#> js-block}}
+  {{!--  The `includes/js01` partial is the default content, but can be overridden.  --}}
+{{> includes/scripts/js01 }}
+  {{/js-block}}
+
+
+  </html>

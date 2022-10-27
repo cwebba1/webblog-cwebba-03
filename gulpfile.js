@@ -1,5 +1,4 @@
 const gulp = require('gulp');
-const cache = require('gulp-cache');
 const imagemin = require('gulp-imagemin');
 const newer = require('gulp-newer');
 const size = require('gulp-size');
@@ -14,20 +13,29 @@ const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
 
 const sass = require('gulp-sass')(require('sass'));
-const { src, dest, task, watch, series, parallel } = require('gulp');
+const handlebars = require('gulp-compile-handlebars');
+const layouts = require('handlebars-layouts');
+
+const { src, dest, watch, series, parallel } = require('gulp');
 
 const jsPath = 'app/assets/js/**/*.js';
 const cssPath = 'app/css/**/*.css';
-const sassPath = 'app/scss/**/*.{scss,sass}';
+const scssPath = 'app/scss/**/*.{scss,sass}';
+const cssscssPath = 'app/scss/css/*.css';
 const imgPath = 'app/assets/images/**/*.{gif,png,jpg,jpeg,svg}';
+const hbsPath = 'app/pages/*.hbs';
+const partialPath = 'app/partials/**/*.hbs';
+const htmlPath = 'app/**/*.html';
 const imgDistPath = 'dist/assets/images/';
-const wordpressPath = './';
+// const wordpressPath = './';
 const browserSync = require ('browser-sync').create();
 
+function browser_sync(){
 browserSync.init({
     watch: true,
     server: "./dist"
-});
+})
+};
 
 /**************** reload task ****************/
 function reload(done){
@@ -36,17 +44,12 @@ function reload(done){
   }
   
  
-function copyHTML() {
-	return src('app/*.html').pipe(gulp.dest('dist'))
-    .pipe(browserSync.stream());
-}
+function copyHTML(done) {
+	return src(htmlPath).pipe(gulp.dest('dist'))
+    .pipe(browserSync.stream()),
+    done();
+};
 exports.copyHTML = copyHTML;
-
-function copySCSS() {
-	return src('app/scss/css/*.css').pipe(gulp.dest('app/css'))
-    .pipe(browserSync.stream());
-}
-exports.copySCSS = copySCSS;
 
   /**************** Copy CSS to Root task ****************/
 
@@ -72,7 +75,6 @@ exports.copySCSS = copySCSS;
 
 function imgTask() {
     return src(imgPath)
-//    return gulp.src(['app/**/*.{gif,png,jpg}'])
 .pipe(newer(imgConfig.dist))
 .pipe(imagemin(imgConfig.minOpts))
 .pipe(size({ showFiles:true }))
@@ -97,7 +99,7 @@ function scssTask () {
         errLogToConsole: true,
         outputStyle: 'expanded'
       };
-    return src(sassPath)
+    return src(scssPath)
       .pipe(
       sass(sassOptions)
       .on('error', sass.logError))
@@ -106,8 +108,18 @@ function scssTask () {
           .pipe(browserSync.stream({ match: '**/*.scss' }))
       )
       .pipe(dest('app/scss/css'))
+      .pipe( src(cssscssPath).pipe(gulp.dest('app/css')))
+      .pipe(browserSync.stream());
     }
   exports.scssTask = scssTask;
+
+function copySCSS(done) {
+	return src(cssscssPath).pipe(gulp.dest('app/css'))
+    .pipe(browserSync.stream()),
+    done();
+}
+exports.copySCSS = copySCSS;
+
 
 // postCSS ONLY here
 function cssTask() {
@@ -121,20 +133,52 @@ function cssTask() {
         cssnano()
     ];
     return src(cssPath)
-      .pipe(concat('style.css'))
+      .pipe(concat('styles.css'))
       .pipe(sourcemaps.init())
       .pipe(postcss(processors))
       .pipe(sourcemaps.write('.'))
-      .pipe(dest('dist/css'))
+      .pipe(dest('./dist/css'))
       .pipe(browserSync.stream());
     }
     exports.cssTask = cssTask;
     
-    
-    function watchTask() {
-        watch([jsPath, cssPath, sassPath], series(scssTask, (parallel(cssTask, jsTask))));
-    }
+  /**************** Handlebars task ****************/
+
+  const hbsConfig = {
+    app         : hbsPath,
+//    watch       : (['app/partials/*.hbs', 'app/pages/*.hbs'], ['hbs']),
+//    watch       : 'app/partials/*.hbs',
+//    watch       : 'app/pages/*.hbs', 
+    build       : htmlPath,   // Need to copy to dist
+}
+
+function hbs() {
+  return gulp.src('./app/pages/*.hbs')
+    .pipe(handlebars({}, {
+      ignorePartials: true,
+      batch: ['./app/partials']
+    }).on('error', function(e){
+            console.log(e);
+         }))
+    .pipe(rename({
+      extname: '.html'
+    }))
+    .pipe(gulp.dest('./app'))
+    .pipe(browserSync.stream());
+}
+exports.hbs = hbs;
 
 
-   // exports.default = parallel(copyHTML, imgTask, jsTask);
-exports.default = series(scssTask, copySCSS,(parallel(copyHTML, imgTask, jsTask)), cssTask, watchTask);
+function watchTask() {
+  gulp.watch(['./assets/images/**/*'], gulp.series(imgTask));
+  gulp.watch([scssPath], gulp.series(scssTask, reload));
+  gulp.watch([cssscssPath], gulp.series(copySCSS, reload));
+  gulp.watch([cssPath], gulp.series(cssTask, reload));
+  gulp.watch([jsPath], gulp.series(jsTask, reload));
+  gulp.watch([hbsPath], gulp.series(hbs, reload));
+  gulp.watch([htmlPath], gulp.series(copyHTML, reload));
+ };
+
+//series(parallel(hbs, jsTask), scssTask, copySCSS, cssTask, copyHTML)
+      
+  exports.default = series( parallel(scssTask, hbs,jsTask, imgTask, copyHTML), series(copySCSS, cssTask), parallel(browser_sync, watchTask));

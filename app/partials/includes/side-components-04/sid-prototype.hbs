@@ -1,0 +1,19 @@
+{{!-- includes/side-components-04/sid-prototype.hbs --}}
+{{!-- Left Sidebar Prototype Links --}}
+<section class="menu-wrap">
+	<h4>{{title}}</h4>
+
+{{!-- 			##HERE!!!		 --}}
+<div class="view-alert">
+<p style="font-weight:400;font-size:86%; margin-bottom:0.5em;"><em>View links in the theater view or open links in a new tab to examine closely</em></p>
+</div>
+	<nav class="prototype-list">
+	<ul id="proto-list">
+
+      {{#> proto-list-block}}
+    {{!-- Prototype List content will go here --}}
+	    {{/proto-list-block }}
+
+		</ul>
+	</nav>
+</section>
