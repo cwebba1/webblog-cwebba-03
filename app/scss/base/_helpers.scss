@@ -181,7 +181,31 @@ code { color:#900;}
   color: hsla(30, 33%, 20%, 1);
 }
 
+/*  NEEDS VARIABLES CREATED
+.darkseagreen {
+  background-color: #8FBC8F;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, from(#bfd9bf), to(#8FBC8F));
+  /*OLD Webkit*/
+/*
+  background-image: -webkit-linear-gradient(top, #bfd9bf, #8FBC8F);
+  background-image: -moz-linear-gradient(top, #bfd9bf, #8FBC8F);
+  background-image: -ms-linear-gradient(top, #bfd9bf, #8FBC8F);
+  background-image: -o-linear-gradient(top, #bfd9bf, #8FBC8F);
+  background: linear-gradient(#bfd9bf, #8FBC8F);
+}
 
+.cornflowerblue {
+  background-color: #6495ED;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, from(#a4c0f4), to(#76a1ef));
+  /*OLD Webkit*/
+/*
+  background-image: -webkit-linear-gradient(top, #a4c0f4, #76a1ef);
+  background-image: -moz-linear-gradient(top, #a4c0f4, #76a1ef);
+  background-image: -ms-linear-gradient(top, #a4c0f4, #76a1ef);
+  background-image: -o-linear-gradient(top, #a4c0f4, #76a1ef);
+  background: linear-gradient(#a4c0f4, #76a1ef);
+}
+*/
 /* Nuggies */
 
 .mb5 {margin-bottom:.5em;}

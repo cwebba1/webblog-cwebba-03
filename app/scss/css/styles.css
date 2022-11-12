@@ -11,7 +11,39 @@ License URI: License.txt
 Tags: post-formats
 Text Domain: cwebba 
 */
+/*! Craig Webb Art Styles Table of Contents*/
+/*! // Reset */
+/*! resets/normalize*/
+/*! resets/reset*/
+/*! // Bootstrap */
+/*! bs_scss/cwebba_bootstrap_0503b2*/
+/*! // Helpers */
+/*! base/base*/
+/*! base/helpers*/
+/*! base/morehelpers*/
+/*! // Styles */
+/*! styles/cwebba07.scss */
+/*! // Modules*/
+/*! module/modals */
+/*! module/lightbox02 */
+/*! module/contact_form_05 */
+/*!  // States */
+/*! states/media_queries*/
+/*!
+ * CSS Compiled on: timestamp()
+ */
 /* Depreciated */
+/* BS_04 Variables
+// BS Color system - Hue 210
+//
+// Variables should follow the `$component-state-property-size` formula for
+// consistent naming. Ex: $nav-link-disabled-color and $modal-content-box-shadow-xs.
+
+// CWebba08 Color system - Hue 25 */
+/* stylelint-disable-next-line scss/dollar-variable-default */
+/* CWebba08 Colors */
+/* #FDFEFB             // .basal off-white background color 
+// HSL 76 66 99 99     /* This is a hue between yellow and green - bright and neutral. */
 /* Very light reddish gray, used as a border on  .workbook li border, .top UL border /*
 #DFDEDD
 30 3 87 87
@@ -65,37 +97,9 @@ stroke:rgba(147, 198, 240, 0.5);        */
 /*#AC3415       <--- Button Hvr Red
 12 78 38 39
 172 52 21       */
-/*  Gradient classes and fallback colors
-
-$gra-gradi:  #f7f7f7;
-$grn-gradi: #EAFFEA;	
-$grnlite01: #DAebDA;
-$topnavhover-gradi: #BBDDCC;
-$topcurrent-gradi: #FFCCCC;
-$topul-gradi: #F9FBFA;	
-$topulhover-gradi: #bdc;	
-
-  */
+/*  Gradient classes and fallback colors  */
 /* IMAGE MODIFIERS */
 /* Box-Shadow */
-/*! Craig Webb Art Styles Table of Contents*/
-/*! // Reset */
-/*! resets/normalize*/
-/*! resets/reset*/
-/*! // Bootstrap */
-/*! bs_scss/cwebba_bootstrap_0503b2*/
-/*! // Helpers */
-/*! base/base*/
-/*! base/helpers*/
-/*! base/morehelpers*/
-/*! // Styles */
-/*! styles/cwebba07.scss */
-/*! // Modules*/
-/*! module/modals */
-/*! module/lightbox02 */
-/*! module/contact_form_05 */
-/*!  // States */
-/*! states/media_queries*/
 /*!
  * CSS Compiled on: timestamp()
  */
@@ -659,6 +663,33 @@ body, nav, ul, li, a {
   padding: 0;
 }
 
+.pagination {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+  width: 96%;
+  margin: 1em auto 0;
+}
+
+.pagination a {
+  font-size: 106%;
+  padding: 0.125em 0.5em;
+  border: 1px solid #EBEAEC;
+  border-radius: 0.25em;
+  background: #FDFDFD;
+}
+
+.pagination span.current {
+  font-size: 106%;
+  padding: 0.125em 0.5em;
+  border: 1px solid #EBEAEC;
+  border-radius: 0.25em;
+  background: #DFDFDF;
+  background: rgba(148, 209, 179, 0.3);
+}
+
 * {
   box-sizing: border-box;
 }
@@ -673,7 +704,9 @@ body {
   width: 100%;
   margin: 0 auto;
   padding: 0;
-} /* Center page without wrapper */
+}
+
+/* Center page without wrapper */
 body {
   font-weight: 300;
   font-style: normal;
@@ -1056,6 +1089,28 @@ blockquote.big {
   background: hsla(150deg, 40%, 70%, 0.3);
   padding: 0.25em 1% 0.375em 2%;
   margin: 1.25em 0 1.375em 0;
+  border-radius: 0.375em;
+}
+
+/* This is intended to fix the WordPress bug that add an unwanted p tag inside blockquote. It isn't working.*/
+blockquote > p,
+blockquote.big > p blockquote.big > p:last-of-type {
+  margin-bottom: 0 !important;
+}
+
+/* blockquote-big class for wordpress span to avoid wordpress p in blockquote. add to span element */
+.blockquote-big {
+  font-family: "Ubuntu", Verdana, Corbel, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans", "Verdana Ref", sans-serif;
+  font-style: italic;
+  color: #625550; /*#8C4103; is H-tag color, #625550; is blockquote color*/
+  font-weight: 300;
+  font-size: 1.125em;
+  line-height: 1.375em;
+  letter-spacing: 0.1em;
+  background: rgba(148, 209, 179, 0.3);
+  padding: 0.25em 1% 0.375em 2%;
+  margin: 1.25em 0 1.375em 0;
+  border-radius: 0.375em;
 }
 
 /* = MEDIA / IMG Elements 
@@ -1585,6 +1640,31 @@ code {
   color: hsl(30deg, 33%, 20%);
 }
 
+/*  NEEDS VARIABLES CREATED
+.darkseagreen {
+  background-color: #8FBC8F;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, from(#bfd9bf), to(#8FBC8F));
+  /*OLD Webkit*/
+/*
+  background-image: -webkit-linear-gradient(top, #bfd9bf, #8FBC8F);
+  background-image: -moz-linear-gradient(top, #bfd9bf, #8FBC8F);
+  background-image: -ms-linear-gradient(top, #bfd9bf, #8FBC8F);
+  background-image: -o-linear-gradient(top, #bfd9bf, #8FBC8F);
+  background: linear-gradient(#bfd9bf, #8FBC8F);
+}
+
+.cornflowerblue {
+  background-color: #6495ED;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, from(#a4c0f4), to(#76a1ef));
+  /*OLD Webkit*/
+/*
+  background-image: -webkit-linear-gradient(top, #a4c0f4, #76a1ef);
+  background-image: -moz-linear-gradient(top, #a4c0f4, #76a1ef);
+  background-image: -ms-linear-gradient(top, #a4c0f4, #76a1ef);
+  background-image: -o-linear-gradient(top, #a4c0f4, #76a1ef);
+  background: linear-gradient(#a4c0f4, #76a1ef);
+}
+*/
 /* Nuggies */
 .mb5 {
   margin-bottom: 0.5em;
@@ -4446,20 +4526,4 @@ time {
   .last span {
     display: none;
   }
-}
-img {
-  border: 3px solid orange;
-}
-
-.testies {
-  color: navajowhite;
-}
-
-.testies span {
-  color: burlywood;
-  background: firebrick;
-}
-
-.testoos {
-  background: violet;
 }

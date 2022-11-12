@@ -41,14 +41,15 @@ $head-ft: 'Ubuntu', Verdana, Corbel, "Lucida Grande", "Lucida Sans Unicode", "Lu
 $mono-ft: "andale mono", "lucida console", monospace, serif;
 $top-ul-ft: Verdana, Geneva, "Helvetica Neue", Helvetica, sans-serif; /* Depreciated */
 
+$brite-wht:rgba(252, 253, 253, 0.99);
 
-// BS_04 Variables
+/* BS_04 Variables
 // BS Color system - Hue 210
 //
 // Variables should follow the `$component-state-property-size` formula for
 // consistent naming. Ex: $nav-link-disabled-color and $modal-content-box-shadow-xs.
 
-// CWebba08 Color system - Hue 25
+// CWebba08 Color system - Hue 25 */
 
 $white:    #fff !default;
 $gray-100: #FBFAF9 !default;
@@ -63,7 +64,7 @@ $gray-900: #2A2622 !default;
 $black:    #000 !default;
 
 $grays: () !default;
-// stylelint-disable-next-line scss/dollar-variable-default
+/* stylelint-disable-next-line scss/dollar-variable-default */
 $grays: map-merge(
   (
     "100": $gray-100,
@@ -79,19 +80,19 @@ $grays: map-merge(
   $grays
 );
 
-// CWebba08 Colors
+
+/* CWebba08 Colors */
 
 // WHITES
 
 
 // #FDFEFB              // A bright, yellow-hue wht.
 // HSL 150 33 99 99
-// RGB 252 253 252
+// RGB 252 253 252  */
 $brite-wht:rgba(252, 253, 253, 0.99);
-
-// #FDFEFB             // .basal off-white background color 
+/* #FDFEFB             // .basal off-white background color 
 // HSL 76 66 99 99     /* This is a hue between yellow and green - bright and neutral. */
-// RGB 253 254 251
+// RGB 253 254 251  */
 $basal-wht: rgba(253, 254, 251, 0.8);
 
 
@@ -360,7 +361,7 @@ $mustard: rgba(218, 180, 82, 0.99);
 // Remaining gradient mixins are on the mixin scss. See full example at module/_bg_gradient.scss
 
 
-/*  Gradient classes and fallback colors
+/*  Gradient classes and fallback colors  */
 
 $gra-gradi:  #f7f7f7;
 $grn-gradi: #EAFFEA;	
@@ -370,7 +371,7 @@ $topcurrent-gradi: #FFCCCC;
 $topul-gradi: #F9FBFA;	
 $topulhover-gradi: #bdc;	
 
-  */
+
 
 
 $gradients: () !default;

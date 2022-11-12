@@ -11,6 +11,7 @@ const postcss = require('gulp-postcss');
 const postcssPresetEnv = require('postcss-preset-env');
 const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
+const svgo = require('postcss-svgo');
 
 const sass = require('gulp-sass')(require('sass'));
 const handlebars = require('gulp-compile-handlebars');
@@ -55,7 +56,7 @@ exports.copyHTML = copyHTML;
 
   function copyCSS(done) {
     // Copy static files
-  gulp.src("dist/css/style.css")
+  gulp.src("dist/css/styles.css")
     .pipe(rename("style.css"))
     .pipe(gulp.dest("../.")); // cwebba/style.css
     done();

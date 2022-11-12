@@ -11,7 +11,6 @@ html {
 
 /* ============  [    Base ]   ============= */
 
-
 html { font-family: 'open_sansregular', Arial, 'Helvetica Neue', Helvetica, sans-serif;
   font-size: 16px;
   }
@@ -24,7 +23,34 @@ body {
 
 body, nav, ul, li, a  {margin: 0; padding: 0;}
 
-* { 
+.pagination {
+  display:flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: space-around;
+      align-items:center;
+  width:96%;
+  margin:1em auto 0;
+  }
+  
+  .pagination a {
+  font-size:106%;
+  padding:0.125em 0.5em;
+  border:1px solid #EBEAEC;
+  border-radius:0.25em;
+  background:#FDFDFD;
+  }
+  
+  .pagination span.current {
+  font-size:106%;
+  padding:0.125em 0.5em;
+  border:1px solid #EBEAEC;
+  border-radius:0.25em;
+  background:#DFDFDF;
+  background:rgba(148, 209, 179, 0.3);
+  }
+  
+  * { 
 box-sizing: border-box;
 }
 
@@ -37,8 +63,9 @@ font-size: 100%;
 width:100%;
 margin: 0 auto;
 padding: 0;
-} /* Center page without wrapper */
+}
 
+/* Center page without wrapper */
 body {
 font-weight:300;
 font-style:normal;
@@ -348,13 +375,35 @@ font-style:italic;
 blockquote.big {
 color:#625550;
 color:hsla(15, 10%, 35%, 1);
-
 font-size:1.125em;
 line-height: 1.375em;
 letter-spacing: 0.1em;
 background:hsla(150, 40%, 70%, .3);
 padding:0.25em 1% 0.375em 2%;
 margin: 1.25em 0 1.375em 0;
+border-radius: 0.375em;
+}
+
+/* This is intended to fix the WordPress bug that add an unwanted p tag inside blockquote. It isn't working.*/
+blockquote > p,
+blockquote.big > p
+blockquote.big > p:last-of-type {
+margin-bottom: 0!important;
+}
+
+/* blockquote-big class for wordpress span to avoid wordpress p in blockquote. add to span element */
+.blockquote-big {
+  font-family: "Ubuntu", Verdana, Corbel, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans", "Verdana Ref", sans-serif;
+  font-style: italic;
+  color: #625550;	  /*#8C4103; is H-tag color, #625550; is blockquote color*/
+  font-weight: 300;
+  font-size: 1.125em;
+  line-height: 1.375em;
+  letter-spacing: 0.1em;
+  background: rgba(148, 209, 179, 0.3);
+  padding: 0.25em 1% 0.375em 2%;
+  margin: 1.25em 0 1.375em 0;
+  border-radius: 0.375em;
 }
 
 /* = MEDIA / IMG Elements 
