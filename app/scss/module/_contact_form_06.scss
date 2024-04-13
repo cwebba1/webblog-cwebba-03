@@ -234,14 +234,14 @@ text-shadow: 1px 2px 2px rgba(102, 255, 166, 0.6);
   border-right: 1px solid #eee;
   border-bottom: 1px solid #eee;
 background:#68E855;/* for non-css3 browsers */
-  background: map-get($gradients, grnlite01);
+  background:var(--grnlite01);
 border-radius: .5em;
 }
 
 button.contact:hover { 
   text-shadow: -1px -2px 2px rgba(102, 255, 166, 0.6);
   background:#68E855;/* for non-css3 browsers */
-  background: map-get($gradients, grnlite02);
+  background:var(--grnlite02);
 }
 
 
@@ -257,17 +257,15 @@ button.contact:hover {
   margin: 0 auto;
   cursor: pointer;
   border-radius: 6px;
-  background: map-get($gradients, grnlite02);
+  background:var(--grnlite02);
 }
 
 .close-btn,
 .map-btn:hover {
   color:hsla(0, 59%, 52%, 1);
   text-decoration: none;
-  background: map-get($gradients, grnlite01);
+  background:var(--grnlite01);
 }
-
-
 
 /* BUTTON SEND: (060916 GREEN) */
 
@@ -276,7 +274,7 @@ button.send {
   text-shadow: 1px 2px 2px hsla(88, 70%, 86%, 0.8);
   margin:.5em 0;
   padding:.625em 1em;
-  font-family: $bod-ft;
+  font-family: var(--bod-ft);
   font-weight:700;
   letter-spacing: 0.08em;
   border-top: 1px solid #ccc;
@@ -286,7 +284,7 @@ button.send {
 /* http://www.cssportal.com/css-gradient-generator/ */
 /* BEDD40  98D85F  81C266 */
   background-color:#BEDD40;
-  background: map-get($gradients, grnlite02);
+  background:var(--grnlite02);
   border-radius: .5em;
 }
 
@@ -296,9 +294,8 @@ button.send:hover {
   /* http://www.cssportal.com/css-gradient-generator/ */
   /* HOVER: 81C266 98D85F BEDD40  */
   background-color:#81C266;
-  background: map-get($gradients, grnlite01);
+  background:var(--grnlite01);
 }
-
 
 .last { margin-right:0;
 }
@@ -312,7 +309,6 @@ button.send:hover {
     display:inline-block;
     margin-right:0;
   }
-
 }
 
 @media (max-width: 880px) {
@@ -321,8 +317,7 @@ button.send:hover {
   }
 
   div.nest label,
-  div.zip label,
-   { width:12%;
+  div.zip label { width:12%;
   }
 }
 
@@ -332,7 +327,7 @@ button.send:hover {
     width:100%;
     display:inline-block;
     margin-right:2%;
-	}
+  }
 
   fieldset > div > div.i2 { 
     width:100%;
@@ -368,14 +363,13 @@ button.send:hover {
   #title5,
   #title6 { width:100%;
   }
-
 }
 
 @media (max-width: 600px) {
 
   fieldset > div > div > label,
   legend {
-  	width: 100%;
+  width: 100%;
     float: left;
     padding-right: 2%;
   }
@@ -420,6 +414,7 @@ button.send:hover {
     height: 2em;
     line-height: 1.5em;
   }
+
   textarea[id="comments"] { 
   height:4.5em;
   }

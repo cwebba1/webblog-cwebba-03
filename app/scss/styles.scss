@@ -1,57 +1,42 @@
 /*!
 Theme Name: cwebba
 Theme URI: http://blog.craigwebbart.com
-Version: 3.0
+Version: 4.0
 Author: Craig Webb
 Author URI: https://craigwebbart.com
 Description: Custom theme for Craig Webb Art
-License: Copyright 2016, 2020, 2022 Craig Webb Art
+License: Copyright 2016 – 2024 Craig Webb Art
 License URI: License.txt
 Tags: post-formats
 Text Domain: cwebba 
 */
 
-/*! Craig Webb Art Styles Table of Contents*/
-/*! // Reset */
-/*! resets/normalize*/
-/*! resets/reset*/
-/*! // Bootstrap */
-/*! bs_scss/cwebba_bootstrap_0503b2*/
-/*! // Helpers */
-/*! base/base*/
-/*! base/helpers*/
-/*! base/morehelpers*/
-/*! // Styles */
-/*! styles/cwebba07.scss */
-/*! // Modules*/
-/*! module/modals */
-/*! module/lightbox02 */
-/*! module/contact_form_05 */
-/*!  // States */
-/*! states/media_queries*/
 
-/*!
- * CSS Compiled on: #{timestamp()}
- */
-
-@import "vars";
+@import "fonts";
+//@import "vars";
 @import "mixins";
 // @import "theme_info";
+
 // Reset 
-@import "resets/normalize";
-@import "resets/reset";
+// @import "resets/normalize";
+// @import "resets/reset";
+@import "resets/cwebba08c_reset";
 
 // Helpers 
+@import "base/css-custom-properties";
+@import "base/gradient_classes";
 @import "base/sticky_footer_flex";
 @import "base/base";
 @import "base/helpers";
 @import "base/css3_columns";
 
 // Styles
-@import "styles/cwebba";
+//@import "styles/cwebba";
 
 // Modules
 @import "module/workbook_nav";
+@import "module/top_nav";
+@import "module/sidebar_navs";
 @import "module/footer";
 @import "module/social_nav";
 @import "module/top_copyright";
@@ -60,7 +45,7 @@ Text Domain: cwebba
 @import "module/searchbox";
 @import "module/modals";
 @import "module/wp-core-styles";
-
+// @import "trig-03";
 
  // States 
 @import "states/media_queries";

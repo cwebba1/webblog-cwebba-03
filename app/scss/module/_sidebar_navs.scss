@@ -1,0 +1,204 @@
+/*! _sidebar_navs.scss gulp_2022	032524 */
+/*! cwebba08c	_sidebar_navs.scss 090923 */
+
+
+/* DEFAULT MOBILE STYLE */
+
+aside, article, #leftnav, blockquote.big {
+border-radius: .375em;
+}
+
+/*! - - - - [ DEFAULT SIDE NAVIGATION ] - - - -  */
+
+/* NOTE: .move is Side Nav. .footmove is a part of the footer */
+
+.move h4, .footmove h4 { margin:0 0 .25em;
+color:#06C;
+line-height:1.75em; 
+}
+
+.move p { font-size:1em;
+line-height:1.25em; 
+color:#223; margin:0;
+}
+
+.sidnav-art nav,
+.sidnav nav { margin:1em 0 .5em;
+}
+
+.navserv,
+.wide-navserv {width: 100%;
+} /*this is a UL element */
+
+.navserv li {
+text-align:left;
+margin:.25em 0;
+}
+
+.grn-gradi01,
+.navserv a:hover, .navserv a:active,
+.footsy a:hover, .footsy a:active {
+	color: rgba(133,116,100,1);
+    background: #EAFFEA;
+  background: linear-gradient(0deg, #eaffea 0%, #cfe6cf 100%);
+}
+
+.services-art header,
+.services header { text-align:left;
+padding:.5em;
+border-radius:6px;
+margin-bottom:.5em;
+}
+.services-art p,
+.services p { font-size:.875em;
+line-height: 1.5em;
+}
+
+.colcontain {padding:.125em;
+}
+
+
+/* .gra-gradi, .join, .socialnav a, .workbook li has moved to helpers.scss */  
+
+.sidnavcol { 
+margin:.125em 0 .5em;
+padding:.5em .5em .25em;
+ margin:.125em 0 .325em ;
+border:1px solid #E7E6E4;
+border-radius: .35em;
+}
+
+/* WHAT ABOUT THESE?
+.sidnavcol p { font-size:.8275em;
+line-height: 1.125em;
+	color: rgba(33,16,0,.7);
+}
+.list-archives {
+  font-weight:400;
+}
+*/
+
+.list-archives {
+    list-style: none;
+    line-height:4px;
+    margin:0 0 .125em;
+    padding: 0;
+}
+
+.list-archives li {
+  font-weight: 400;
+  font-size: .875em;
+  line-height: 1.5em;
+  margin: 0 0 .25em;
+  color: rgba(33, 16, 0, 0.7);
+}
+
+/*
+.sidnavcol a {
+  color: hsla(210, 0%, 54%, 1);
+} this is grey - I've decided to go with the a.link declaration. */
+
+.sidnavcol a:hover {
+  color: hsla(210, 100%, 40%, 1);
+  text-decoration:none;
+}
+
+.col-fix li:nth-of-type(1) { margin-top:-1em;
+}
+ 
+
+/* - - - - [ END SIDE NAVIGATION ] - - - -  */
+
+
+
+/*! - - - - [ WIDE SIDE NAVIGATION ] - - - -  */
+
+.wide-move {
+  width: 100%;
+  margin-right: 2%;
+  transition: all .5s ease-in-out;
+}
+
+.wide-move h4 { margin:0 0 .25em;
+color:hsla(200, 100%, 40%, 1);/*#0088CC;*/
+line-height:1.75em;
+font-weight:400;
+}
+
+.wide-move p { font-size:1em;
+line-height:1.25em; 
+color:#223; margin:0;
+}
+
+.wide-sidnav nav { margin:1em 0 .5em;
+}
+
+.wide-navserv {
+  padding:0;
+  column-count: 1;
+  column-gap: 1em;
+  margin-bottom:1em;
+}
+
+
+.wide-navserv .rice { 
+text-align:left;
+padding:.5em .75em;
+margin:.125em 0;
+}
+
+.wide-navserv li {
+  width: 100%;
+  float: left;
+}
+
+.wide-navserv li div {
+   background-color: transparent;
+   padding: .375em 1.25em;
+border-radius: .35em;
+}
+
+
+.wide-navserv li div:hover {
+color: #857464;
+color:hsla(29, 14%, 46%, 1);
+  background: #EAFFEA;
+  background: var(--grn);
+padding: .375em 1.25em;
+  line-height: 1.25em;
+}
+
+.wide-navserv a, .wide-navserv a:visited {
+  font-size: .875em;
+  line-height: 1.325em;
+  color: rgba(33, 16, 0, 0.7);/* These links are grey */
+  text-shadow: hsla(29, 14%, 46%, 0.5) 0 0 1px;
+  background-color: transparent;
+  text-decoration: none;
+  display:block;
+}
+
+.wide-services {
+  width: 100%;
+  margin: 0;
+  transition: all .5s ease-in-out;
+}
+
+.wide-services header { 
+padding:.5em .75em;
+margin:.5em 0;
+text-align:left;
+}
+
+.wide-services h5 { 
+margin:0;
+}
+
+.wide-services p { font-size:.875em;
+line-height: 1.5em;
+}
+
+/* - - - - [ END WIDE SIDE NAVIGATION ] - - - -  */
+
+
+

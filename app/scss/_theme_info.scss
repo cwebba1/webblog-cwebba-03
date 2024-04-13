@@ -1,13 +1,11 @@
-/*!
- 
-Theme Name: #{ $theme_name }
-Theme URI: #{ $theme_uri }
-Version: #{ $theme_version }
-Author: #{ $theme_author }
-Author URI: #{ $theme_author_uri }
-Description: #{ $theme_description }
-License: #{ $theme_license }
-License URI: License.txt
-Tags: #{ $theme_tags }
-Text Domain: #{ $text_domain} 
-*/
+// Theme Information    032424 // 110920
+//--------------------------------------------//
+$theme_name: "cwebba";
+$theme_uri: "http://blog.craigwebbart.com";
+$theme_author: "Craig Webb";
+$theme_author_uri: "http://craigwebbart.com";
+$theme_description: "Custom theme for Craig Webb Art";
+$theme_version: "3.0";
+$theme_license: "Copyright 2024, 2020, 2016 Craig Webb Art";
+$theme_tags: "post-formats";
+$text_domain: "cwebba";

@@ -1,4 +1,4 @@
-/* - – - – - – [  MEDIA QUERIES  ] – - - – - – */
+/*! - – - – - – [  MEDIA QUERIES  ] – - - – - – */
 
 
 
@@ -25,7 +25,7 @@
   }
 
   .top ul li:hover a, .top li:hover li a {
-  font-family: $head-ft;
+  font-family: var(--head-ft);
     line-height: 1.375em;
   }
 

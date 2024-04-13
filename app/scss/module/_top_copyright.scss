@@ -1,9 +1,9 @@
-/** _top_copyright.scss */
+/* _top_copyright.scss 040624 */
 
-/** - - - [ To the Top and Copyright ] - - - */
+/*! - - - [ To the Top and Copyright ] - - - */
 
 .copyright {
-    font-family: $head-ft;
+    font-family: var(--head-ft);
   font-size: 0.6875em;
   line-height: .0625em;
   color: #889;

@@ -23,6 +23,7 @@ const jsPath = 'app/assets/js/**/*.js';
 const cssPath = 'app/css/**/*.css';
 const scssPath = 'app/scss/**/*.{scss,sass}';
 const cssscssPath = 'app/scss/css/*.css';
+const distCssPath = 'dist/*.css';
 const imgPath = 'app/assets/images/**/*.{gif,png,jpg,jpeg,svg}';
 const hbsPath = 'app/pages/*.hbs';
 const partialPath = 'app/partials/**/*.hbs';
@@ -52,17 +53,7 @@ function copyHTML(done) {
 };
 exports.copyHTML = copyHTML;
 
-  /**************** Copy CSS to Root task ****************/
 
-  function copyCSS(done) {
-    // Copy static files
-  gulp.src("dist/css/styles.css")
-    .pipe(rename("style.css"))
-    .pipe(gulp.dest("../.")); // cwebba/style.css
-    done();
-  }
-    exports.copyCSS = copyCSS;
-  
   /**************** images task ****************/
 
   const imgConfig = {
@@ -142,6 +133,19 @@ function cssTask() {
       .pipe(browserSync.stream());
     }
     exports.cssTask = cssTask;
+
+
+  /**************** Copy CSS to Root task ****************/
+
+  function copyCSS(done) {
+    // Copy static files
+  gulp.src("dist/css/styles.css")
+    .pipe(rename("style.css"))
+    .pipe(gulp.dest("../.")); // cwebba/style.css
+    done();
+  }
+    exports.copyCSS = copyCSS;
+  
     
   /**************** Handlebars task ****************/
 
@@ -178,8 +182,9 @@ function watchTask() {
   gulp.watch([jsPath], gulp.series(jsTask, reload));
   gulp.watch([hbsPath], gulp.series(hbs, reload));
   gulp.watch([htmlPath], gulp.series(copyHTML, reload));
+  gulp.watch([distCssPath], gulp.series(copyCSS, reload)); //<-- This is new 040624
  };
 
 //series(parallel(hbs, jsTask), scssTask, copySCSS, cssTask, copyHTML)
       
-  exports.default = series( parallel(scssTask, hbs,jsTask, imgTask, copyHTML), series(copySCSS, cssTask), parallel(browser_sync, watchTask));
+  exports.default = series( parallel(scssTask, hbs,jsTask, imgTask, copyHTML), series(copySCSS, cssTask), series(copyCSS), parallel(browser_sync, watchTask));

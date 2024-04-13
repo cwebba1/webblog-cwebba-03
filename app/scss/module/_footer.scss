@@ -1,4 +1,4 @@
-/* footer.scss 072120
+/* footer.scss 040624 072120
 footer.scss 050620
 footer.scss 022519 */
 /* footer.scss 021019 */
@@ -20,7 +20,7 @@ margin-bottom:0.5em;
 .footsy a:hover, .footsy a:active {
   color: #857464;
   background: #EAFFEA;
-  background: map-get($gradients, grn);
+  background:var(--grn);
 }
 
 ul.footsy   {
@@ -99,8 +99,8 @@ border-radius: .375em;
 
 .join {
   background: #f7f7f7;
-/*  background: map-get($gradients, gra); */
   background: linear-gradient(#f7f7f7, #e6e6e6);
+  background: var(--gra);
   color: #432;
   color: hsla(30, 33%, 20%, 1);
 }

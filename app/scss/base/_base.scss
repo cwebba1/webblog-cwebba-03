@@ -1,7 +1,7 @@
-/** Webblog Cwebba Theme _base.scss 110920 */
-/* Today is probably Sunday, 102520 */
+/** Webblog Cwebba Theme _base.scss 040624, 110920 */
+/* See prototype 032424 @ Starter-Gulp-SASS-2023 */
 /* 090316 Cwebba_WP base.scss with styles from CWebba07 base.css */
-/* Previous: 061415 Cwebba Theme from 062914 CSS */
+/* Previous: 061415 Cwebba Theme from 062914, 061415 CSS */
 
 
 /* This Normalize Reset conflicts with Fancybox.
@@ -11,17 +11,48 @@ html {
 
 /* ============  [    Base ]   ============= */
 
-html { font-family: 'open_sansregular', Arial, 'Helvetica Neue', Helvetica, sans-serif;
-  font-size: 16px;
-  }
-
-html,
-body {
-  height: 100%;
-  min-height: 100%;
+  * { 
+box-sizing: border-box;
 }
 
-body, nav, ul, li, a  {margin: 0; padding: 0;}
+.unborderbox { box-sizing: content-box;
+}
+
+html {
+  font-family : var(--bod-ft), 'Open Sans', 'source-sans-pro', 'Helvetica Neue', 'Frutiger', "Myriad Pro", Arial, Helvetica, var(--system-ui), sans-serif;
+  font-size: 100%;
+  font-size: 1em;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-tab-size: 4;
+  tab-size: 2;
+  min-height: 100%;
+  text-rendering: optimizeLegibility;}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}  
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+body, nav, ul, li, a  {
+  margin: 0; padding: 0;
+}
 
 .pagination {
   display:flex;
@@ -49,34 +80,22 @@ body, nav, ul, li, a  {margin: 0; padding: 0;}
   background:#DFDFDF;
   background:rgba(148, 209, 179, 0.3);
   }
-  
-  * { 
-box-sizing: border-box;
-}
 
-.unborderbox { box-sizing: content-box;
-}
 
 body {
-font:$bod-ft; /* 'Open Sans', Arial, 'Helvetica Neue', Helvetica, sans-serif; */
-font-size: 100%;
-width:100%;
-margin: 0 auto;
-padding: 0;
+  font-family: var(--bod-ft); 
+  font-weight: 400;
+  line-height: 1.5;
+  text-rendering: optimizeSpeed;
+  -webkit-font-smoothing: antialiased;
+  color: hsl(27, 100%, 7%);
+  text-shadow: rgba(0, 0, 0, 0.01) 0 0 1px;
+  line-height: 1.5;
+  transition: all 0.5s ease-in;
+  background: var(--old-yeller);
+  background: url("../assets/images/oj_emboss.png");
 }
 
-/* Center page without wrapper */
-body {
-font-weight:300;
-font-style:normal;
-font-size:1rem;
-line-height:1.70rem;
-color:hsla(27, 100%, 7%, 1); /* #241000 */
-text-shadow:rgba(0,0,0,0.01) 0 0 1px;
-transition:all .5s ease-in; 
-background-color:rgba(135, 135, 105, 0.4);
-background:url('assets/images/oj_emboss.png');
-}
 
 
 /*-  SELF-CLEARING FLOATS
@@ -108,6 +127,14 @@ background:#FFF;
 transition:width .25s ease-in; 
 }
 
+/* these styles added from cwebba08c - experimental */
+/*.basal {  – BREAKS LAYOUT
+  display:flex;
+  flex-direction:column;
+  height:100%;
+  background:rgba(253, 254, 251, 0.8);
+}*/
+
 .cask {
 padding-left: 1.375em;
 padding-right: 1.375em;
@@ -120,18 +147,16 @@ margin: 0 auto;
 overflow: hidden;
 }
 
-
-
 /* formatting of elements */
 
-/* TYPOGRAPHY */
+/*! TYPOGRAPHY */
 
 p {
-font:$bod-ft;
-font-weight:300;
-font-size: 1em;
+font-family:var(--bod-ft), 'Open Sans';
+/*font-weight: normal;*/
+font-weight:400;
+font-size: 1.125rem;
 line-height: 1.5em;
-font-weight: normal;
 margin: 0 0 .5em 0;
 }
 
@@ -225,11 +250,12 @@ float:right;
 text-align:right;
 }
 
-/* LINKS */
+/*! LINKS */
 
 a { 
 color: #004477;
 color:hsla(206, 100%, 23%, 1);
+color: var(--midnight-blue);
 font-size: inherit;
 line-height: inherit;
 text-decoration: none;
@@ -249,104 +275,106 @@ outline: 0;
 }
 a:hover, a:active { outline: none; }
 
-a:focus, a:hover { color: #0066CC;
+a:focus, a:hover { color:var(--royal-blu); /*#0066CC;*/
 text-decoration: underline; 
 }
 
-a:visited {color: #335577;
+a:visited {color: var(--visitation-blu); /* grey blue #335577;*/
 text-decoration: none;
 }/* grey blue */
 
 a:active { text-decoration: underline; 
-color: #900000; 
+color: var(--redskin); /* #900000, #AC3415; */
 }
 
 a.contact {
-  color : #E6662D;
+  color: var(--pumpkin); /*#E6662D;*/
   text-decoration: none;
 }
 
 a.contact:hover {
-  color : #FF9966;
+  color: var(--orange-lt); /*#FF9966;*/
   text-decoration: underline;
 }
 
-.credit {font:$bod-ft;
+.credit {font-family:var(--bod-ft);
 font-weight:400;
 font-size:.675em;
 line-height:.75em;
 }
 
-.credit a {color: #84A4BD;
+.credit a {color: var(--blu-moon); /* csw blue #84A4BD;*/
   text-decoration: none;
   transition: 0.2s color linear;
-}/*csw blue */
+}
 
 .credit a:focus { outline: thin dotted; }
 
-.credit a:focus, a:hover {color: #0066CC;
+.credit a:focus, a:hover {color: var(--daylight-blu); /*#5FC1F1, #0066CC */
 text-decoration: underline; 
 }
 
-.credit a:visited {color: #8C0C10;
+.credit a:visited {color: hsla(358,84%,30%,1); /*#8C0C10;*/
 text-decoration: none;
-}
+} /* This might change to var(--visitation-blu) */
 
-a.cutine { color: #3399CC;
+a.cutine { color: var(--midnight-blue); /*rgba(0, 68, 119, 0.99); , #3399CC*/
 margin: 0 0 .5em 0;
-font-family: $bod-it-ft;
+font-family: var(--bod-ft);
 font-size: .75em;
 line-height: 1.4em;
 font-style:italic;
 text-decoration: none; }
 
-a.cutine:hover { color: #3399CC;
+a.cutine:hover { color: var(--royal-blu); /* Royal blue #0066CC;, #3399CC*/
 margin: 0 0 .5em 0;
 font-size: .75em;
 line-height: 1.4em;
 font-style:italic;
 text-decoration: underline; }
 
-a.cutine:visited {color: #0066CC;
+a.cutine:visited {color: var(--visitation-blu); /*#3399CC;, #0066CC, Royal blue */
 margin: 0 0 .5em 0;
 font-size: .75em;
 line-height: 1.4em;
 font-style:italic;
 text-decoration: underline;
-}/*Royal blue */
+}
 
 p a, p a:visited { line-height: inherit; }
 
-h2 > a:focus, h2:hover > a { color: #0066CC;
+h2 > a:focus, h2:hover > a { color: var(--royal-blu); /* Royal blue #0066CC;*/
 text-decoration: none; 
 }
-
 
 a img, img { border: none; }
 a img {display: block;} /* Stops image links getting text link styles */
 
 a.menu {
-font-family: $head-ft;
+font-family: var(--head-ft);
 font-size:.875em;
 font-weight: 300;
 line-height : 1.625em;
-color: #3090C0;
+color: var(--visitation-blu); /*#3090C0;*/
 text-decoration: none;
 }
 
 a.menu:hover {
-  font-family: $head-ft;
-  color : #5FC1F1;
+  font-family: var(--head-ft);
+  color : var(--daylight-blu); /*#5FC1F1;*/
   text-decoration: underline;
+  text-decoration-thickness: 10%;
 }
 
 
-/* Headers */
+/*! Headers */
 
-h1, h2, h3, h4, h5, h6,  blockquote {font-family: $head-ft;
-  color: #8c4103;
-  color:hsla(27, 96%, 28%, 1);/*#8C4103;*/
-  font-weight: 300;
+h1, h2, h3, h4, h5, h6,  blockquote {
+  font-family: var(--head-ft), 'Ubuntu variable', "DejaVu Sans", "Seravek", 'source-sans-pro', 'Corbel', 'Gill Sans Nova', "Liberation Sans", 'Nimbus Sans', "Bitstream Vera Sans", Verdana, "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", "Verdana Ref", sans-serif;
+/*  font-style:italic; */
+  color: var(--hdr-brn);/* #8c4103 hsla(27, 96%, 28%, 1)*/;
+  font-weight: 400;
+  /* letter-spacing: -0.0625em; from prototype 032424 */
 }
 
 h1 { font-size: 2em; line-height:1.2em; margin-bottom:0.35em; margin-top:0; }
@@ -364,49 +392,60 @@ h6 { font-size:1em;line-height:1.25em; margin-bottom:.25em;
   margin-top: 0; }
 
 blockquote {
-color:#625550;
-color:hsla(15, 10%, 35%, 1);
+color: var(--bdy-brn); /* hsla(27, 100%, 7%, 1) */
 font-size:1.125em;
-line-height: 1.375em;
-margin: 0 0 0.5em 0;
 font-style:italic;
-}
-
-blockquote.big {
-color:#625550;
-color:hsla(15, 10%, 35%, 1);
-font-size:1.125em;
 line-height: 1.375em;
-letter-spacing: 0.1em;
-background:hsla(150, 40%, 70%, .3);
-padding:0.25em 1% 0.375em 2%;
-margin: 1.25em 0 1.375em 0;
-border-radius: 0.375em;
+  background:hsla(150, 40%, 70%, .3);
+  padding: 0.25em 1% 0.375em 2%;
+  border-radius: 0.375em;
+margin: 0 0 0.5em 0;
 }
 
-/* This is intended to fix the WordPress bug that add an unwanted p tag inside blockquote. It isn't working.*/
-blockquote > p,
-blockquote.big > p
-blockquote.big > p:last-of-type {
-margin-bottom: 0!important;
-}
 
 /* blockquote-big class for wordpress span to avoid wordpress p in blockquote. add to span element */
 .blockquote-big {
-  font-family: "Ubuntu", Verdana, Corbel, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans", "Verdana Ref", sans-serif;
+  font-family: var(--head-ft), 'Ubuntu variable', Verdana, Corbel, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans", "Verdana Ref", sans-serif;
   font-style: italic;
-  color: #625550;	  /*#8C4103; is H-tag color, #625550; is blockquote color*/
-  font-weight: 300;
+  color: var(--bdy-brn);
+  font-weight: 800;
   font-size: 1.125em;
   line-height: 1.375em;
-  letter-spacing: 0.1em;
-  background: rgba(148, 209, 179, 0.3);
+  letter-spacing: 0.1em; /* OR 0.0625em*/
+  background:hsla(150, 40%, 70%, .3);
   padding: 0.25em 1% 0.375em 2%;
   margin: 1.25em 0 1.375em 0;
   border-radius: 0.375em;
 }
+/* color: #8C4103; #625550; = color:hsla(15, 10%, 35%, 1); was blockquote color*/
 
-/* = MEDIA / IMG Elements 
+/* This is to fix WordPress p=blockquote bug */
+p.blockquote-big { 
+  font-weight: 400;
+  color: var(--bdy-brn);
+  background:hsla(150, 40%, 70%, .3);
+}
+
+aside, article, #leftnav, blockquote.big {
+  -moz-border-radius: .375em;
+  -webkit-border-radius: .375em;
+border-radius: .375em;
+}
+
+blockquote.big h4 {
+  padding:0;
+  margin: 0 0 0.125em 0;
+  }
+
+blockquote.big p {
+  padding:0;
+  margin: 0 0 0.5em 0;
+  }
+
+
+
+
+/*! = MEDIA / IMG Elements 
 ---------------------------------------------------- */
 img {
 border: 0;
@@ -420,7 +459,14 @@ svg:not(:root) {
 
 img { -ms-interpolation-mode: bicubic; }
 
-/* IMAGE MODIFIERS */
+/* You forgot the 'alt' attribute
+img[alt=""],
+img:not([alt]) {
+  border: 5px dashed hotpink;
+} */
+
+
+/*! IMAGE MODIFIERS */
 .border {
 	border-style: solid;
 	border-color: #DDD;
@@ -445,8 +491,10 @@ border-radius: .3em;
 
 a img { border:0;}
 
-figure img, figure object, figure embed, figure video {max-width: 100%;
-width: 100%; height: auto; 
+figure img, figure object, figure embed, figure video {
+  max-width: 100%;
+  width: 100%;
+  height: auto; 
 }
 
 svg:not(:root) { overflow:hidden} /* Correct IE9 overflow */
@@ -464,13 +512,22 @@ font-size:1rem;
 }
 
 figcaption { 
-  margin:.375em 0; 
-  font-size:1em; line-height:1em; color: #262626;
+  margin:.125em 0 0.5em; 
+  font-size:.8125em; 
+  line-height:1em; 
+  color: #333333; /* Was: #262626*/
 }
-figcaption p { margin:0 0 .5em; font-size:0.75em; 
-  line-height:1.25em; 
-  color: #262626;
-text-align:left;
+
+figcaption p { 
+  margin:0; 
+  font-size:1em; 
+  line-height:1.25; 
+  color: #333333;
+  text-align:left;
+}
+
+figcaption p:last-of-type { 
+  margin:0; 
 }
 
 figure.w250 { width:250px;
@@ -482,11 +539,32 @@ margin-right:1em;
 padding:0;
 }
 
-.w250 a { margin:0;
+figure.w200 { 
+  width:200px;
+  max-width:200px; 
+  float:left;
+  text-align:left;
+  margin-bottom:1em;
+  padding:0;
+  }
+  
+  figure.w150 { 
+  width:150px;
+  max-width:150px; 
+  float:left;
+  text-align:left;
+  margin-bottom:1em;
+  padding:0;
+  }
+
+.w150 a,
+.w200 a,  
+.w250 a { margin: 0;
 }
 
 
-/* = LISTS 
+
+/*! = LISTS 
 ---------------------------------------------------- */
 
 ul { list-style:initial;
@@ -518,6 +596,10 @@ list-style-type:disc;
 list-style-position :outside;
 */
 
+ul.inside li {
+  list-style-position: inside;
+} /* put list inside */
+
 
 li ul, li ol {margin:0;}
 dl dd {margin-left: 1.5em}
@@ -528,7 +610,6 @@ dl dd {margin-left: 1.5em}
   margin-left:0;
   padding-left:0;
 }
-
 
 ul.example {
     list-style: none;
@@ -542,11 +623,11 @@ ul.example {
     margin:0 0 .5em;
 }
  
+/* » Right-pointing double angle quotation mark &#187; */
 .example li:before {
     content: "» ";
     color: #ab3223; /* or whatever color you prefer */
-}/* Â» RIGHT-POINTING DOUBLE ANGLE QUOTATION MARK &#187; */
-
+}
 
 ul.dash,
 ul.mdash,
@@ -568,33 +649,28 @@ ul.angle
 .mdash li,
 .bullet li,
 .triangle li,
-.angle li
- { 
-    margin:0 0 .5em;
+.angle li { 
+  margin:0 0 .5em;
+  color: var( --redskin) /*hsla(0 66%, 40%, 1); */
 }
 
 .dash li:before {
     content: "\2013\00a0\020";
-    color: #A92323; /* or whatever color you prefer */
 }
 
 .mdash li:before {
     content: "\2014\020";
-    color: #A92323; /* or whatever color you prefer */
 }
 
 .bullet li:before {
     content: "\2022\00a0\020";
-    color: #A92323; /* or whatever color you prefer */
-}/* â€¢ */
+}
 
 .triangle li:before {
     content: "\2023\00a0\020";
-    color: #A92323; /* or whatever color you prefer */
-}/* â€£ */
+}
 
 .angle li:before {
     content: "\00bb\00a0\020";
-    color: #A92323; /* or whatever color you prefer */
-}/* Â» */
+}
 

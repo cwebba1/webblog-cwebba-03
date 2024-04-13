@@ -1,4 +1,4 @@
-/* _workbook_nav.scss 062720 020819 */
+/* _workbook_nav.scss 040624 062720 020819 */
 
 /* Workbook Navigation Module - Cwebba08b Flexbox Styles */
 
@@ -8,7 +8,7 @@
 .socialnav a,	*/
 .workbook li {
   background: #f7f7f7;
-  background: map-get($gradients, gra);
+  background:var(--gra);
   color: #432;
   color: hsla(30, 33%, 20%, 1);
 }
@@ -29,7 +29,8 @@ flex-direction:column;
     border:1px solid #DFDEDD;
     border-radius: .35em;
   background: #f7f7f7;
-  background: linear-gradient(0deg, rgba(247, 247, 247, 1) 0%,rgba(230, 230, 230, 1) 100%);
+/*  background: linear-gradient(0deg, rgba(247, 247, 247, 1) 0%,rgba(230, 230, 230, 1) 100%);*/
+  background:var(--gra);
   margin: 0 0 1em 0;
 margin-bottom:1em;
 }

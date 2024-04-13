@@ -1,4 +1,4 @@
-/*!  _modals.scss from 072120 Cwebba08b*/
+/*  _modals.scss from 040624 110920 072120 Cwebba08b, c */
 /*!  - - - [ Map Modal ] - - - */
 
 #map_fadar {
@@ -188,7 +188,7 @@ padding:1em 0;
 }
 
 .subscribe label { 
-  font-family:$bod-ft;
+  font-family:--bod-ft;
 margin-top: .125em;
 margin-right:1em;
 padding-top: 0;
@@ -214,7 +214,9 @@ background: #fefefe;
 border: 1px solid #c4c8cc;
 border-radius: 4px;
     border-bottom-right-radius: 0;
-font: italic .8125em Georgia, "Times New Roman", Times, serif;
+font-family: Georgia, "Times New Roman", Times, serif;
+font-size: .8125em;
+font-style: italic;
 outline: none;
 padding: .25em .375em;
 width: 70%;
@@ -232,7 +234,9 @@ line-height:1em;
 .social {
 background: #EAFFEA;
 line-height:1em;
-font: italic .8125em Georgia, "Times New Roman", Times, serif;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: .8125em;
+  font-style: italic;
 padding: .25em .375em .25em .375em;
 width: 4.5em;
 border: 1px solid #c4c8cc;
@@ -250,14 +254,13 @@ border:1px solid #D4CEC9;
 
 .social-button:hover { 
   background-color:#BEDD40;
-  background: map-get($gradients, grnlite01);
-
+  background:var(--grnlite01);
 }
 
 .map-btn:hover,
 button.send:hover {
 background: #EAFFEA;
- background: map-get($gradients, grn);
+  background:var(--grn);
 cursor: pointer;
 }
 
@@ -284,15 +287,15 @@ text-align:center;
 
 .mail-me { 
 text-decoration: none;
-color: $tan-txt;
+  color: var(--tan-txt);
 font-size:.75em;
   &:focus { color: #06C;
   }
   &:visited  {
-  color: $tan-txt-dk; /*#6E5C4D*/
+    color: var(--tan-txt-dk);  /*#6E5C4D*/
   }
   &:active {
-  color: $redskin;
+    color: var(--redskin);
  }
 }
 /* END Social Modal Styles */

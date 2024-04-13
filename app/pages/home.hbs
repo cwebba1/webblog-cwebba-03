@@ -1,0 +1,57 @@
+{{!-- pages/home.hbs --}}
+{{!-- 071219
+– Formerly pages/index.hbs --}}
+
+{{#> layouts/cwebba-landpage title="Craig Webb Art / Content Design & Development" }}
+  {{!--   The `includes/head` partial is here.  --}}
+  {{#> head-block}}
+        {{> includes/head }}
+  {{/head-block}}
+  {{!--   The `includes/header` partial is here.  --}}
+  {{#*inline "rail-block"}}
+    {{> includes/rail
+      rail-src="assets/images/navpics/wave.jpg"
+      rail-alt="(917) 797&middot;0983"
+    }}
+  {{/inline}}
+
+    {{!-- MAIN CONTENT --}}
+
+    {{!-- Let's change the hero image for this layout. --}}
+  {{#*inline "hero-block"}}
+    {{> includes/hero
+      hero-class="herobox"
+      hero-src="assets/images/heropics/phoenixes-by-paulownia-trees.jpg"
+      hero-alt="Phoenixes by Paulownia Trees - Kano Tan'yu."
+      fig-caption="Phoenixes by Paulownia Trees - Kano Tan'yu."
+    }}
+  {{/inline}}
+
+    {{!-- Let's change the content for this layout. --}}
+   {{#*inline "content-block"}}
+    <p>This content replaces the content.hbs text.</p>
+    <figure class="w306 inblock">
+      <img src="assets/images/content/D-Day.jpg" alt="D-Day, off the ship.">
+    </figure>
+
+<div class="inblock" style="width:50%; vertical-align:top; margin-left:0.5em;">
+  <p>Let's all go home.</p>
+    <p style="margin:0 0 1em 0;">Being busy does not always mean real work. Seeming to do is not doing. ~ Thomas Edison
+</p>
+<p>To be seriously alive is to have scars ~ John Steinbeck</p>
+<p>Get Shit Done – &ldquo;Care more about the artifact than the construct.&rdquo;</p>
+<p>We are what we pretend to be, so we must be careful about what we pretend to be. – Kurt Vonnegut</p>
+<p>Never leave words unsaid, hugs to give, affection to share.<br>
+Now is right and tomorrow may be too late.</p>
+
+</div>
+
+  {{/inline}}
+
+ {{!-- The "footer-block" content is here. --}}
+
+{{!--  MODAL FORM BLOCK HERE  --}}
+
+{{!-- <!--  Javascripts BOX  --> --}}
+
+{{/layouts/cwebba-landpage}}

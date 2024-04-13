@@ -1,0 +1,251 @@
+/*! _gradient_classes.scss  112623
+*/
+
+/* Gradient Classes */
+.bg-gradient-gra {
+    background: linear-gradient(0deg, rgb(247, 247, 247) 0%, rgb(230, 230, 230) 100%);
+  }
+  
+  .bg-gradient-gra02 {
+    background: linear-gradient(0deg, rgb(230, 230, 230) 0%, rgb(247, 247, 247) 100%);
+  }
+  
+  .bg-gradient-grn {
+    background: linear-gradient(0deg, rgb(234, 255, 234) 0%, rgb(207, 230, 207) 100%);
+  }
+  
+  .bg-gradient-grnlite01 {
+    background: linear-gradient(0deg, rgb(234, 255, 234) 0%, rgb(218, 235, 218) 100%);
+  }
+  
+  .bg-gradient-grnlite02 {
+    background: linear-gradient(0deg, rgb(218, 235, 218) 0%, rgb(234, 255, 234) 100%);
+  }
+  
+  .bg-gradient-topnavhover {
+    background: linear-gradient(180deg, rgb(221, 238, 230) 0%, rgb(187, 221, 204) 47%, rgb(169, 198, 184) 100%);
+  }
+  
+  .bg-gradient-topcurrent {
+    background: linear-gradient(180deg, rgba(238, 221, 221, 0.4) 0%, rgba(255, 204, 204, 0.5) 47%, rgb(198, 169, 169) 100%);
+  }
+  
+  .bg-gradient-topul {
+    background: linear-gradient(180deg, rgba(253, 254, 251, 0.9) 0%, rgb(249, 251, 250) 17%, rgb(169, 198, 184) 100%);
+  }
+  
+  .bg-gradient-topulhover {
+    background: linear-gradient(0deg, rgb(187, 221, 204) 0%, rgb(123, 173, 148) 100%);
+  }
+  
+  .bg-gradient-chill {
+    background: linear-gradient(135deg, #09e485 0%, #0291e3 100%);
+  }
+  
+  .bg-gradient-warm {
+    background: linear-gradient(135deg, #F2CD48 0%, #FD803F 100%);
+  }
+  
+  .bg-gradient-hot {
+    background: linear-gradient(135deg, #F9445A 0%, #FD803F 100%);
+  }
+  
+  .bg-gradient-cold {
+    background: linear-gradient(135deg, #8019C6 0%, #2F93CC 100%);
+  }
+  
+  .text-gradient-gra {
+    background-image: linear-gradient(0deg, rgb(247, 247, 247) 0%, rgb(230, 230, 230) 100%);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+  
+  .text-gradient-gra02 {
+    background-image: linear-gradient(0deg, rgb(230, 230, 230) 0%, rgb(247, 247, 247) 100%);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+  
+  .text-gradient-grn {
+    background-image: linear-gradient(0deg, rgb(234, 255, 234) 0%, rgb(207, 230, 207) 100%);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+  
+  .text-gradient-grnlite01 {
+    background-image: linear-gradient(0deg, rgb(234, 255, 234) 0%, rgb(218, 235, 218) 100%);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+  
+  .text-gradient-grnlite02 {
+    background-image: linear-gradient(0deg, rgb(218, 235, 218) 0%, rgb(234, 255, 234) 100%);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+  
+  .text-gradient-topnavhover {
+    background-image: linear-gradient(180deg, rgb(221, 238, 230) 0%, rgb(187, 221, 204) 47%, rgb(169, 198, 184) 100%);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+  
+  .text-gradient-topcurrent {
+    background-image: linear-gradient(180deg, rgba(238, 221, 221, 0.4) 0%, rgba(255, 204, 204, 0.5) 47%, rgb(198, 169, 169) 100%);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+  
+  .text-gradient-topul {
+    background-image: linear-gradient(180deg, rgba(253, 254, 251, 0.9) 0%, rgb(249, 251, 250) 17%, rgb(169, 198, 184) 100%);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+  
+  .text-gradient-topulhover {
+    background-image: linear-gradient(0deg, rgb(187, 221, 204) 0%, rgb(123, 173, 148) 100%);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+  
+  .text-gradient-chill {
+    background-image: linear-gradient(135deg, #09e485 0%, #0291e3 100%);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+  
+  .text-gradient-warm {
+    background-image: linear-gradient(135deg, #F2CD48 0%, #FD803F 100%);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+  
+  .text-gradient-hot {
+    background-image: linear-gradient(135deg, #F9445A 0%, #FD803F 100%);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+  
+  .text-gradient-cold {
+    background-image: linear-gradient(135deg, #8019C6 0%, #2F93CC 100%);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+  
+  .border-gradient-gra {
+    border: 20px solid transparent;
+    border-width: 6px;
+    border-style: solid;
+    border-image: linear-gradient(0deg, rgb(247, 247, 247) 0%, rgb(230, 230, 230) 100%);
+    border-image-slice: 1;
+  }
+  
+  .border-gradient-gra02 {
+    border: 20px solid transparent;
+    border-width: 6px;
+    border-style: solid;
+    border-image: linear-gradient(0deg, rgb(230, 230, 230) 0%, rgb(247, 247, 247) 100%);
+    border-image-slice: 1;
+  }
+  
+  .border-gradient-grn {
+    border: 20px solid transparent;
+    border-width: 6px;
+    border-style: solid;
+    border-image: linear-gradient(0deg, rgb(234, 255, 234) 0%, rgb(207, 230, 207) 100%);
+    border-image-slice: 1;
+  }
+  
+  .border-gradient-grnlite01 {
+    border: 20px solid transparent;
+    border-width: 6px;
+    border-style: solid;
+    border-image: linear-gradient(0deg, rgb(234, 255, 234) 0%, rgb(218, 235, 218) 100%);
+    border-image-slice: 1;
+  }
+  
+  .border-gradient-grnlite02 {
+    border: 20px solid transparent;
+    border-width: 6px;
+    border-style: solid;
+    border-image: linear-gradient(0deg, rgb(218, 235, 218) 0%, rgb(234, 255, 234) 100%);
+    border-image-slice: 1;
+  }
+  
+  .border-gradient-topnavhover {
+    border: 20px solid transparent;
+    border-width: 6px;
+    border-style: solid;
+    border-image: linear-gradient(180deg, rgb(221, 238, 230) 0%, rgb(187, 221, 204) 47%, rgb(169, 198, 184) 100%);
+    border-image-slice: 1;
+  }
+  
+  .border-gradient-topcurrent {
+    border: 20px solid transparent;
+    border-width: 6px;
+    border-style: solid;
+    border-image: linear-gradient(180deg, rgba(238, 221, 221, 0.4) 0%, rgba(255, 204, 204, 0.5) 47%, rgb(198, 169, 169) 100%);
+    border-image-slice: 1;
+  }
+  
+  .border-gradient-topul {
+    border: 20px solid transparent;
+    border-width: 6px;
+    border-style: solid;
+    border-image: linear-gradient(180deg, rgba(253, 254, 251, 0.9) 0%, rgb(249, 251, 250) 17%, rgb(169, 198, 184) 100%);
+    border-image-slice: 1;
+  }
+  
+  .border-gradient-topulhover {
+    border: 20px solid transparent;
+    border-width: 6px;
+    border-style: solid;
+    border-image: linear-gradient(0deg, rgb(187, 221, 204) 0%, rgb(123, 173, 148) 100%);
+    border-image-slice: 1;
+  }
+  
+  .border-gradient-chill {
+    border: 20px solid transparent;
+    border-width: 6px;
+    border-style: solid;
+    border-image: linear-gradient(135deg, #09e485 0%, #0291e3 100%);
+    border-image-slice: 1;
+  }
+  
+  .border-gradient-warm {
+    border: 20px solid transparent;
+    border-width: 6px;
+    border-style: solid;
+    border-image: linear-gradient(135deg, #F2CD48 0%, #FD803F 100%);
+    border-image-slice: 1;
+  }
+  
+  .border-gradient-hot {
+    border: 20px solid transparent;
+    border-width: 6px;
+    border-style: solid;
+    border-image: linear-gradient(135deg, #F9445A 0%, #FD803F 100%);
+    border-image-slice: 1;
+  }
+  
+  .border-gradient-cold {
+    border: 20px solid transparent;
+    border-width: 6px;
+    border-style: solid;
+    border-image: linear-gradient(135deg, #8019C6 0%, #2F93CC 100%);
+    border-image-slice: 1;
+  }
+  

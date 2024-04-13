@@ -9,6 +9,19 @@
         Craig Webb Art
       {{/if}}
     </title>
+    {{#> meta-block }}
+    {{!--  The `includes/meta` partial is the default content, but can be overridden. --}}
+{{/meta-block }}
+
+<!-- This is a revised statement added to the head for testing. -->
+
+{{#> font-block }}
+    {{!--  The `includes/fonts` partial is the default content, but can be overridden. --}}
+   {{> includes/fonts }}
+{{/font-block }}
+
+<link rel="stylesheet" type="text/css" href="css/styles.css"> 
+
     {{#> head-block}}
       {{!-- Custom <head> content per page can be added as inline-block, replacing head-block wrapper. --}}
         {{> includes/head }}
